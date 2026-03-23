@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про нас | Riverside</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Однакова шапка підтримує єдиний стиль на внутрішніх сторінках -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <!-- Логотип зберігає зв'язок з головною сторінкою -->
+        <a class="brand" href="../index.html">River<span>side</span></a>
+
+        <!-- Меню дублює структуру всього сайту для зручного переходу між розділами -->
+        <nav class="site-nav" aria-label="Основне меню">
+          <a class="site-nav__link" href="../index.html">Головна</a>
+          <a class="site-nav__link is-active" href="about.html">Про нас</a>
+          <a class="site-nav__link" href="articles.html">Статті</a>
+          <a class="site-nav__link" href="gallery.html">Галерея</a>
+          <a class="site-nav__link" href="form.html">Форма</a>
+          <a class="site-nav__link" href="anchors.html">Якорі</a>
+          <a class="site-nav__link" href="contacts.html">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Контент сторінки знаходиться в контейнері та не притискається до країв -->
+    <main>
+      <section class="page-intro">
+        <div class="container intro-grid">
+          <!-- Основний текстовий блок описує концепцію сайту -->
+          <article class="article-card">
+            <span class="eyebrow">Сторінка про нас</span>
+            <h1>Невелика історія навчального проєкту</h1>
+            <p>Сайт присвячений вигаданій кав'ярні Riverside. Така тема дозволяє поєднати інформаційний текст, галерею, контактні дані та форму бронювання в одному логічному проєкті.</p>
+            <p>Основна ідея сторінки "Про нас" полягає в тому, щоб показати звичайний текстовий контент у привабливій картці, яка гармонійно вписується в спільний стиль всього сайту.</p>
+          </article>
+
+          <!-- Бічна картка додає структуровані факти в компактному форматі -->
+          <aside class="side-card">
+            <h2>Коротко про концепцію</h2>
+            <ul class="plain-list">
+              <li>Тепла кольорова палітра без різких контрастів.</li>
+              <li>Картки з тінями та великими радіусами для м'якого вигляду.</li>
+              <li>Однакове меню та футер на кожній сторінці.</li>
+              <li>Акцент на зручність читання та логічне групування блоків.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер повторюється без змін, щоб зберегти уніфікацію сайту -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer-grid">
+          <section>
+            <h3>Riverside</h3>
+            <p>Сторінка "Про нас" показує приклад звичайного текстового наповнення.</p>
+          </section>
+
+          <section>
+            <h3>Переходи</h3>
+            <ul class="site-footer__list">
+              <li><a href="../index.html">Головна</a></li>
+              <li><a href="articles.html">Статті</a></li>
+              <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Дизайн</h3>
+            <ul class="site-footer__list">
+              <li>Контейнер по центру</li>
+              <li>Спільні картки та кнопки</li>
+              <li class="accent-text">Єдиний стиль на всіх сторінках</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__bottom">Контент цієї сторінки оформлений у тому ж стилі, що і решта сайту.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,484 @@
+/* Кореневі змінні збирають основні кольори, радіуси та тіні в одному місці для зручного редагування дизайну. */
+:root {
+  --page-bg: #f6f0e8;
+  --surface: rgba(255, 250, 244, 0.95);
+  --surface-strong: #ffffff;
+  --line: #d9c5b1;
+  --text: #2f241b;
+  --muted: #6d5f52;
+  --accent: #c05d2d;
+  --accent-dark: #8f411d;
+  --accent-soft: #f2d9c8;
+  --success: #347455;
+  --shadow: 0 18px 40px rgba(84, 53, 28, 0.12);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+/* Глобальний box-sizing робить розрахунок розмірів елементів більш передбачуваним на всіх сторінках сайту. */
+* {
+  box-sizing: border-box;
+}
+
+/* Плавна прокрутка покращує переходи за посиланнями та якорями всередині сайту. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Базові стилі body задають спільний фон, типографіку та основний колір тексту для всього проєкту. */
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(237, 183, 141, 0.42), transparent 28%),
+    linear-gradient(180deg, #fff8f1 0%, var(--page-bg) 100%);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* Зображення обмежуються шириною контейнера, щоб не ламати сітку сторінки. */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Посилання успадковують колір від батьківського елемента, щоб краще вписуватися в різні блоки дизайну. */
+a {
+  color: inherit;
+}
+
+/* Зовнішня оболонка сторінки допомагає тримати структуру сайту по висоті екрана. */
+.page-shell {
+  min-height: 100vh;
+}
+
+/* Універсальний контейнер обмежує ширину контенту, центрує його та зберігає бокові відступи. */
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Шапка закріплюється зверху і залишається доступною під час прокрутки сторінки. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(46, 33, 24, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* Внутрішній блок хедера вирівнює логотип і меню в одну лінію. */
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 78px;
+}
+
+/* Логотип виділяється розміром і кольором, щоб одразу задавати візуальний акцент сайту. */
+.brand {
+  color: #fff2e4;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Акцентна частина логотипа допомагає зробити назву більш виразною. */
+.brand span {
+  color: #f2b07d;
+}
+
+/* Навігація будується в гнучкий ряд, щоб пункти меню акуратно переносилися на малих екранах. */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Посилання меню оформлюються як компактні кнопки для однакового вигляду всіх сторінок. */
+.site-nav__link {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #f7ece2;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Активний і наведений пункт меню підсвічується, щоб користувач бачив поточний розділ. */
+.site-nav__link:hover,
+.site-nav__link:focus-visible,
+.site-nav__link.is-active {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Спільні вертикальні відступи створюють однаковий ритм між великими секціями сайту. */
+.page-intro,
+.content-section,
+.site-footer {
+  padding: 34px 0 72px;
+}
+
+/* Перша секція отримує додатковий верхній відступ, щоб не прилягати до шапки. */
+.page-intro {
+  padding-top: 54px;
+}
+
+/* Усі основні сітки зібрані в одному місці, щоб простіше підтримувати єдиний підхід до розкладки. */
+.hero-grid,
+.intro-grid,
+.feature-grid,
+.gallery-grid,
+.footer-grid,
+.info-grid,
+.form-layout,
+.contact-grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Двоколонкові блоки використовуються там, де потрібно розділити основний контент і бічну картку. */
+.hero-grid,
+.intro-grid,
+.form-layout {
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: start;
+}
+
+/* Сітка на три колонки підходить для карток переваг і блоків футера. */
+.feature-grid,
+.footer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Галерея спеціально фіксується на трьох колонках для виконання умови домашнього завдання. */
+.gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Двоколонкова сітка застосовується для компактного виводу додаткової інформації. */
+.info-grid,
+.contact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Спільний набір карток підтримує єдиний фон, рамки, тіні та скруглення на всіх сторінках. */
+.card,
+.feature-card,
+.gallery-card,
+.form-card,
+.side-card,
+.article-card,
+.anchor-card,
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+/* Великі змістові картки отримують збільшені внутрішні відступи для комфортного читання. */
+.card,
+.form-card,
+.side-card,
+.article-card,
+.anchor-card,
+.contact-card {
+  padding: 32px;
+}
+
+/* Компактніші картки використовуються в сітках, де в одному ряду стоїть кілька елементів. */
+.feature-card,
+.gallery-card {
+  padding: 24px;
+}
+
+/* Невелика плашка над заголовком допомагає виділяти тип поточного блока або сторінки. */
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Спільні налаштування заголовків роблять типографіку сайту узгодженою. */
+h1,
+h2,
+h3 {
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+/* Розмір головного заголовка адаптується під ширину екрана, щоб зберігати виразність. */
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+}
+
+/* Розмір заголовків другого рівня також масштабується для акуратного візуального балансу. */
+h2 {
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+}
+
+/* Заголовок третього рівня використовується в картках і другорядних блоках. */
+h3 {
+  font-size: 1.35rem;
+}
+
+/* Абзаци та пункти списків отримують приглушений колір для спокійного читання. */
+p,
+li {
+  color: var(--muted);
+}
+
+/* Абзаци мають нижній відступ, щоб текст не зливався в суцільний масив. */
+p {
+  margin: 0 0 16px;
+}
+
+/* Базові списки отримують стандартний відступ зліва для читабельної структури тексту. */
+ul,
+ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Список без маркерів використовується там, де елементи оформлюються як окремі рядки інтерфейсу. */
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Рядки в таких списках розділяються лініями, щоб інформація виглядала впорядковано. */
+.plain-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Останній елемент списку не отримує нижню межу, щоб блок виглядав акуратно. */
+.plain-list li:last-child {
+  border-bottom: 0;
+}
+
+/* Обмеження ширини заголовкового блока допомагає уникати занадто довгих рядків в описах секцій. */
+.section-title {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+/* Ряд кнопок розташовує дії поруч і дозволяє їм переноситися на вузьких екранах. */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Базовий стиль кнопок задає єдину поведінку для посилань і кнопок дії. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Головна кнопка підсвічується акцентним кольором, щоб виділити основну дію. */
+.button--primary {
+  background: var(--accent);
+  color: #fffaf4;
+}
+
+/* Другорядна кнопка виглядає спокійніше і використовується для менш пріоритетних переходів. */
+.button--secondary {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+/* Велике числове значення в картках допомагає візуально виділити ключовий факт або номер. */
+.stat-value {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Обгортка зображення приховує зайве і зберігає акуратні скруглення всередині картки. */
+.gallery-card__media {
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+/* Зображення галереї приводяться до єдиного формату, щоб уся сітка виглядала рівно. */
+.gallery-card__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Сітка форми вирівнює короткі поля у дві колонки для компактного та логічного введення даних. */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Кожен блок поля збирає підпис і елемент керування в одну вертикальну групу. */
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+/* Поля на всю ширину використовуються для довгого тексту і кнопок надсилання. */
+.field--full {
+  grid-column: 1 / -1;
+}
+
+/* Підписи полів виділяються більш насиченим кольором для зручності заповнення форми. */
+.field label {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+/* Усі елементи форми отримують однакові розміри й відступи, щоб форма виглядала структуровано. */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+  color: var(--text);
+  font: inherit;
+}
+
+/* Текстове поле робиться вищим за звичайні поля, адже в нього вводиться розгорнутий коментар. */
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Додаткова примітка під формою візуально відокремлюється як пояснювальний блок. */
+.note-box {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: #f8efe6;
+  color: var(--accent-dark);
+}
+
+/* Навігація за якорями оформлюється як компактний список посилань для швидкого переходу сторінкою. */
+.anchor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Самі посилання якорів виглядають як мінікнопки і легко зчитуються на початку сторінки. */
+.anchor-nav a {
+  display: inline-flex;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #f3e6da;
+  text-decoration: none;
+}
+
+/* Між якорними секціями залишається однакова відстань для рівного ритму читання. */
+.anchor-section + .anchor-section {
+  margin-top: 28px;
+}
+
+/* У футера забирається верхній відступ секції, тому що він уже завершує сторінку. */
+.site-footer {
+  padding-top: 0;
+}
+
+/* Внутрішній контейнер футера збирає контент в окремий темний блок і візуально завершує макет. */
+.site-footer__inner {
+  padding: 28px 32px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: #2e2118;
+  color: #f7ede2;
+}
+
+/* Списки футера очищаються від стандартних маркерів, щоб виглядати як навігаційні колонки. */
+.site-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Між рядками списку футера додається простір для кращої читабельності. */
+.site-footer__list li + li {
+  margin-top: 10px;
+}
+
+/* Посилання футера успадковують світлий колір, щоб добре читатися на темному фоні. */
+.site-footer__list a {
+  color: #f7ede2;
+  text-decoration: none;
+}
+
+/* Нижній рядок футера відділяється зверху лінією і слугує завершальним підписом сторінки. */
+.site-footer__bottom {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ddcab7;
+}
+
+/* Акцентний текст використовується для виділення найважливішого рядка всередині списку або підпису. */
+.accent-text {
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* Медіазапит перебудовує сітки в одну колонку, щоб сайт коректно виглядав на невеликих екранах. */
+@media (max-width: 900px) {
+  /* Хедер переходить у вертикальний режим, коли місця по ширині стає менше. */
+  .site-header__inner {
+    padding: 16px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Усі великі сітки збираються в один стовпець для мобільної та планшетної версії. */
+  .hero-grid,
+  .intro-grid,
+  .feature-grid,
+  .gallery-grid,
+  .footer-grid,
+  .info-grid,
+  .form-layout,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Форма також переходить в одну колонку, щоб поля було зручно заповнювати на вузькому екрані. */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

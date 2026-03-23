@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма | Riverside</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Спільний хедер зберігає однакову структуру меню на сторінці форми -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <!-- Логотип дозволяє в будь-який момент повернутися на головну -->
+        <a class="brand" href="../index.html">River<span>side</span></a>
+
+        <!-- Меню повторюється на всіх сторінках, щоб сайт виглядав цілісно -->
+        <nav class="site-nav" aria-label="Основне меню">
+          <a class="site-nav__link" href="../index.html">Головна</a>
+          <a class="site-nav__link" href="about.html">Про нас</a>
+          <a class="site-nav__link" href="articles.html">Статті</a>
+          <a class="site-nav__link" href="gallery.html">Галерея</a>
+          <a class="site-nav__link is-active" href="form.html">Форма</a>
+          <a class="site-nav__link" href="anchors.html">Якорі</a>
+          <a class="site-nav__link" href="contacts.html">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Основний блок ділиться на форму та допоміжну контактну картку -->
+    <main>
+      <section class="page-intro">
+        <div class="container form-layout">
+          <!-- Форма має обмежену ширину, внутрішні відступи і логічний порядок полів -->
+          <article class="form-card">
+            <span class="eyebrow">Сторінка форми</span>
+            <h1>Форма бронювання столика</h1>
+            <p>Поля вирівняні в сітці, мають однакові відступи й не притискаються до країв контейнера. Довгі елементи займають увесь ряд, щоб форма виглядала логічно і зручно.</p>
+
+            <!-- Форма демонструє приклад структурованого розташування полів у дві колонки -->
+            <form class="form-grid" action="#" method="post">
+              <div class="field">
+                <label for="name">Ім'я</label>
+                <input id="name" name="name" type="text" placeholder="Вкажіть ваше ім'я" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" placeholder="+380" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required>
+              </div>
+
+              <div class="field">
+                <label for="guests">Кількість гостей</label>
+                <select id="guests" name="guests">
+                  <option>1-2 гості</option>
+                  <option>3-4 гості</option>
+                  <option>5-6 гостей</option>
+                  <option>7+ гостей</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="date">Дата</label>
+                <input id="date" name="date" type="date">
+              </div>
+
+              <div class="field">
+                <label for="time">Час</label>
+                <input id="time" name="time" type="time">
+              </div>
+
+              <div class="field field--full">
+                <label for="comment">Побажання</label>
+                <textarea id="comment" name="comment" placeholder="Наприклад: потрібен столик біля вікна"></textarea>
+              </div>
+
+              <div class="field field--full">
+                <button class="button button--primary" type="submit">Надіслати</button>
+              </div>
+            </form>
+
+            <p class="note-box">Логіка форми: короткі поля розміщені поруч для економії місця, а текстове поле винесене окремо на всю ширину для зручного введення.</p>
+          </article>
+
+          <!-- Бічна картка дає користувачу корисну інформацію поруч із формою -->
+          <aside class="side-card">
+            <h2>Контакти для бронювання</h2>
+            <ul class="plain-list">
+              <li><strong>Адреса:</strong> вул. Набережна, 14, Київ</li>
+              <li><strong>Телефон:</strong> +380 67 555 44 22</li>
+              <li><strong>Email:</strong> hello@riverside.cafe</li>
+              <li><strong>Графік:</strong> щодня з 08:00 до 22:00</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер повторює оформлення інших сторінок і закриває макет -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer-grid">
+          <section>
+            <h3>Riverside</h3>
+            <p>Форма показує охайне вирівнювання полів і правильну роботу з відступами.</p>
+          </section>
+
+          <section>
+            <h3>Розділи</h3>
+            <ul class="site-footer__list">
+              <li><a href="../index.html">Головна</a></li>
+              <li><a href="gallery.html">Галерея</a></li>
+              <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Переваги</h3>
+            <ul class="site-footer__list">
+              <li>Чітке вирівнювання полів</li>
+              <li>Зручна ширина форми</li>
+              <li class="accent-text">Логічне групування елементів</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__bottom">Форма стилізована через класи, що відповідає вимогам домашнього завдання.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

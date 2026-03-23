@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Домашнє завдання №7 — Навігація</title>
+  <style>
+    /* Проста базова стилізація головної сторінки для швидкого переходу між прикладами. */
+    :root {
+      --bg: #eef3ff;
+      --card: #ffffff;
+      --text: #1f2c48;
+      --accent: #2d5cbf;
+      --line: #c8d8fb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .wrap {
+      width: min(920px, 100%);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(31, 48, 84, 0.08);
+    }
+    h1 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 16px;
+      color: #2d3d62;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+    li {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfdff;
+      padding: 12px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .sub {
+      margin: 4px 0 0;
+      color: #4a5f84;
+      font-size: 0.95rem;
+    }
+    .btn-all {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: #f1f5ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Головна сторінка з вбудованою навігацією: один клік → потрібний урок з практикою. -->
+  <main class="wrap">
+    <h1>Домашнє завдання №7 — головне меню</h1>
+    <p>Нижче список сторінок з практичними завданнями до теми:
+      <strong>div/span, normalize vs reset, display, box-sizing, float/clear, overflow, позиціонування</strong>.</p>
+
+    <!-- Кожен пункт веде на окрему HTML-сторінку з прикладами та короткими поясненнями. -->
+    <ul>
+      <li>
+        <a href="01-basic-div-span.html">01 — Основні теги верстки: div та span</a>
+        <p class="sub">Показую блокові й інлайнові елементи в дії.</p>
+      </li>
+      <li>
+        <a href="02-normalize.html">02 — normalize.css</a>
+        <p class="sub">Демонстрація нормалізації стандартних браузерних стилів.</p>
+      </li>
+      <li>
+        <a href="03-reset.html">03 — reset.css</a>
+        <p class="sub">Показую «чисте» скидання базових стилів та ручне налаштування.</p>
+      </li>
+      <li>
+        <a href="04-display.html">04 — Властивість display</a>
+        <p class="sub">Порівняння inline, block, flex, а також display: none.</p>
+      </li>
+      <li>
+        <a href="05-box-sizing.html">05 — Box sizing</a>
+        <p class="sub">Порівняння content-box та border-box на реальних блоках.</p>
+      </li>
+      <li>
+        <a href="06-float-clear.html">06 — Float і clear</a>
+        <p class="sub">Експерименти з обтіканням елементів і скиданням float.</p>
+      </li>
+      <li>
+        <a href="07-overflow-position.html">07 — Overflow і позиціонування</a>
+        <p class="sub">overflow-контейнер, fixed/sticky, static/relative/absolute.</p>
+      </li>
+    </ul>
+
+    <a class="btn-all" href="./">Відкрити цю сторінку ще раз</a>
+  </main>
+</body>
+</html>

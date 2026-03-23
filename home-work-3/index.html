@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашнє завдання 3 | Riverside</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Спільний хедер задає однаковий вигляд шапки для всього сайту -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <!-- Логотип веде на головну і допомагає користувачу не загубитися між сторінками -->
+        <a class="brand" href="index.html">River<span>side</span></a>
+
+        <!-- Меню повторюється на всіх сторінках для уніфікованого оформлення -->
+        <nav class="site-nav" aria-label="Основне меню">
+          <a class="site-nav__link is-active" href="index.html">Головна</a>
+          <a class="site-nav__link" href="pages/about.html">Про нас</a>
+          <a class="site-nav__link" href="pages/articles.html">Статті</a>
+          <a class="site-nav__link" href="pages/gallery.html">Галерея</a>
+          <a class="site-nav__link" href="pages/form.html">Форма</a>
+          <a class="site-nav__link" href="pages/anchors.html">Якорі</a>
+          <a class="site-nav__link" href="pages/contacts.html">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Перший екран знайомить з темою сайту і демонструє презентаційний блок -->
+    <main>
+      <section class="page-intro">
+        <div class="container hero-grid">
+          <!-- Основна картка коротко пояснює логіку побудови домашнього завдання -->
+          <article class="card">
+            <span class="eyebrow">Домашнє завдання 3.1</span>
+            <h1>Багатосторінковий сайт кав'ярні з єдиним стилем оформлення</h1>
+            <p>Цей сайт створений як навчальний проєкт для демонстрації візуального оформлення багатосторінкового веб-сайту. На сторінках використано спільний контейнер, однакове меню, один стиль для футера, окрему галерею та охайну форму.</p>
+            <p>Уся стилізація побудована через класи, а над основними HTML-блоками додані коментарі з описом логіки розміщення елементів.</p>
+            <div class="button-row">
+              <a class="button button--primary" href="pages/gallery.html">Подивитися галерею</a>
+              <a class="button button--secondary" href="pages/form.html">Перейти до форми</a>
+            </div>
+          </article>
+
+          <!-- Бічна картка додає баланс макету і підкреслює переваги структури -->
+          <aside class="side-card">
+            <h2>Що перевіряє це ДЗ</h2>
+            <ul class="plain-list">
+              <li>Наявність контентного контейнера з відступами та центруванням.</li>
+              <li>Однаковий дизайн меню та футера на всіх сторінках.</li>
+              <li>Логічно вирівняну форму без притискання полів до країв.</li>
+              <li>Галерею із зображеннями, розташованими по три в ряд.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Блок карток показує структуру сайту і робить головну сторінку більш змістовною -->
+      <section class="content-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Структура навчального сайту</h2>
+            <p>Кожна сторінка виконує окрему роль, але візуально залишається частиною одного цілого завдяки єдиній стилістиці.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="stat-value">01</span>
+              <h3>Інформаційні сторінки</h3>
+              <p>Розділи "Про нас" і "Статті" дають приклад контентних сторінок із текстом і картками.</p>
+            </article>
+
+            <article class="feature-card">
+              <span class="stat-value">02</span>
+              <h3>Візуальна галерея</h3>
+              <p>Галерея побудована сіткою по три елементи в рядок для впорядкованого перегляду.</p>
+            </article>
+
+            <article class="feature-card">
+              <span class="stat-value">03</span>
+              <h3>Сторінка форми</h3>
+              <p>Форма бронювання має логічний порядок полів, рівні відступи та адекватну ширину.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Спільний футер завершує сторінку і повторюється на всіх інших сторінках -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer-grid">
+          <section>
+            <h3>Riverside</h3>
+            <p>Навчальний багатосторінковий сайт для домашнього завдання з HTML і CSS.</p>
+          </section>
+
+          <section>
+            <h3>Розділи</h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Головна</a></li>
+              <li><a href="pages/gallery.html">Галерея</a></li>
+              <li><a href="pages/form.html">Форма</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Переваги</h3>
+            <ul class="site-footer__list">
+              <li>Спільні стилі для всіх сторінок</li>
+              <li>Контейнер із відступами</li>
+              <li class="accent-text">Коментарі над основними блоками</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__bottom">Домашнє завдання 3.1. Візуальне оформлення багатосторінкового веб-сайту.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

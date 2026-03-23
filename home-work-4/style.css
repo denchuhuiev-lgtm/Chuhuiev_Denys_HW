@@ -1,0 +1,90 @@
+/* Універсальний селектор скидає стандартні відступи та вирівнює розрахунок розмірів. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Базове правило для сторінки додає спокійний фон і робить текст читабельним. */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
+  color: #1b2430;
+}
+
+/* Контейнер обмежує ширину сторінки та робить макет акуратним по центру. */
+.page {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+}
+
+/* Спільне оформлення вирівнює всі приклади та робить їх схожими на окремі картки. */
+.item {
+  display: block;
+  margin-bottom: 16px;
+  padding: 16px 18px;
+  border: 1px solid #d7dfeb;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 24px rgba(28, 42, 64, 0.06);
+  text-decoration: none;
+  line-height: 1.45;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Невеликий ефект наведення робить сторінку візуально охайнішою. */
+.item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(28, 42, 64, 0.1);
+}
+
+/* Селектор за тегом. */
+p {
+  background-color: #dbeafe;
+}
+
+/* Селектор за класом. */
+.by-class {
+  background-color: #fde68a;
+}
+
+/* Селектор за id. */
+#by-id {
+  background-color: #fecaca;
+}
+
+/* Селектор за частиною значення атрибута. */
+a[href*="page"] {
+  background-color: #d9f99d;
+}
+
+/* Контекстний селектор. */
+div p {
+  color: #1e3a8a;
+}
+
+/* Дочірній селектор. */
+.child-box > p {
+  background-color: #fdba74;
+}
+
+/* Селектор безпосереднього сусіда. */
+h3 + p {
+  background-color: #f9a8d4;
+}
+
+/* Селектор усіх наступних сусідів. */
+span ~ p {
+  background-color: #a7f3d0;
+}
+
+/* Селектор за початком значення атрибута. */
+a[href^="https://example.com"] {
+  color: #6d28d9;
+}
+
+/* Комбінований селектор з id, класом, атрибутом і вкладеністю. */
+#combo-id .combo-final[data-file$=".pdf"] p {
+  background-color: #f5d0fe;
+}

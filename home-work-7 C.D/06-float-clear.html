@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Урок 7 — 06. float і clear</title>
+  <style>
+    /* Два плаваючі блоку знову підтверджують поведінку обтікання та очищення. */
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 24px;
+      background: #f0f6ff;
+      color: #1e2b45;
+    }
+    .menu a { margin-right: 14px; color: #1e4f9e; text-decoration: none; font-weight: 600; }
+    .menu { margin-bottom: 16px; }
+    .float-left, .float-right {
+      width: 160px;
+      padding: 12px;
+      color: #11264a;
+      border: 1px solid #2e5cb1;
+      background: #dce7ff;
+    }
+    .float-left { float: left; margin-right: 12px; }
+    .float-right { float: right; margin-left: 12px; }
+    .clear-block {
+      clear: both;
+      padding: 10px;
+      background: #fff9d9;
+      border: 1px solid #d0b845;
+      margin-top: 12px;
+    }
+    .flow {
+      border: 1px solid #9db4dd;
+      background: #ffffff;
+      padding: 12px;
+      margin-top: 16px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html">Головна</a>
+    <a href="01-basic-div-span.html">1) div/span</a>
+    <a href="02-normalize.html">2) normalize.css</a>
+    <a href="03-reset.html">3) reset.css</a>
+    <a href="04-display.html">4) display</a>
+    <a href="05-box-sizing.html">5) box-sizing</a>
+    <a href="06-float-clear.html">6) float/clear</a>
+    <a href="07-overflow-position.html">7) overflow/position</a>
+  </nav>
+
+  <h1>6) Практика float і clear</h1>
+  <p>
+    Спочатку два елементи обтікаються текстом, потім очищуємо обтікання перед наступним блоком.
+  </p>
+
+  <!-- Два float-блоки демонструють, як текст під них переноситься. -->
+  <div class="float-left">left float</div>
+  <div class="float-right">right float</div>
+  <p>
+    Текст починає обтікати лівий і правий елементи з обох сторін. Коли потрібно почати «новий рядок»,
+    застосовуємо clear, щоб не дати наступному блоку приліпнути до плаваючих.
+  </p>
+
+  <!-- clear: both зупиняє обтікання зліва і справа, відновлюючи нормальний потік. -->
+  <div class="clear-block">Цей блок має clear: both і стоїть під плаваючими.</div>
+
+  <!-- overflow: hidden на контейнері також може «обхопити» плаваючі елементи всередині. -->
+  <div class="flow">
+    <div class="float-left">float 1</div>
+    <div class="float-left">float 2</div>
+    <p>Цей контейнер має overflow: hidden і утримує плаваючі всередині.</p>
+  </div>
+</body>
+</html>
+
+

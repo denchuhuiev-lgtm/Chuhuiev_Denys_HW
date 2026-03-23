@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ДЗ №6 — Таблиця в стилі Мондріана</title>
+  <style>
+    /* Глобальні змінні кольорів: спрощують підтримку палітри в усьому макеті */
+    :root {
+      --bg: #eef1ff;
+      --bg2: #f6f8ff;
+      --line: #131313;
+      --muted: #495266;
+      --yellow: #f0cd3f;
+      --red: #e04f4f;
+      --blue: #3d63bf;
+    }
+
+    /* Базове нормалізування розміру елементів та мінімальний reset */
+    * { box-sizing: border-box; }
+    /* Page shell: центрування контенту на сторінці для акуратної демонстрації */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #202636;
+      background: linear-gradient(140deg, var(--bg), var(--bg2));
+      padding: 32px 12px 44px;
+    }
+
+    /* Контейнер сторінки: текст + рамка з таблицею */
+    .wrap {
+      width: min(920px, 100%);
+      display: grid;
+      gap: 20px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    /* Заголовок уроку */
+    h1 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      letter-spacing: 0.04em;
+    }
+
+    .desc {
+      max-width: 680px;
+      color: var(--muted);
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Рамка "картини": фіксована пропорція та товста межа, як у Мондріана */
+    .frame {
+      width: min(680px, 94vw);
+      aspect-ratio: 7 / 5;
+      background: #fff;
+      border: 7px solid var(--line);
+      padding: 0;
+      box-shadow: 0 18px 35px rgba(17, 27, 57, 0.15);
+    }
+
+    /* Таблиця як основа композиції, без display-хаосів: класична table-layout */
+    table {
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    /* Базова комірка: товста чорна лінія-границя між площинами */
+    .cell {
+      border: 6px solid var(--line);
+      background: #fff;
+    }
+
+    /* Кольорові класи, які формують візуальні акценти */
+    .yellow { background: var(--yellow); }
+    .red { background: var(--red); }
+    .blue { background: var(--blue); }
+    /* Білий сегмент залишився нейтральним фоном */
+    .empty { background: #ffffff; }
+
+    /* Фіксовані висоти рядків задають загальні пропорції полотна */
+    .r1 { height: 38%; }
+    .r2 { height: 16%; }
+    .r3 { height: 16%; }
+    .r4 { height: 16%; }
+    .r5 { height: 14%; }
+
+    /* Пояснювальний текст під композицією */
+    .note {
+      max-width: 760px;
+      text-align: left;
+      font-size: 0.96rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <!-- Основний контейнер: показуємо завдання й результат разом в одному блоці -->
+  <main class="wrap" aria-label="Домашнє завдання №6: відтворення композиції Мондріана таблицею">
+    <h1>Домашнє завдання №6</h1>
+    <p class="desc">
+      Верстка виконана тільки за допомогою таблиці без прихованих стовпців і рядків.
+      Зони об'єднано через <strong>rowspan</strong>/<strong>colspan</strong>, щоб отримати
+      більші монолітні сегменти, як у композиціях П'єта Мондріана.
+    </p>
+
+    <!-- Рамка-полотно: центр композиції, який стилістично відсилає до картин -->
+    <div class="frame">
+      <!-- Таблиця з об’єднанням осередків (rowspan/colspan) для великих сегментів -->
+      <table aria-label="Мозаїка в стилі Пієта Мондріана">
+        <colgroup>
+          <!-- colgroup фіксує відносні ширини стовпців: мінімальна, контрольована сітка -->
+          <col style="width: 18%">
+          <col style="width: 18%">
+          <col style="width: 15%">
+          <col style="width: 17%">
+          <col style="width: 14%">
+          <col style="width: 18%">
+        </colgroup>
+        <tr class="r1">
+          <!-- Перший великий жовтий блок зліва: об’єднання 2 колонок і 3 рядів -->
+          <td class="cell yellow" colspan="2" rowspan="3"></td>
+          <td class="cell empty" rowspan="2"></td>
+          <td class="cell blue" colspan="2"></td>
+          <td class="cell red" rowspan="2"></td>
+        </tr>
+        <tr class="r2">
+          <!-- Верхній рядок розбитий на великі нейтральні та двоколірні площини -->
+          <td class="cell empty" colspan="2"></td>
+        </tr>
+        <tr class="r3">
+          <td class="cell blue"></td>
+          <td class="cell empty" colspan="2"></td>
+          <td class="cell yellow"></td>
+        </tr>
+        <tr class="r4">
+          <!-- Четвертий рядок: акцент червоним і розширений синій у правій частині -->
+          <td class="cell empty" colspan="3"></td>
+          <td class="cell red"></td>
+          <td class="cell blue" colspan="2"></td>
+        </tr>
+        <tr class="r5">
+          <!-- Останній рядок: завершення композиції великим червоним ліворуч -->
+          <td class="cell red" colspan="2"></td>
+          <td class="cell empty"></td>
+          <td class="cell yellow" colspan="3"></td>
+        </tr>
+      </table>
+    </div>
+
+    <p class="note">
+      Вимоги виконані: таблиця має мінімальну сітку, усі комірки явні; немає прихованих
+      колонок/рядків; великі площини утворено об'єднанням сусідніх комірок; композиція зберігає
+      характерні для Мондріана контрастні кольори, великий акцент на прямокутниках та чіткі чорні лінії.
+    </p>
+  </main>
+</body>
+</html>

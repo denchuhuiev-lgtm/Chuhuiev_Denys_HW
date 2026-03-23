@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Урок 7 — 02. normalize.css</title>
+  <!-- Підключаю normalize.css, щоб показати, як нормалізуються стандартні браузерні стилі без повного скидання. -->
+  <link rel="stylesheet" href="normalize.css" />
+  <style>
+    /* Власні стилі дають уніфікований вигляд, а normalize.css прибирає типові розбіжності між браузерами. */
+    body {
+      font-family: "Trebuchet MS", sans-serif;
+      margin: 24px;
+      background: #eef6ff;
+      color: #1b2233;
+    }
+    .menu a { margin-right: 14px; color: #1248b8; text-decoration: none; font-weight: 600; }
+    .menu { margin-bottom: 16px; }
+    .note {
+      background: #ffffff;
+      padding: 14px;
+      border: 1px solid #c4d4ee;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    ul { margin-top: 8px; padding-left: 24px; }
+    .btn {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid #0f55d4;
+      background: #d7e6ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Єдина навігація залишає одну логіку між усіма семи сторінками. -->
+  <nav class="menu">
+    <a href="index.html">Головна</a>
+    <a href="01-basic-div-span.html">1) div/span</a>
+    <a href="02-normalize.html">2) normalize.css</a>
+    <a href="03-reset.html">3) reset.css</a>
+    <a href="04-display.html">4) display</a>
+    <a href="05-box-sizing.html">5) box-sizing</a>
+    <a href="06-float-clear.html">6) float/clear</a>
+    <a href="07-overflow-position.html">7) overflow/position</a>
+  </nav>
+
+  <main>
+    <h1>2) Нормалізація стилів</h1>
+    <!-- Тут пояснюю результат: normalize.css зберігає корисні базові стилі, але вирівнює відмінності. -->
+    <p>
+      На цій сторінці використано файл <code>normalize.css</code>. Його мета — зробити стандартні
+      елементи браузера передбачуванішими та однаковішими, не знищуючи корисні базові стилі.
+    </p>
+
+    <div class="note">
+      <p><strong>Що перевірив:</strong></p>
+      <ul>
+        <li>Використав заголовки, список, посилання, кнопку та абзаци без додаткових скидання.</li>
+        <li>normalize.css вирівняв відступи у формах та шрифтові різниці, залишивши звичний базовий вигляд.</li>
+      </ul>
+      <a class="btn" href="#">Демонстраційне посилання</a>
+    </div>
+  </main>
+</body>
+</html>
+
+

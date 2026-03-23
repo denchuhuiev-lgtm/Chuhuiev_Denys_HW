@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Якорі | Riverside</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Спільний хедер забезпечує однакове меню навіть на допоміжній сторінці -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <!-- Логотип веде на головну і зберігає цілісність проєкту -->
+        <a class="brand" href="../index.html">River<span>side</span></a>
+
+        <!-- Меню повторює структуру всього сайту і полегшує навігацію -->
+        <nav class="site-nav" aria-label="Основне меню">
+          <a class="site-nav__link" href="../index.html">Головна</a>
+          <a class="site-nav__link" href="about.html">Про нас</a>
+          <a class="site-nav__link" href="articles.html">Статті</a>
+          <a class="site-nav__link" href="gallery.html">Галерея</a>
+          <a class="site-nav__link" href="form.html">Форма</a>
+          <a class="site-nav__link is-active" href="anchors.html">Якорі</a>
+          <a class="site-nav__link" href="contacts.html">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Сторінка з якорями демонструє навігацію по довгому контенту -->
+    <main>
+      <section class="page-intro">
+        <div class="container">
+          <!-- Картка з навігацією по сторінці стоїть на початку для швидкого переходу -->
+          <article class="anchor-card" id="top">
+            <span class="eyebrow">Сторінка якорів</span>
+            <h1>Навігація всередині довгого контенту</h1>
+            <p>Якорі дозволяють швидко переходити до потрібного розділу на сторінці. Для стилізації тут також використовуються класи, а ID залишені лише для самої роботи посилань.</p>
+            <ul class="anchor-nav">
+              <li><a href="#section-1">Розділ 1</a></li>
+              <li><a href="#section-2">Розділ 2</a></li>
+              <li><a href="#section-3">Розділ 3</a></li>
+            </ul>
+          </article>
+
+          <!-- Нижче йдуть самі розділи з достатніми відступами для комфортного читання -->
+          <article class="anchor-card anchor-section" id="section-1">
+            <h2>Розділ 1</h2>
+            <p>Перший розділ показує, як можна оформлювати великий текстовий блок у межах того ж контейнера. Важливо, що навіть довгий контент не виходить за межі макета й зберігає однакові відступи.</p>
+            <p><a href="#top">Повернутися вгору</a></p>
+          </article>
+
+          <!-- Другий розділ підтримує ту саму візуальну логіку і відстані між блоками -->
+          <article class="anchor-card anchor-section" id="section-2">
+            <h2>Розділ 2</h2>
+            <p>Другий розділ демонструє повторювану структуру карток. Саме така послідовність робить сторінку впорядкованою, а переходи за якорями стають передбачуваними та зрозумілими.</p>
+            <p><a href="#top">Повернутися вгору</a></p>
+          </article>
+
+          <!-- Третій розділ завершує приклад внутрішньої навігації сторінки -->
+          <article class="anchor-card anchor-section" id="section-3">
+            <h2>Розділ 3</h2>
+            <p>Останній розділ завершує сторінку з якорями. Він показує, що навіть допоміжні сторінки мають залишатися частиною спільної дизайн-системи і не вибиватися зі стилю всього сайту.</p>
+            <p><a href="#top">Повернутися вгору</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер повторює загальний стиль та завершує сторінку -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer-grid">
+          <section>
+            <h3>Riverside</h3>
+            <p>Сторінка з якорями демонструє навігацію по довгому контенту.</p>
+          </section>
+
+          <section>
+            <h3>Переходи</h3>
+            <ul class="site-footer__list">
+              <li><a href="../index.html">Головна</a></li>
+              <li><a href="articles.html">Статті</a></li>
+              <li><a href="form.html">Форма</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Особливість</h3>
+            <ul class="site-footer__list">
+              <li>ID використані лише для якорів</li>
+              <li>Стилі залишаються класовими</li>
+              <li class="accent-text">Навігація по довгому тексту</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__bottom">На цій сторінці ID не використовуються для стилізації, тільки для переходів.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

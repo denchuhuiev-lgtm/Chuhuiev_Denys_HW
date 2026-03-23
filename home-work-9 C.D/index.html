@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple Site landing page built with Flexbox and CSS variables.">
+  <title>Simple Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-nav__link" href="#home">HOME</a>
+        <a class="site-nav__link" href="#about">ABOUT</a>
+        <a class="site-nav__link" href="#works">WORKS</a>
+        <a class="site-nav__link" href="#process">PROCESS</a>
+        <a class="site-nav__link" href="#contacts">CONTACTS</a>
+      </nav>
+
+      <section class="hero" id="home">
+        <div class="hero__content">
+          <h1 class="hero__title">Design and Layout</h1>
+          <p class="hero__text">
+            Lorem Ipsum is placeholder text commonly used in printing and web design.
+            Lorem Ipsum has been the standard dummy text for 500 years.
+          </p>
+          <a class="button" href="#contacts">WRITE TO ME</a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="about section" id="about">
+      <div class="container section__inner">
+        <h2 class="section__title">About Me</h2>
+        <p class="section__text">
+          Lorem Ipsum is placeholder text commonly used in printing and web design.
+          Lorem Ipsum has been the standard dummy text for 500 years.
+        </p>
+      </div>
+    </section>
+
+    <section class="numbers" id="works">
+      <div class="container numbers__list" aria-label="Project statistics">
+        <article class="numbers__item">
+          <img class="numbers__icon" src="File/project.svg" alt="" aria-hidden="true">
+          <div class="numbers__content">
+            <strong class="numbers__value">40+</strong>
+            <span class="numbers__label">projects</span>
+          </div>
+        </article>
+        <article class="numbers__item">
+          <img class="numbers__icon" src="File/project.svg" alt="" aria-hidden="true">
+          <div class="numbers__content">
+            <strong class="numbers__value">40+</strong>
+            <span class="numbers__label">projects</span>
+          </div>
+        </article>
+        <article class="numbers__item">
+          <img class="numbers__icon" src="File/project.svg" alt="" aria-hidden="true">
+          <div class="numbers__content">
+            <strong class="numbers__value">40+</strong>
+            <span class="numbers__label">projects</span>
+          </div>
+        </article>
+        <article class="numbers__item">
+          <img class="numbers__icon" src="File/project.svg" alt="" aria-hidden="true">
+          <div class="numbers__content">
+            <strong class="numbers__value">40+</strong>
+            <span class="numbers__label">projects</span>
+          </div>
+        </article>
+        <article class="numbers__item">
+          <img class="numbers__icon" src="File/project.svg" alt="" aria-hidden="true">
+          <div class="numbers__content">
+            <strong class="numbers__value">40+</strong>
+            <span class="numbers__label">projects</span>
+          </div>
+        </article>
+        <article class="numbers__item">
+          <img class="numbers__icon" src="File/project.svg" alt="" aria-hidden="true">
+          <div class="numbers__content">
+            <strong class="numbers__value">40+</strong>
+            <span class="numbers__label">projects</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="process section" id="process">
+      <div class="container section__inner">
+        <h2 class="section__title">How I Work</h2>
+        <p class="section__text">
+          Lorem Ipsum is placeholder text commonly used in printing and web design.
+          Lorem Ipsum has been the standard dummy text for 500 years.
+        </p>
+
+        <div class="video-card">
+          <video
+            class="video-card__media"
+            preload="metadata"
+            playsinline
+            aria-label="Portfolio process video"
+          >
+            <source src="File/Code.mp4" type="video/mp4">
+          </video>
+          <button class="video-card__play" type="button" aria-label="Play video">
+            <span class="video-card__play-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container site-footer__inner">
+      <h2 class="site-footer__title">Denys Chuhuiev</h2>
+      <p class="site-footer__text">(c) 2018. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

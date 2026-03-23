@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея | Riverside</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Спільний хедер залишає однакову навігацію на сторінці галереї -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <!-- Логотип допомагає швидко повернутися на головну сторінку -->
+        <a class="brand" href="../index.html">River<span>side</span></a>
+
+        <!-- Меню дублює інші сторінки, щоб користувач бачив єдину структуру сайту -->
+        <nav class="site-nav" aria-label="Основне меню">
+          <a class="site-nav__link" href="../index.html">Головна</a>
+          <a class="site-nav__link" href="about.html">Про нас</a>
+          <a class="site-nav__link" href="articles.html">Статті</a>
+          <a class="site-nav__link is-active" href="gallery.html">Галерея</a>
+          <a class="site-nav__link" href="form.html">Форма</a>
+          <a class="site-nav__link" href="anchors.html">Якорі</a>
+          <a class="site-nav__link" href="contacts.html">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Вступ пояснює логіку організації галереї у три колонки -->
+    <main>
+      <section class="page-intro">
+        <div class="container intro-grid">
+          <!-- Текстова картка знайомить з правилами побудови галереї -->
+          <article class="article-card">
+            <span class="eyebrow">Сторінка галереї</span>
+            <h1>Фотографії подані впорядкованою сіткою</h1>
+            <p>Для виконання вимоги домашнього завдання зображення розміщені по три елементи в рядок. Завдяки спільним відступам, карткам і підписам галерея виглядає структуровано та охайно.</p>
+          </article>
+
+          <!-- Бічна картка додає пояснення щодо адаптивної поведінки -->
+          <aside class="side-card">
+            <h2>Принцип оформлення</h2>
+            <p>На широкому екрані сітка показує три картки в ряд. На вузьких екранах сітка стає одноколонковою, щоб зображення залишалися достатньо великими для перегляду.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Галерея використовує існуючі локальні зображення з папки images -->
+      <section class="content-section">
+        <div class="container">
+          <div class="gallery-grid">
+            <!-- Кожна картка поєднує фото і короткий опис для зручності перегляду -->
+            <figure class="gallery-card">
+              <div class="gallery-card__media">
+                <img src="../images/img1.jpg" alt="Фото інтер'єру кав'ярні">
+              </div>
+              <figcaption>
+                <h3>Інтер'єр</h3>
+                <p>Світлий простір для ранкової кави та спокійних зустрічей.</p>
+              </figcaption>
+            </figure>
+
+            <!-- Однакова структура карток підтримує ритм і чисту композицію -->
+            <figure class="gallery-card">
+              <div class="gallery-card__media">
+                <img src="../images/img2.jpg" alt="Фото авторського напою">
+              </div>
+              <figcaption>
+                <h3>Напої</h3>
+                <p>Акцент на красиву подачу та теплі кольори у кадрі.</p>
+              </figcaption>
+            </figure>
+
+            <!-- Третя картка завершує перший рядок галереї -->
+            <figure class="gallery-card">
+              <div class="gallery-card__media">
+                <img src="../images/img3.jpg" alt="Фото десерту в кав'ярні">
+              </div>
+              <figcaption>
+                <h3>Десерти</h3>
+                <p>Солодка вітрина доповнює атмосферу затишного закладу.</p>
+              </figcaption>
+            </figure>
+
+            <!-- Наступні три елементи формують другий рівний рядок -->
+            <figure class="gallery-card">
+              <div class="gallery-card__media">
+                <img src="../images/img4.jpg" alt="Фото тераси">
+              </div>
+              <figcaption>
+                <h3>Тераса</h3>
+                <p>Зона для відпочинку на свіжому повітрі у теплу пору року.</p>
+              </figcaption>
+            </figure>
+
+            <!-- П'ята картка продовжує спільний стиль галереї -->
+            <figure class="gallery-card">
+              <div class="gallery-card__media">
+                <img src="../images/img5.jpg" alt="Фото сніданку">
+              </div>
+              <figcaption>
+                <h3>Сніданки</h3>
+                <p>Затишна сервіровка підкреслює домашній характер закладу.</p>
+              </figcaption>
+            </figure>
+
+            <!-- Остання картка завершує галерею шістьма елементами -->
+            <figure class="gallery-card">
+              <div class="gallery-card__media">
+                <img src="../images/img6.jpg" alt="Фото вечірньої атмосфери">
+              </div>
+              <figcaption>
+                <h3>Події</h3>
+                <p>Невеликі вечори та зустрічі роблять простір живим і дружнім.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер повторюється без змін для уніфікованого завершення сторінки -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer-grid">
+          <section>
+            <h3>Riverside</h3>
+            <p>Галерея показує візуальну частину багатосторінкового сайту.</p>
+          </section>
+
+          <section>
+            <h3>Навігація</h3>
+            <ul class="site-footer__list">
+              <li><a href="../index.html">Головна</a></li>
+              <li><a href="form.html">Форма</a></li>
+              <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Вимога</h3>
+            <ul class="site-footer__list">
+              <li>Три елементи в одному рядку</li>
+              <li>Спільні відступи та картки</li>
+              <li class="accent-text">Логічно організований перегляд</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__bottom">Для галереї використані локальні зображення з папки images.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Урок 7 — 03. reset.css</title>
+  <!-- Підключаю reset.css, щоб показати очищення вбудованих стилів браузера до базового стану. -->
+  <link rel="stylesheet" href="reset.css" />
+  <style>
+    /* Тут мінімальні стилі потрібні, бо reset прибирає типові відступи, маркери списків, заготовлені кольори тощо. */
+    body {
+      font-family: "Verdana", sans-serif;
+      margin: 24px;
+      background: #fff8f0;
+      color: #2a1f13;
+    }
+    .menu a { margin-right: 14px; color: #7a3b00; text-decoration: none; font-weight: 600; }
+    .menu { margin-bottom: 16px; }
+    .note {
+      background: #fff;
+      border: 1px solid #ead8b3;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      border: 1px solid #7a3b00;
+      background: #ffefd5;
+      color: #7a3b00;
+      text-decoration: none;
+    }
+    ul { margin-bottom: 10px; }
+    li { margin-left: 20px; list-style: disc; }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html">Головна</a>
+    <a href="01-basic-div-span.html">1) div/span</a>
+    <a href="02-normalize.html">2) normalize.css</a>
+    <a href="03-reset.html">3) reset.css</a>
+    <a href="04-display.html">4) display</a>
+    <a href="05-box-sizing.html">5) box-sizing</a>
+    <a href="06-float-clear.html">6) float/clear</a>
+    <a href="07-overflow-position.html">7) overflow/position</a>
+  </nav>
+
+  <main>
+    <h1>3) <span>Скидання стилів</span></h1>
+    <!-- Цей приклад показує чисте полотно після reset.css, де все треба задавати вручну. -->
+    <p>
+      На цій сторінці ми підключили <code>reset.css</code>. Різниця з normalize: відсутні практично всі
+      браузерні дефолтні відступи й оформлення, тому сторінка виглядає «порожньо» до додавання власних правил.
+    </p>
+
+    <div class="note">
+      <p><strong>Що змінилося:</strong></p>
+      <ul>
+        <li>margin/padding у body та списків скинуті, тому без наших правил контент іде вліво.</li>
+        <li>стилізацію заголовків, кнопок і посилань доводиться описувати повністю.</li>
+      </ul>
+      <a class="btn" href="#">Демонстраційне посилання</a>
+    </div>
+  </main>
+</body>
+</html>
+
+

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Форма</title>
+  </head>
+  <body>
+    <header>
+      <h1>Форма реєстрації</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="articles.html">Статті</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="form.html">Форма</a></li>
+        <li><a href="anchors.html">Якорі</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Особисті дані</legend>
+
+          <div>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Додаткова інформація</legend>
+
+          <div>
+            <p>Стать:</p>
+            <label
+              ><input type="radio" name="gender" value="male" /> Чоловік</label
+            >
+            <label
+              ><input type="radio" name="gender" value="female" /> Жінка</label
+            >
+          </div>
+
+          <div>
+            <p>Інтереси:</p>
+            <label><input type="checkbox" name="html" /> HTML</label>
+            <label><input type="checkbox" name="css" /> CSS</label>
+            <label><input type="checkbox" name="js" /> JavaScript</label>
+          </div>
+
+          <div>
+            <label for="course">Курс:</label>
+            <select id="course" name="course">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Коментар:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <div>
+          <button type="submit">Надіслати</button>
+          <button type="reset">Очистити</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026</p>
+    </footer>
+  </body>
+</html>

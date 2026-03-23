@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Головна сторінка з навігацією по домашніх завданнях курсу FullStack від iTHillel."
+  >
+  <title>FullStack iTHillel | Домашні завдання</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --surface: rgba(255, 252, 247, 0.88);
+      --surface-strong: #fffaf1;
+      --text: #1f2430;
+      --muted: #5a6472;
+      --accent: #c25b2f;
+      --accent-dark: #8d3918;
+      --line: rgba(31, 36, 48, 0.12);
+      --shadow: 0 18px 50px rgba(64, 39, 22, 0.14);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(194, 91, 47, 0.16), transparent 28%),
+        radial-gradient(circle at right, rgba(107, 132, 96, 0.16), transparent 24%),
+        linear-gradient(180deg, #f9f4ed 0%, #efe5d6 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(135deg, rgba(255, 250, 241, 0.94), rgba(255, 244, 228, 0.9));
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -100px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(194, 91, 47, 0.1);
+      filter: blur(8px);
+    }
+
+    .hero__eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(194, 91, 47, 0.1);
+      color: var(--accent-dark);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 10ch;
+      margin: 0 0 16px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 0.95;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.6vw, 22px);
+      line-height: 1.6;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero__chip,
+    .card__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section-title {
+      margin: 38px 0 18px;
+      font-size: clamp(30px, 5vw, 42px);
+    }
+
+    .section-copy {
+      max-width: 760px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-height: 240px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(194, 91, 47, 0.35);
+      background: var(--surface-strong);
+    }
+
+    .card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .card__number {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .card__title {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.05;
+    }
+
+    .card__text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+
+    .card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .card__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 126px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fffaf4;
+      font-weight: 700;
+      transition: background 180ms ease, transform 180ms ease;
+    }
+
+    .card__link:hover,
+    .card__link:focus-visible {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 1160px);
+        padding-top: 20px;
+      }
+
+      .hero {
+        padding: 24px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+
+      .card__footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .card__link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <span class="hero__eyebrow">FullStack Course</span>
+      <h1>Домашні завдання iTHillel</h1>
+      <p>
+        Це головна сторінка для всіх моїх домашніх робіт на курсі FullStack від школи
+        iTHillel. Кожне завдання лежить в окремій папці та відкривається через свій
+        власний <code>index.html</code>.
+      </p>
+      <div class="hero__meta">
+        <span class="hero__chip">9 домашніх робіт</span>
+        <span class="hero__chip">HTML / CSS / JavaScript</span>
+        <span class="hero__chip">Окремі папки для кожного ДЗ</span>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="section-title">Навігація по роботах</h2>
+      <p class="section-copy">
+        Оберіть потрібне завдання зі списку нижче. Посилання ведуть на головну сторінку
+        кожної домашньої роботи всередині відповідної папки.
+      </p>
+
+      <section class="grid" aria-label="Список домашніх завдань">
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 1</div>
+              <h3 class="card__title">Базова HTML сторінка</h3>
+            </div>
+            <span class="card__tag">index.html</span>
+          </div>
+          <p class="card__text">
+            Перше домашнє завдання з базовою структурою сторінки та початковою HTML-розміткою.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-1</code></span>
+            <a class="card__link" href="home-work-1/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 2</div>
+              <h3 class="card__title">Багатосторінковий HTML сайт</h3>
+            </div>
+            <span class="card__tag">index.html</span>
+          </div>
+          <p class="card__text">
+            Навігація між кількома сторінками: about, articles, contacts, gallery, form та anchors.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-2</code></span>
+            <a class="card__link" href="home-work-2/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 3</div>
+              <h3 class="card__title">HTML + CSS сторінки</h3>
+            </div>
+            <span class="card__tag">index.html</span>
+          </div>
+          <p class="card__text">
+            Продовження багатосторінкового сайту з окремими стилями та розширеною структурою сторінок.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-3</code></span>
+            <a class="card__link" href="home-work-3/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 4</div>
+              <h3 class="card__title">Верстка сторінки</h3>
+            </div>
+            <span class="card__tag">index.html</span>
+          </div>
+          <p class="card__text">
+            Окрема практична робота з HTML і CSS для відпрацювання макету та стилізації сторінки.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-4</code></span>
+            <a class="card__link" href="home-work-4/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 5</div>
+              <h3 class="card__title">Git та двосторінковий сайт</h3>
+            </div>
+            <span class="card__tag">README</span>
+          </div>
+          <p class="card__text">
+            Практика базового Git-процесу та невеликий сайт з окремою сторінкою про виконану роботу.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-5</code></span>
+            <a class="card__link" href="home-work-5/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 6</div>
+              <h3 class="card__title">Таблиця у стилі Мондріана</h3>
+            </div>
+            <span class="card__tag">CSS Table</span>
+          </div>
+          <p class="card__text">
+            Відтворення композиції у стилі Піта Мондріана через HTML-таблицю, rowspan та colspan.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-6</code></span>
+            <a class="card__link" href="home-work-6/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 7</div>
+              <h3 class="card__title">Практика блокової моделі</h3>
+            </div>
+            <span class="card__tag">7 pages</span>
+          </div>
+          <p class="card__text">
+            Серія сторінок з <code>display</code>, <code>float</code>, <code>overflow</code>,
+            позиціонуванням, <code>normalize.css</code> та <code>reset.css</code>.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-7 C.D</code></span>
+            <a class="card__link" href="home-work-7%20C.D/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 8</div>
+              <h3 class="card__title">Float Layout та BEM</h3>
+            </div>
+            <span class="card__tag">5 layouts</span>
+          </div>
+          <p class="card__text">
+            Практика семантичної розмітки, BEM-іменування та побудови макетів на основі <code>float</code>.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-8 C.D</code></span>
+            <a class="card__link" href="home-work-8%20C.D/index.html">Відкрити</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <div>
+              <div class="card__number">Home Work 9</div>
+              <h3 class="card__title">Landing Page</h3>
+            </div>
+            <span class="card__tag">JavaScript</span>
+          </div>
+          <p class="card__text">
+            Адаптивний лендинг за макетом з секціями статистики, відеоблоком та окремими ассетами.
+          </p>
+          <div class="card__footer">
+            <span>Папка: <code>home-work-9 C.D</code></span>
+            <a class="card__link" href="home-work-9%20C.D/index.html">Відкрити</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Репозиторій об'єднує домашні завдання до курсу FullStack від школи iTHillel.
+        Автор: Denys Chuhuiev.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

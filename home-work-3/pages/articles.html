@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статті | Riverside</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Шапка сторінки повторює загальне меню і логотип -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <!-- Логотип створює швидкий шлях повернення на головну -->
+        <a class="brand" href="../index.html">River<span>side</span></a>
+
+        <!-- Повторювана навігація підтримує однакову структуру всього сайту -->
+        <nav class="site-nav" aria-label="Основне меню">
+          <a class="site-nav__link" href="../index.html">Головна</a>
+          <a class="site-nav__link" href="about.html">Про нас</a>
+          <a class="site-nav__link is-active" href="articles.html">Статті</a>
+          <a class="site-nav__link" href="gallery.html">Галерея</a>
+          <a class="site-nav__link" href="form.html">Форма</a>
+          <a class="site-nav__link" href="anchors.html">Якорі</a>
+          <a class="site-nav__link" href="contacts.html">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Основний блок статей показує, як оформлювати контентні картки з текстом -->
+    <main>
+      <section class="page-intro">
+        <div class="container">
+          <div class="section-title">
+            <span class="eyebrow">Сторінка статей</span>
+            <h1>Короткі матеріали про атмосферу кав'ярні</h1>
+            <p>Цей розділ демонструє, як можна красиво оформити кілька текстових матеріалів у межах одного контейнера.</p>
+          </div>
+
+          <div class="feature-grid">
+            <!-- Перша стаття показує текстовий контент з окремим заголовком і абзацом -->
+            <article class="feature-card">
+              <h2>Що таке затишний інтер'єр</h2>
+              <p>Затишний інтер'єр будується на поєднанні теплого освітлення, природних фактур і продуманої посадки гостей. Саме тому для цього сайту обрано м'яку палітру та великі картки.</p>
+            </article>
+
+            <!-- Друга стаття урізноманітнює сторінку, але зберігає спільний стиль карток -->
+            <article class="feature-card">
+              <h2>Чому важлива візуальна єдність</h2>
+              <p>Коли меню, футер, відступи та кнопки однакові на всіх сторінках, сайт сприймається цілісно. Користувачеві простіше орієнтуватися, а сторінки виглядають професійніше.</p>
+            </article>
+
+            <!-- Третя стаття логічно підводить до сторінок з галереєю і формою -->
+            <article class="feature-card">
+              <h2>Навіщо сайту галерея і форма</h2>
+              <p>Галерея додає емоційне враження від сайту, а форма робить його функціональним. Разом вони показують не лише красу, а й практичне застосування HTML та CSS.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер завершує сторінку в тому ж стилі, що й інші розділи -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="footer-grid">
+          <section>
+            <h3>Riverside</h3>
+            <p>Текстові матеріали також оформлені як частина одного візуального макета.</p>
+          </section>
+
+          <section>
+            <h3>Розділи</h3>
+            <ul class="site-footer__list">
+              <li><a href="about.html">Про нас</a></li>
+              <li><a href="gallery.html">Галерея</a></li>
+              <li><a href="form.html">Форма</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Акцент</h3>
+            <ul class="site-footer__list">
+              <li>Зручне читання тексту</li>
+              <li>Спільні відступи і картки</li>
+              <li class="accent-text">Впорядкована багатосторінкова структура</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__bottom">Сторінка статей оформлена без використання ID для стилізації.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
