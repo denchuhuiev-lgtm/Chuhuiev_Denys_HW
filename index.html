@@ -87,7 +87,7 @@
     .hero h1 {
       max-width: 10ch;
       margin: 0 0 16px;
-      font-size: clamp(42px, 7vw, 78px);
+      font-size: clamp(30px, 7vw, 78px);
       line-height: 0.95;
     }
 
@@ -105,8 +105,7 @@
       gap: 12px;
     }
 
-    .hero__chip,
-    .card__tag {
+    .hero__chip {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -160,9 +159,15 @@
 
     .card__top {
       display: flex;
+      flex-wrap: wrap;
       align-items: flex-start;
       justify-content: space-between;
       gap: 16px;
+    }
+
+    .card__top > div {
+      flex: 1 1 160px;
+      min-width: 0;
     }
 
     .card__number {
@@ -174,8 +179,9 @@
 
     .card__title {
       margin: 0;
-      font-size: 28px;
+      font-size: 18px;
       line-height: 1.05;
+      overflow-wrap: anywhere;
     }
 
     .card__text {
@@ -276,7 +282,6 @@
               <div class="card__number">Home Work 1</div>
               <h3 class="card__title">Базова HTML сторінка</h3>
             </div>
-            <span class="card__tag">index.html</span>
           </div>
           <p class="card__text">
             Перше домашнє завдання з базовою структурою сторінки та початковою HTML-розміткою.
@@ -293,7 +298,6 @@
               <div class="card__number">Home Work 2</div>
               <h3 class="card__title">Багатосторінковий HTML сайт</h3>
             </div>
-            <span class="card__tag">index.html</span>
           </div>
           <p class="card__text">
             Навігація між кількома сторінками: about, articles, contacts, gallery, form та anchors.
@@ -310,7 +314,6 @@
               <div class="card__number">Home Work 3</div>
               <h3 class="card__title">HTML + CSS сторінки</h3>
             </div>
-            <span class="card__tag">index.html</span>
           </div>
           <p class="card__text">
             Продовження багатосторінкового сайту з окремими стилями та розширеною структурою сторінок.
@@ -327,7 +330,6 @@
               <div class="card__number">Home Work 4</div>
               <h3 class="card__title">Верстка сторінки</h3>
             </div>
-            <span class="card__tag">index.html</span>
           </div>
           <p class="card__text">
             Окрема практична робота з HTML і CSS для відпрацювання макету та стилізації сторінки.
@@ -344,7 +346,6 @@
               <div class="card__number">Home Work 5</div>
               <h3 class="card__title">Git та двосторінковий сайт</h3>
             </div>
-            <span class="card__tag">README</span>
           </div>
           <p class="card__text">
             Практика базового Git-процесу та невеликий сайт з окремою сторінкою про виконану роботу.
@@ -361,7 +362,6 @@
               <div class="card__number">Home Work 6</div>
               <h3 class="card__title">Таблиця у стилі Мондріана</h3>
             </div>
-            <span class="card__tag">CSS Table</span>
           </div>
           <p class="card__text">
             Відтворення композиції у стилі Піта Мондріана через HTML-таблицю, rowspan та colspan.
@@ -378,7 +378,6 @@
               <div class="card__number">Home Work 7</div>
               <h3 class="card__title">Практика блокової моделі</h3>
             </div>
-            <span class="card__tag">7 pages</span>
           </div>
           <p class="card__text">
             Серія сторінок з <code>display</code>, <code>float</code>, <code>overflow</code>,
@@ -396,7 +395,6 @@
               <div class="card__number">Home Work 8</div>
               <h3 class="card__title">Float Layout та BEM</h3>
             </div>
-            <span class="card__tag">5 layouts</span>
           </div>
           <p class="card__text">
             Практика семантичної розмітки, BEM-іменування та побудови макетів на основі <code>float</code>.
@@ -413,7 +411,6 @@
               <div class="card__number">Home Work 9</div>
               <h3 class="card__title">Landing Page</h3>
             </div>
-            <span class="card__tag">JavaScript</span>
           </div>
           <p class="card__text">
             Адаптивний лендинг за макетом з секціями статистики, відеоблоком та окремими ассетами.
