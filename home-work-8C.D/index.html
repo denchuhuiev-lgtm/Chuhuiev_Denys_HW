@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашня робота №8</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+  <!-- Шапка сторінки з назвою роботи та коротким поясненням -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <h1 class="site-header__title">Домашня робота №8</h1>
+      <p class="site-header__subtitle">
+        Практика за лекцією про BEM, Float Layout, Flexbox, Grid Layout і семантичні теги.
+      </p>
+    </div>
+  </header>
+
+  <!-- Основна навігація для переходу між усіма сторінками домашньої роботи -->
+  <nav class="site-nav container" aria-label="Основна навігація">
+    <a class="site-nav__link site-nav__link--active" href="index.html">Головна</a>
+    <a class="site-nav__link" href="page-1.html">1. Ліворуч і праворуч</a>
+    <a class="site-nav__link" href="page-2.html">2. Ліворуч і кілька праворуч</a>
+    <a class="site-nav__link" href="page-3.html">3. Два ліворуч і два праворуч</a>
+    <a class="site-nav__link" href="page-4.html">4. Три праворуч</a>
+    <a class="site-nav__link" href="page-5.html">5. Три по центру</a>
+  </nav>
+
+  <!-- Основний вміст сторінки з описом тем та переходами до практичних прикладів -->
+  <main class="container">
+    <!-- Вступний блок з поясненням, що саме було реалізовано в роботі -->
+    <section class="hero">
+      <h2 class="hero__title">Що реалізовано в цій роботі</h2>
+      <p class="hero__text">
+        У роботі використано семантичні теги HTML5, BEM-іменування класів та окремі сторінки
+        з прикладами макетів. Для самих демонстраційних блоків застосовано позиціонування через
+        <code>float</code> і <code>margin</code>, як вказано у завданні.
+      </p>
+    </section>
+
+    <!-- Інформаційний блок з коротким підсумком лекції -->
+    <section class="info-section">
+      <h2 class="info-section__title">Короткий підсумок лекції</h2>
+      <article class="info-card">
+        <h3 class="info-card__title">BEM</h3>
+        <p class="info-card__text">
+          BEM допомагає створювати зрозумілі класи: блок, елемент і модифікатор.
+        </p>
+      </article>
+      <article class="info-card">
+        <h3 class="info-card__title">Float Layout</h3>
+        <p class="info-card__text">
+          У домашньому завданні саме через <code>float</code> і <code>margin</code> побудовано всі макети.
+        </p>
+      </article>
+      <article class="info-card">
+        <h3 class="info-card__title">Семантичні теги</h3>
+        <p class="info-card__text">
+          Для структури сторінок використано <code>header</code>, <code>nav</code>, <code>main</code>,
+          <code>section</code> і <code>footer</code>.
+        </p>
+      </article>
+    </section>
+
+    <!-- Блок із картками-посиланнями на всі сторінки з практикою -->
+    <section class="cards-section">
+      <h2 class="cards-section__title">Сторінки з практичними прикладами</h2>
+
+      <article class="task-card">
+        <h3 class="task-card__title">Сторінка 1</h3>
+        <p class="task-card__text">Один блок ліворуч, другий праворуч.</p>
+        <a class="button-link" href="page-1.html">Відкрити приклад</a>
+      </article>
+
+      <article class="task-card">
+        <h3 class="task-card__title">Сторінка 2</h3>
+        <p class="task-card__text">Один блок ліворуч, кілька блоків праворуч.</p>
+        <a class="button-link" href="page-2.html">Відкрити приклад</a>
+      </article>
+
+      <article class="task-card">
+        <h3 class="task-card__title">Сторінка 3</h3>
+        <p class="task-card__text">Два блоки ліворуч, два праворуч.</p>
+        <a class="button-link" href="page-3.html">Відкрити приклад</a>
+      </article>
+
+      <article class="task-card">
+        <h3 class="task-card__title">Сторінка 4</h3>
+        <p class="task-card__text">Три блоки праворуч, два з них один під одним.</p>
+        <a class="button-link" href="page-4.html">Відкрити приклад</a>
+      </article>
+
+      <article class="task-card">
+        <h3 class="task-card__title">Сторінка 5</h3>
+        <p class="task-card__text">Три блоки по центру, два з них один під одним.</p>
+        <a class="button-link" href="page-5.html">Відкрити приклад</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Підвал сторінки з фінальним підписом до домашньої роботи -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__text">Домашня робота виконана за матеріалами уроку №8.</p>
+    </div>
+  </footer>
+</body>
+</html>

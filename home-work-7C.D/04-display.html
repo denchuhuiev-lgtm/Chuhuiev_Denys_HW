@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Урок 7 — 04. display</title>
+  <style>
+    /* Кожен клас демонструє конкретне значення display для наочної перевірки. */
+    body {
+      font-family: "Tahoma", sans-serif;
+      margin: 24px;
+      background: #f3f8f2;
+      color: #213225;
+    }
+    .menu a { margin-right: 14px; color: #116b2d; text-decoration: none; font-weight: 600; }
+    .menu { margin-bottom: 16px; }
+    .panel {
+      background: white;
+      border: 1px solid #bfd8be;
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .inline-ex > span {
+      display: inline;
+      background: #dbffcf;
+      border: 1px dashed #4a9e4a;
+      padding: 4px;
+      margin-right: 4px;
+    }
+    .block-ex > span {
+      display: block;
+      background: #d9eeff;
+      border: 1px solid #5ca2e8;
+      margin-bottom: 6px;
+      padding: 6px;
+    }
+    .flex-ex {
+      display: flex;
+      gap: 10px;
+    }
+    .flex-ex > span {
+      background: #f5e8ff;
+      border: 1px solid #a67de8;
+      padding: 8px;
+      flex: 1;
+    }
+    .hidden-note {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Розділ порівнює, як різні display керують потоком і розміщенням елементів. -->
+  <nav class="menu">
+    <a href="index.html">Головна</a>
+    <a href="01-basic-div-span.html">1) div/span</a>
+    <a href="02-normalize.html">2) normalize.css</a>
+    <a href="03-reset.html">3) reset.css</a>
+    <a href="04-display.html">4) display</a>
+    <a href="05-box-sizing.html">5) box-sizing</a>
+    <a href="06-float-clear.html">6) float/clear</a>
+    <a href="07-overflow-position.html">7) overflow/position</a>
+  </nav>
+
+  <h1>4) Властивість <code>display</code></h1>
+  <p>
+    Я створив кілька блоків з різними режимами: inline, block, inline-block та flex.
+    Так видно, як змінюється модель розміщення в одному і тому ж HTML.
+  </p>
+
+  <div class="panel">
+    <h2>inline</h2>
+    <!-- inline не починає з нового рядка, тому елементи йдуть у потоці тексту. -->
+    <p class="inline-ex">
+      <span>перший</span><span>другий</span><span>третій</span>
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>block</h2>
+    <!-- block дає кожному елементу окремий рядок на всю доступну ширину. -->
+    <p class="block-ex">
+      <span>перший блок</span><span>другий блок</span><span>третій блок</span>
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>flex</h2>
+    <!-- flex дозволяє керувати розтягуванням/інтервалами між дочірніми блоками. -->
+    <p class="flex-ex">
+      <span>колонка 1</span><span>колонка 2</span><span>колонка 3</span>
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>display: none</h2>
+    <!-- display: none повністю прибирає елемент з макета (не займає місце). -->
+    <p class="hidden-note">Цей текст не видно</p>
+    <p>Цей блок показує, що прихована частина не впливає на розміщення.</p>
+  </div>
+</body>
+</html>
+
+

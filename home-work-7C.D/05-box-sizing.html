@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Урок 7 — 05. box-sizing</title>
+  <style>
+    /* На одній картці box-sizing не заданий, на іншій border-box, щоб порівняти реальну ширину. */
+    body {
+      font-family: "Georgia", serif;
+      margin: 24px;
+      background: #fff7f7;
+      color: #411c1c;
+    }
+    .menu a { margin-right: 14px; color: #8a2525; text-decoration: none; font-weight: 600; }
+    .menu { margin-bottom: 16px; }
+    .compare {
+      display: grid;
+      gap: 16px;
+    }
+    .box {
+      width: 260px;
+      border: 3px solid #d07a7a;
+      padding: 16px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    .content-box {
+      box-sizing: content-box;
+      /* За замовчуванням розмір 260px не враховує padding і border. */
+    }
+    .border-box {
+      box-sizing: border-box;
+      /* border-box рахує width разом із border і padding, тому візуальна ширина залишається 260px. */
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html">Головна</a>
+    <a href="01-basic-div-span.html">1) div/span</a>
+    <a href="02-normalize.html">2) normalize.css</a>
+    <a href="03-reset.html">3) reset.css</a>
+    <a href="04-display.html">4) display</a>
+    <a href="05-box-sizing.html">5) box-sizing</a>
+    <a href="06-float-clear.html">6) float/clear</a>
+    <a href="07-overflow-position.html">7) overflow/position</a>
+  </nav>
+
+  <h1>5) <code>box-sizing</code> і розміри блоків</h1>
+  <p>
+    Короткий експеримент: однакові значення width/padding/border дають різні візуальні розміри,
+    якщо в першого блоку content-box, а другого border-box.
+  </p>
+
+  <div class="compare">
+    <div class="box content-box">
+      <h2>content-box</h2>
+      <p>Цей елемент візуально ширший, бо до width додаються padding і border.</p>
+    </div>
+
+    <div class="box border-box">
+      <h2>border-box</h2>
+      <p>Цей елемент зберігає загальну ширину 260px разом із падінгом і рамкою.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
