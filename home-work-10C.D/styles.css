@@ -286,6 +286,26 @@ button {
   line-height: 1.6;
 }
 
+.site-footer__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 3.25rem;
+  padding: 0.875rem 1.5rem;
+  color: var(--color-footer-text);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.site-footer__button:hover,
+.site-footer__button:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
 @keyframes play-pulse {
   0%,
   100% {
@@ -375,6 +395,12 @@ button {
   .site-footer__inner {
     align-items: center;
     text-align: center;
+  }
+
+  .site-footer__button {
+    align-self: center;
+    width: 100%;
+    max-width: 20rem;
   }
 }
 
