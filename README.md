@@ -1,33 +1,40 @@
-# Home Work FullStack iTHillel
+# Домашні завдання FullStack iTHillel
 
-This repository contains my home works for the FullStack course from iTHillel school.
+Цей репозиторій містить мої домашні завдання з курсу **FullStack** від школи **iTHillel**.
 
-## Structure
+## Що знаходиться в репозиторії
 
-Each homework is stored in a separate folder and has its own entry page:
+Усі домашні роботи збережені в окремих папках. Кожне завдання має власний файл `index.html`, а головна сторінка репозиторію містить зручну навігацію по всіх роботах.
 
-- `home-work-1/index.html`
-- `home-work-2/index.html`
-- `home-work-3/index.html`
-- `home-work-4/index.html`
-- `home-work-5/index.html`
-- `home-work-6/index.html`
-- `home-work-7 C.D/index.html`
-- `home-work-8 C.D/index.html`
-- `home-work-9 C.D/index.html`
+## Структура
 
-The root `index.html` is the main navigation page for all course assignments.
+Основні домашні завдання знаходяться в таких папках:
 
-## Open Project
+- `home-work-1`
+- `home-work-2`
+- `home-work-3`
+- `home-work-4`
+- `home-work-5`
+- `home-work-6`
+- `home-work-7C.D`
+- `home-work-8C.D`
+- `home-work-9C.D`
+- `home-work-10C.D`
 
-1. Open the root `index.html`.
-2. Choose the needed homework from the navigation cards.
-3. Follow the link to the corresponding folder.
+Головний файл для навігації по всіх роботах:
 
-## Repository
+- `index.html`
 
-- GitHub: https://github.com/denchuhuiev-lgtm/Home_Work_FullStack_ithillel.git
+## Як переглянути
 
-## Author
+1. Відкрити кореневий файл `index.html`.
+2. Обрати потрібне домашнє завдання зі списку.
+3. Перейти до відповідної сторінки роботи.
+
+## Репозиторій
+
+- GitHub: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW
+
+## Автор
 
 Denys Chuhuiev
