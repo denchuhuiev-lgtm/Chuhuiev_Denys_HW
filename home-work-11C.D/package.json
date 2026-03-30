@@ -1,0 +1,10 @@
+{
+  "name": "home-work-11c-d",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/main.scss styles.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}

@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+// Базова структура для типових секцій сторінки.
+.section {
+  padding: $section-space 0;
+
+  &__inner {
+    @include block-flex(center, center, column);
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 1.75rem;
+    color: $color-heading;
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    line-height: 1.18;
+    font-weight: 500;
+  }
+
+  &__text {
+    @extend %section-copy;
+    max-width: 33.75rem;
+  }
+
+  @include media-down(tablet) {
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  @include media-down(mobile) {
+    padding: 4.25rem 0;
+  }
+
+  @include media-down(mobile-sm) {
+    &__text {
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+// Окремий фон для блоку "About Me".
+.about {
+  background: $color-surface;
+}

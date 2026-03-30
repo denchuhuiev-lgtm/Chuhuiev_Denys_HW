@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+// Футер завжди вирівнюється по центру на будь-якому розмірі екрана.
+.site-footer {
+  padding: 3.125rem 0;
+  background: $color-primary;
+
+  &__inner {
+    @include block-flex(center, center, column);
+    gap: 14px;
+    text-align: center;
+  }
+
+  &__title,
+  &__text {
+    margin: 0;
+    color: $color-footer-text;
+  }
+
+  &__title {
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  &__button {
+    @include footer-button(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.24));
+    width: min(100%, 20rem);
+  }
+}

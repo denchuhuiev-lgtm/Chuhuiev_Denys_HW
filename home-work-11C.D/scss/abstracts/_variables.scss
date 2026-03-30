@@ -1,0 +1,21 @@
+// Кольори, шрифти, тіні та базові розміри для всього сайту.
+$color-background: #eeeff1;
+$color-surface: #ffffff;
+$color-primary: #34547a;
+$color-heading: #000000;
+$color-text: #727272;
+$color-footer-text: #ffffff;
+$font-base: "Roboto", sans-serif;
+$container-width: 1110px;
+$shadow-soft: 0 18px 50px rgba(52, 84, 122, 0.14);
+$section-space: clamp(4rem, 8vw, 7rem);
+$header-top-space: clamp(2rem, 5vw, 3.5rem);
+$hero-top-space: clamp(4rem, 9vw, 9.1875rem);
+
+// Карта брейкпоінтів для повторного використання у медіа-міксинах.
+$breakpoints: (
+  desktop: 1024px,
+  tablet: 768px,
+  mobile: 560px,
+  mobile-sm: 375px
+);

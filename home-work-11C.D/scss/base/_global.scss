@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+// Глобальні стилі для тіла сторінки.
+body {
+  font-family: $font-base;
+  color: $color-text;
+  background: $color-background;
+}

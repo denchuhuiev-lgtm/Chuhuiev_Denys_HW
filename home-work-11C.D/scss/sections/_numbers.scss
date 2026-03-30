@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+// Блок статистики з адаптивним розташуванням карток.
+.numbers {
+  padding: clamp(3.5rem, 8vw, 6.25rem) 0;
+  background: $color-primary;
+
+  &__list {
+    @include block-flex(center, stretch);
+    flex-wrap: wrap;
+    gap: 2rem 2.8125rem;
+  }
+
+  &__item {
+    @include block-flex(flex-start, center);
+    gap: 1.25rem;
+    flex: 1 1 9rem;
+    max-width: 10.25rem;
+    min-width: 0;
+    color: $color-footer-text;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &__content {
+    @include block-flex(flex-start, stretch, column);
+    gap: 2px;
+  }
+
+  &__value,
+  &__label {
+    line-height: 1;
+  }
+
+  &__value {
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &__label {
+    font-size: 16px;
+  }
+
+  @include media-down(desktop) {
+    &__list {
+      gap: 2rem;
+    }
+  }
+
+  @include media-down(tablet) {
+    &__list {
+      justify-content: flex-start;
+    }
+
+    &__item {
+      flex-basis: calc(50% - 1rem);
+      max-width: none;
+    }
+  }
+
+  @include media-down(mobile) {
+    padding: 3.5rem 0;
+  }
+
+  @include media-down(mobile-sm) {
+    &__list {
+      justify-content: center;
+      gap: 1.5rem 1rem;
+    }
+
+    &__item {
+      flex: 0 1 calc(50% - 0.5rem);
+      justify-content: center;
+      max-width: 9.5rem;
+    }
+  }
+}

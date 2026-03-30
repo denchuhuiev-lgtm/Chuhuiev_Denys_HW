@@ -1,0 +1,13 @@
+// Placeholder для стандартного текстового опису в секціях.
+%section-copy {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.64;
+}
+
+// Placeholder для декоративного фону відеоблоку.
+%card-overlay {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)),
+    radial-gradient(circle at top, rgba(52, 84, 122, 0.35), rgba(0, 0, 0, 0.55));
+}

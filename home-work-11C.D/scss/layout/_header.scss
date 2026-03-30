@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+// Відступи для шапки сторінки.
+.site-header {
+  padding: $header-top-space 0 clamp(4.5rem, 10vw, 8.8125rem);
+}
+
+// Навігація з адаптивним перенесенням і станами взаємодії.
+.site-nav {
+  @include block-flex(flex-start, center);
+  flex-wrap: wrap;
+  gap: 1rem 2.625rem;
+
+  &__link {
+    color: $color-heading;
+    font-size: 1rem;
+    line-height: 1.64;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-primary;
+      outline: none;
+    }
+  }
+
+  @include media-down(tablet) {
+    justify-content: center;
+  }
+
+  @include media-down(mobile) {
+    gap: 0.875rem 1rem;
+
+    &__link {
+      font-size: 0.9375rem;
+    }
+  }
+
+  @include media-down(mobile-sm) {
+    justify-content: space-between;
+
+    &__link {
+      letter-spacing: 0.08em;
+    }
+  }
+}
+
+// Hero-блок формує перший екран сайту.
+.hero {
+  @include block-flex();
+  padding-top: $hero-top-space;
+
+  &__content {
+    max-width: 33.8125rem;
+  }
+
+  &__title {
+    margin: 0 0 2rem;
+    color: $color-heading;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    line-height: 1.25;
+    font-weight: 500;
+  }
+
+  &__text {
+    @extend %section-copy;
+    margin-bottom: 2.5rem;
+  }
+
+  @include media-down(desktop) {
+    padding-top: 6rem;
+  }
+
+  @include media-down(tablet) {
+    justify-content: center;
+    text-align: center;
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+
+  @include media-down(mobile) {
+    padding-top: 4.5rem;
+  }
+
+  @include media-down(mobile-sm) {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text {
+      font-size: 0.9375rem;
+    }
+  }
+}

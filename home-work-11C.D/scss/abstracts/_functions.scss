@@ -1,0 +1,7 @@
+@use "sass:map";
+@use "variables";
+
+// Функція повертає значення брейкпоінта за його ім'ям.
+@function breakpoint($name) {
+  @return map.get(variables.$breakpoints, $name);
+}

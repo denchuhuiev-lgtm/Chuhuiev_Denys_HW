@@ -1,0 +1,25 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Основна кнопка в hero-блоці.
+.button {
+  @include inline-flex-center();
+  min-width: min(100%, 14.0625rem);
+  min-height: 4.0625rem;
+  padding: 1.25rem 1.5rem;
+  color: $color-footer-text;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-align: center;
+  @include interactive-surface($color-primary, color.adjust($color-primary, $lightness: -8%));
+
+  @include media-down(mobile) {
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  @include media-down(mobile-sm) {
+    min-height: 3.75rem;
+    padding-inline: 1rem;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+// Центральний контейнер обмежує ширину контенту на сторінці.
+.container {
+  @include fluid-container(2rem);
+
+  @include media-down(mobile) {
+    @include fluid-container(1.5rem);
+  }
+}

@@ -1,0 +1,6 @@
+// Підключаємо всі модулі проєкту в одному вхідному SCSS-файлі.
+@use "abstracts";
+@use "base";
+@use "layout";
+@use "components";
+@use "sections";

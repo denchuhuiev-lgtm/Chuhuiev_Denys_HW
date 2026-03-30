@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+
+// Анімація пульсації для кнопки запуску відео.
+@keyframes play-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.28);
+  }
+
+  50% {
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+  }
+}
+
+// Відеоблок з оверлеєм та кастомною кнопкою відтворення.
+.video-card {
+  position: relative;
+  width: 100%;
+  max-width: 1110px;
+  margin-top: 3.5rem;
+  aspect-ratio: 1110 / 600;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  @extend %card-overlay;
+  box-shadow: $shadow-soft;
+
+  &__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__play {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    @include inline-flex-center();
+    width: clamp(4.5rem, 10vw, 6.25rem);
+    height: clamp(4.5rem, 10vw, 6.25rem);
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: play-pulse 2.4s ease-in-out infinite;
+
+    &:hover,
+    &:focus-visible {
+      background: #ffffff;
+      transform: translate(-50%, -50%) scale(1.05);
+      outline: none;
+    }
+
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      animation: none;
+    }
+  }
+
+  &__play-icon {
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 24px solid $color-primary;
+  }
+
+  @include media-down(mobile) {
+    margin-top: 2.25rem;
+    aspect-ratio: 16 / 10;
+  }
+
+  @include media-down(mobile-sm) {
+    &__play {
+      width: 4.25rem;
+      height: 4.25rem;
+    }
+
+    &__play-icon {
+      margin-left: 4px;
+      border-top-width: 0.625rem;
+      border-bottom-width: 0.625rem;
+      border-left-width: 1rem;
+    }
+  }
+}

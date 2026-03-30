@@ -1,0 +1,6 @@
+@use "../abstracts" as *;
+
+// Нижній відступ для секції з описом процесу роботи.
+.process {
+  padding-bottom: $section-space;
+}

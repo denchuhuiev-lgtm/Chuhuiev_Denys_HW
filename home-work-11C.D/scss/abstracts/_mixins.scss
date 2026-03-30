@@ -1,0 +1,67 @@
+@use "sass:color";
+@use "functions";
+@use "variables";
+
+// Міксин створює медіа-запит для екранів менше обраного брейкпоінта.
+@mixin media-down($point) {
+  @media (max-width: functions.breakpoint($point)) {
+    @content;
+  }
+}
+
+// Міксин центрує елементи всередині inline-flex контейнера.
+@mixin inline-flex-center($justify: center, $align: center) {
+  display: inline-flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Міксин задає базову flex-структуру для блоків.
+@mixin block-flex($justify: flex-start, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Міксин оформлює інтерактивні поверхні та їхній hover/focus стан.
+@mixin interactive-surface($background, $hover-background: null) {
+  background: $background;
+  transition: 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    @if $hover-background == null {
+      background: color.scale($background, $lightness: -12%);
+    } @else {
+      background: $hover-background;
+    }
+
+    outline: none;
+  }
+}
+
+// Міксин задає адаптивну ширину контейнера.
+@mixin fluid-container($offset) {
+  width: min(calc(100% - #{$offset}), variables.$container-width);
+  margin: 0 auto;
+}
+
+// Міксин створює єдиний стиль кнопки у футері.
+@mixin footer-button($background, $border-color) {
+  @include inline-flex-center();
+  align-self: center;
+  min-height: 3.25rem;
+  padding: 0.875rem 1.5rem;
+  color: variables.$color-footer-text;
+  background: $background;
+  border: 1px solid $border-color;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+
+  &:hover,
+  &:focus-visible {
+    background: color.scale($background, $alpha: 20%, $lightness: 18%);
+    outline: none;
+  }
+}
