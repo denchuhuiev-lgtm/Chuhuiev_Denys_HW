@@ -22,6 +22,7 @@
 - `home-work-10C.D`
 - `home-work-11C.D`
 - `home-work-13C.D`
+- `home-work-14C.D`
 
 ## Домашнє завдання №13
 
@@ -39,6 +40,23 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-13C.D/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-13C.D
+
+## Домашнє завдання №14
+
+Тема роботи: **Розробка адаптивного макету з використанням Bootstrap**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-14C.D/index.html` з підключеним Bootstrap 5.3 через CDN;
+- побудовано адаптивний макет із зонами `header`, `left`, `main`, `right` і `footer`;
+- центральний блок зроблено ширшим за бокові колонки через Bootstrap Grid;
+- у секції `main` розміщено 5 контентних блоків;
+- у правій колонці додано Bootstrap-форму, а у футері кнопку повернення на головний індекс.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-14C.D/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-14C.D
 
 ## Як переглянути
 
