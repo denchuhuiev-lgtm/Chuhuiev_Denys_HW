@@ -14,120 +14,39 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   >
-  <style>
-    :root {
-      --sand: #f4ecdf;
-      --paper: rgba(255, 255, 255, 0.88);
-      --ink: #24303d;
-      --muted: #607080;
-      --accent: #1d6f6d;
-      --accent-soft: rgba(29, 111, 109, 0.12);
-      --line: rgba(36, 48, 61, 0.12);
-      --shadow: 0 18px 45px rgba(26, 42, 56, 0.12);
-      --radius: 24px;
-    }
-
-    body {
-      min-height: 100vh;
-      color: var(--ink);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(29, 111, 109, 0.18), transparent 24%),
-        radial-gradient(circle at right, rgba(233, 165, 78, 0.2), transparent 22%),
-        linear-gradient(180deg, #f8f4ed 0%, #ece1d1 100%);
-    }
-
-    .layout-shell {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
-
-    .glass-panel {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--paper);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-    }
-
-    .hero {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -3rem;
-      bottom: -4rem;
-      width: 12rem;
-      height: 12rem;
-      border-radius: 50%;
-      background: rgba(29, 111, 109, 0.1);
-      filter: blur(6px);
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 0.45rem 0.85rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .section-card,
-    .content-card,
-    .footer-card {
-      border: 1px solid var(--line);
-      border-radius: 1.25rem;
-      background: rgba(255, 255, 255, 0.82);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
-    }
-
-    .content-card {
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .content-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(26, 42, 56, 0.08);
-    }
-
-    .icon-dot {
-      width: 0.75rem;
-      height: 0.75rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #1d6f6d, #5bb8b5);
-      flex-shrink: 0;
-      margin-top: 0.35rem;
-    }
-
-    .footer-card {
-      margin-top: 1.5rem;
-    }
-  </style>
+  <!-- Тег link підключає зовнішній CSS-файл зі стилями для цієї сторінки. -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-body">
+  <!-- Блок container створює основну обмежену по ширині область сторінки. -->
   <div class="container layout-shell">
+    <!-- Блок header використовується для верхньої вступної частини сторінки. -->
     <header class="glass-panel hero p-4 p-lg-5 mb-4">
+      <!-- Тег div тут використовується як Bootstrap-рядок для побудови двох колонок у шапці. -->
       <div class="row align-items-center g-4">
+        <!-- Тег div створює ліву колонку шапки з заголовком і описом. -->
         <div class="col-lg-8">
+          <!-- Тег span використовується для короткої позначки номера домашнього завдання. -->
           <span class="hero-badge">Home Work 14</span>
+          <!-- Тег h1 задає головний заголовок сторінки. -->
           <h1 class="display-5 fw-bold mt-3 mb-3">Адаптивний макет на Bootstrap</h1>
+          <!-- Тег p використовується для вступного опису сторінки. -->
           <p class="lead text-secondary mb-0">
             На цій сторінці зібрано домашнє завдання до уроку №14: використано
+            <!-- Тег strong виділяє важливу частину тексту жирним накресленням. -->
             <strong>Bootstrap grid</strong>, адаптивні колонки, готові компоненти,
             утиліти відступів і базову семантичну структуру сторінки.
           </p>
         </div>
+        <!-- Тег div створює праву колонку шапки з коротким списком можливостей макета. -->
         <div class="col-lg-4">
-          <div class="section-card p-4 h-100">
+          <!-- Тег div використовується як картка з окремим змістовим блоком. -->
+          <div class="section-card page-card p-4 h-100">
+            <!-- Тег h2 задає заголовок другорядного змістового блоку. -->
             <h2 class="h5 fw-semibold mb-3">Що є в макеті</h2>
+            <!-- Тег ul створює маркований список переваг і частин сторінки. -->
             <ul class="list-unstyled mb-0 text-secondary d-grid gap-2">
+              <!-- Тег li містить окремий пункт списку. -->
               <li>Header із коротким описом сторінки</li>
               <li>Left sidebar з навігацією</li>
               <li>Main-контент ширший за бокові частини</li>
@@ -139,20 +58,27 @@
       </div>
     </header>
 
+    <!-- Блок main містить основний контент сторінки та три колонки макета. -->
     <main class="row g-4 align-items-start">
+      <!-- Блок aside використовується для лівої бічної колонки з навігацією. -->
       <aside class="col-12 col-lg-3">
-        <section class="section-card p-4 h-100">
+        <!-- Тег section об'єднує тематично пов'язаний контент у лівій колонці. -->
+        <section class="section-card page-card p-4 h-100">
           <h2 class="h4 mb-3">LEFT</h2>
           <p class="text-secondary mb-4">
             Ліва колонка містить додаткову навігацію та короткий список тем із уроку.
           </p>
+          <!-- Тег nav використовується для навігаційного меню по сторінці. -->
           <nav aria-label="Навігація по секціях сторінки">
+            <!-- Тег div тут працює як контейнер для групи посилань Bootstrap list-group. -->
             <div class="list-group list-group-flush">
+              <!-- Тег a створює посилання для переходу до потрібного блоку сторінки. -->
               <a class="list-group-item list-group-item-action rounded-3 mb-2 border" href="#cards">Картки контенту</a>
               <a class="list-group-item list-group-item-action rounded-3 mb-2 border" href="#benefits">Переваги Bootstrap</a>
               <a class="list-group-item list-group-item-action rounded-3 border" href="#right-panel">Права колонка</a>
             </div>
           </nav>
+          <!-- Тег hr створює горизонтальну лінію для візуального поділу інформації. -->
           <hr class="my-4">
           <h3 class="h6 text-uppercase text-secondary">Теми уроку</h3>
           <ul class="text-secondary ps-3 mb-0">
@@ -164,8 +90,10 @@
         </section>
       </aside>
 
+      <!-- Блок section використовується для центральної головної частини сторінки. -->
       <section class="col-12 col-lg-6" id="cards">
-        <div class="section-card p-4 p-lg-5 mb-4">
+        <!-- Тег div створює вступну картку центрального контенту. -->
+        <div class="section-card page-card p-4 p-lg-5 mb-4">
           <h2 class="h3 mb-3">MAIN</h2>
           <p class="text-secondary mb-0">
             Центральна частина ширша за бокові колонки й містить п'ять інформаційних блоків,
@@ -174,19 +102,22 @@
           </p>
         </div>
 
+        <!-- Блок div створює внутрішню сітку для п'яти інформаційних карток. -->
         <div class="row g-3" id="benefits">
           <div class="col-12">
-            <article class="content-card p-4">
+            <!-- Тег article позначає окремий самостійний змістовий блок. -->
+            <article class="content-card page-card p-4">
               <span class="badge text-bg-dark mb-3">Блок 1</span>
               <h3 class="h5">Grid-система</h3>
               <p class="text-secondary mb-0">
-                Bootstrap дозволяє швидко будувати структуру сторінки через <code>container</code>,
-                <code>row</code> і <code>col-*</code>, не прописуючи власну сітку з нуля.
+                Bootstrap дозволяє швидко будувати структуру сторінки через
+                <!-- Тег code використовується для виділення назв класів і фрагментів коду. -->
+                <code>container</code>, <code>row</code> і <code>col-*</code>, не прописуючи власну сітку з нуля.
               </p>
             </article>
           </div>
           <div class="col-12 col-md-6">
-            <article class="content-card p-4 h-100">
+            <article class="content-card page-card p-4 h-100">
               <span class="badge text-bg-success mb-3">Блок 2</span>
               <h3 class="h5">Адаптивність</h3>
               <p class="text-secondary mb-0">
@@ -196,7 +127,7 @@
             </article>
           </div>
           <div class="col-12 col-md-6">
-            <article class="content-card p-4 h-100">
+            <article class="content-card page-card p-4 h-100">
               <span class="badge text-bg-warning mb-3">Блок 3</span>
               <h3 class="h5">Готові компоненти</h3>
               <p class="text-secondary mb-0">
@@ -206,7 +137,7 @@
             </article>
           </div>
           <div class="col-12 col-md-6">
-            <article class="content-card p-4 h-100">
+            <article class="content-card page-card p-4 h-100">
               <span class="badge text-bg-info mb-3">Блок 4</span>
               <h3 class="h5">Утиліти</h3>
               <p class="text-secondary mb-0">
@@ -216,7 +147,7 @@
             </article>
           </div>
           <div class="col-12 col-md-6">
-            <article class="content-card p-4 h-100">
+            <article class="content-card page-card p-4 h-100">
               <span class="badge text-bg-primary mb-3">Блок 5</span>
               <h3 class="h5">Швидкий старт через CDN</h3>
               <p class="text-secondary mb-0">
@@ -228,16 +159,22 @@
         </div>
       </section>
 
+      <!-- Блок aside використовується для правої бічної колонки з формою та підказками. -->
       <aside class="col-12 col-lg-3" id="right-panel">
-        <section class="section-card p-4 mb-4">
+        <!-- Тег section об'єднує форму в окремий змістовий блок. -->
+        <section class="section-card page-card p-4 mb-4">
           <h2 class="h4 mb-3">RIGHT</h2>
           <p class="text-secondary mb-4">
             Права колонка містить невелику Bootstrap-форму й короткі нотатки щодо застосування компонентів.
           </p>
 
+          <!-- Тег form використовується для групування полів введення в єдину форму. -->
           <form>
+            <!-- Тег div об'єднує підпис і поле форми в окремий рядок. -->
             <div class="mb-3">
+              <!-- Тег label підписує поле форми та пов'язується з ним через атрибут for. -->
               <label class="form-label" for="name">Ім'я</label>
+              <!-- Тег input створює однорядкове поле для введення тексту. -->
               <input class="form-control" id="name" type="text" placeholder="Введіть ім'я">
             </div>
             <div class="mb-3">
@@ -246,18 +183,22 @@
             </div>
             <div class="mb-3">
               <label class="form-label" for="topic">Тема</label>
+              <!-- Тег select створює випадаючий список варіантів. -->
               <select class="form-select" id="topic">
+                <!-- Тег option задає окремий варіант вибору у випадаючому списку. -->
                 <option selected>Bootstrap Grid</option>
                 <option>Forms</option>
                 <option>Utilities</option>
                 <option>Components</option>
               </select>
             </div>
+            <!-- Тег button створює кнопку для взаємодії з формою. -->
             <button class="btn btn-dark w-100" type="button">Надіслати</button>
           </form>
         </section>
 
-        <section class="section-card p-4">
+        <!-- Блок section використовується для допоміжної інформації та міні-пам'ятки. -->
+        <section class="section-card page-card p-4">
           <h3 class="h5 mb-3">Міні-пам'ятка</h3>
           <div class="d-grid gap-3 text-secondary">
             <div class="d-flex gap-3">
@@ -277,17 +218,20 @@
       </aside>
     </main>
 
-    <footer class="footer-card p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+    <!-- Блок footer використовується для завершальної частини сторінки з кнопкою навігації. -->
+    <footer class="footer-card page-card p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+      <!-- Тег div групує текстову частину підвалу. -->
       <div>
         <h2 class="h5 mb-2">FOOTER</h2>
         <p class="text-secondary mb-0">
           Домашнє завдання №14 виконане з використанням Bootstrap 5.3 та мінімального власного CSS.
         </p>
       </div>
-      <a class="btn btn-outline-dark btn-lg" href="../index.html">Повернутися на головний індекс</a>
+      <a class="btn btn-outline-dark btn-lg" href="../index.html">Повернутися на головну сторінку</a>
     </footer>
   </div>
 
+  <!-- Тег script підключає JavaScript-файл Bootstrap для інтерактивних компонентів. -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
