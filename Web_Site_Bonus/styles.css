@@ -1,0 +1,119 @@
+/* Блок @import підключає шрифти Oswald і Montserrat для відповідності макету. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Oswald:wght@400;700&display=swap");
+
+/* Блок body задає базовий фон і керує загальним рендерингом шрифтів. */
+.site-body {
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Блок .font-oswald використовується як службовий клас для заголовків сайту. */
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+/* Блок .font-montserrat використовується як службовий клас для текстового контенту. */
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Блок .hero-section підключає головне фонове зображення першого екрана. */
+.hero-section {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.18) 35%, rgba(0, 0, 0, 0.1) 100%),
+    url("Photo to main offer.png") center/cover no-repeat;
+}
+
+/* Блок .about-section підключає фон для секції "Трохи про мене". */
+.about-section {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("about me.png") center/cover no-repeat;
+}
+
+/* Блок .stats-section підключає затемнений фон для секції з лічильниками. */
+.stats-section {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
+    url("counter.png") center/cover no-repeat;
+}
+
+/* Блок .articles-section підключає фон для блоку з останніми статтями. */
+.articles-section {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url("news_bg.png") center/cover no-repeat;
+}
+
+/* Блок .contacts-map-section підключає зображення карти для контактної секції. */
+.contacts-map-section {
+  background: url("map.jpg") center/cover no-repeat;
+}
+
+/* Блок .review-card задає м'яку тінь для картки з відгуком. */
+.review-card {
+  box-shadow: 0 22px 60px rgba(45, 94, 94, 0.12);
+}
+
+/* Блок .review-arrow прибирає стандартне оформлення кнопок-стрілок. */
+.review-arrow {
+  background: transparent;
+  border: 0;
+  line-height: 1;
+}
+
+/* Блок .faq-item summary::-webkit-details-marker ховає стандартний маркер браузера. */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Блок .faq-item summary знімає стандартний список-маркер у summary для всіх браузерів. */
+.faq-item summary {
+  list-style: none;
+}
+
+/* Блок .form-select додає власну стрілку до select для наближення до макета. */
+.form-select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #000 50%),
+    linear-gradient(135deg, #000 50%, transparent 50%);
+  background-position:
+    calc(100% - 28px) calc(50% - 4px),
+    calc(100% - 18px) calc(50% - 4px);
+  background-size: 10px 10px, 10px 10px;
+  background-repeat: no-repeat;
+}
+
+/* Блок .form-field::placeholder стилізує плейсхолдери у всіх полях форми. */
+.form-field::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+/* Блок @media (max-width: 1023px) коригує фонові позиції на планшетах. */
+@media (max-width: 1023px) {
+  .hero-section {
+    background-position: 72% center;
+  }
+
+  .contacts-map-section {
+    background-position: 30% center;
+  }
+}
+
+/* Блок @media (max-width: 767px) адаптує декоративні фони під мобільні екрани. */
+@media (max-width: 767px) {
+  .hero-section {
+    background-position: 68% center;
+  }
+
+  .about-section {
+    background-position: 62% center;
+  }
+
+  .articles-section {
+    background-position: 54% center;
+  }
+}

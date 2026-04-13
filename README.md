@@ -23,6 +23,7 @@
 - `home-work-11C.D`
 - `home-work-13C.D`
 - `home-work-14C.D`
+- `Web_Site_Bonus`
 
 ## Домашнє завдання №13
 
@@ -57,6 +58,23 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-14C.D/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-14C.D
+
+## Домашнє завдання №15
+
+Тема роботи: **Tailwind CSS**.
+
+Що реалізовано:
+
+- створено бонусну сторінку `Web_Site_Bonus/index.html` за макетом із `Web Site.png` та шаблоном із `code.txt`;
+- використано Tailwind CSS через CDN для layout, spacing, typography, grid і responsive-поведінки;
+- власні фонові стилі, шрифти та допоміжні класи винесені в окремий файл `Web_Site_Bonus/styles.css`;
+- зібрано hero-блок, послуги, секцію "про мене", дві форми запису, лічильники, відгук, статті, FAQ, контакти й футер;
+- додано українські коментарі над HTML-блоками, над CSS-блоками та пояснення для нових тегів у розмітці.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/Web_Site_Bonus/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/Web_Site_Bonus
 
 ## Як переглянути
 
