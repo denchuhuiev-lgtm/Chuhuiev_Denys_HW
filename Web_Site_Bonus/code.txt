@@ -1,0 +1,2622 @@
+/* Desktop */
+
+position: relative;
+width: 1440px;
+height: 5177px;
+
+background: #FFF7F7;
+
+
+/* Rectangle */
+
+position: absolute;
+width: 1440px;
+height: 190px;
+left: 0px;
+top: 4987px;
+
+background: #2D5E5E;
+
+
+/* футер контакты */
+
+position: absolute;
+width: 714px;
+height: 24px;
+left: 385px;
+top: 5070px;
+
+
+
+/* Group 4 */
+
+position: absolute;
+width: 161px;
+height: 24px;
+left: 385px;
+top: 5070px;
+
+
+
+/* @phyholog_sergei */
+
+position: absolute;
+width: 133px;
+height: 24px;
+left: 413px;
+top: 5070px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+color: #FFFFFF;
+
+
+
+/* instagram-logo */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 385px;
+top: 5072px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 24.23%;
+right: 24.23%;
+top: 24.23%;
+bottom: 24.23%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 70.34%;
+right: 16.65%;
+top: 16.71%;
+bottom: 70.28%;
+
+background: #FFFFFF;
+
+
+/* Group 5 */
+
+position: absolute;
+width: 151px;
+height: 24px;
+left: 576px;
+top: 5070px;
+
+
+
+/* +380 99 123 45 67 */
+
+position: absolute;
+width: 123px;
+height: 24px;
+left: 604px;
+top: 5070px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+color: #FFFFFF;
+
+
+
+/* viber */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 576px;
+top: 5072px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 4.3%;
+right: 4.2%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 18.37%;
+right: 30.21%;
+top: 22.65%;
+bottom: 25.93%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 47.83%;
+right: 18.28%;
+top: 12.96%;
+bottom: 53.15%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 47.83%;
+right: 30.83%;
+top: 25.51%;
+bottom: 53.15%;
+
+background: #FFFFFF;
+
+
+/* Group 6 */
+
+position: absolute;
+width: 161px;
+height: 24px;
+left: 757px;
+top: 5070px;
+
+
+
+/* @phyholog_sergei */
+
+position: absolute;
+width: 133px;
+height: 24px;
+left: 785px;
+top: 5070px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+color: #FFFFFF;
+
+
+
+/* telegram */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 757px;
+top: 5072px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 3.03%;
+bottom: 3.03%;
+
+background: #FFFFFF;
+
+
+/* Group 7 */
+
+position: absolute;
+width: 151px;
+height: 24px;
+left: 948px;
+top: 5070px;
+
+
+
+/* +380 99 123 45 67 */
+
+position: absolute;
+width: 123px;
+height: 24px;
+left: 976px;
+top: 5070px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+color: #FFFFFF;
+
+
+
+/* phone-call */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 948px;
+top: 5073px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0.07%;
+right: 0.07%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0.07%;
+right: 0.07%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0.07%;
+right: 6.13%;
+top: 5.78%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 51.7%;
+right: 18.17%;
+top: 18.13%;
+bottom: 51.73%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 52.51%;
+right: 0.07%;
+top: 0%;
+bottom: 52.6%;
+
+background: #FFFFFF;
+
+
+/* Скидка */
+
+position: absolute;
+width: 1170px;
+height: 3314.28px;
+left: 135px;
+top: 1612.2px;
+
+
+
+/* Записаться на прием */
+
+position: absolute;
+width: 969px;
+height: 3259.8px;
+left: 336px;
+top: 1612.2px;
+
+
+
+/* Кнопка */
+
+position: absolute;
+width: 250px;
+height: 40px;
+left: 595px;
+top: 2021px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 250px;
+height: 40px;
+left: calc(50% - 250px/2);
+top: calc(50% - 40px/2 - 547.5px);
+
+background: #2D5E5E;
+border-radius: 10px;
+
+
+/* Відправити */
+
+position: absolute;
+width: 110px;
+height: 24px;
+left: calc(50% - 110px/2);
+top: calc(50% - 24px/2 - 547.5px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* Кнопка */
+
+position: absolute;
+width: 370px;
+height: 40px;
+left: 935px;
+top: 4832px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 370px;
+height: 40px;
+left: 935px;
+top: 4832px;
+
+background: #2D5E5E;
+border-radius: 10px;
+
+
+/* Записатися зі знижкою */
+
+position: absolute;
+width: 228px;
+height: 24px;
+left: 1012px;
+top: 4840px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* Политика */
+
+position: absolute;
+width: 283.09px;
+height: 30px;
+left: 578.45px;
+top: 1951px;
+
+
+
+/* чекбокс */
+
+position: absolute;
+width: 15.05px;
+height: 15px;
+left: 578.45px;
+top: 1959px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 15.05px;
+height: 15px;
+left: 578.45px;
+top: 1959px;
+
+background: #FFFFFF;
+border: 1px solid #2D5E5E;
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 11.03px;
+height: 11px;
+left: 580.46px;
+top: 1961px;
+
+background: #2D5E5E;
+
+
+/* Я згоден із політикою конфіденційності */
+
+position: absolute;
+width: 253px;
+height: 30px;
+right: 578.45px;
+top: 1951px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 30px;
+/* identical to box height, or 250% */
+
+color: #2D5E5E;
+
+
+
+/* Записатися на консультацію */
+
+position: absolute;
+width: 618.27px;
+height: 72px;
+left: 410.87px;
+top: 1612.2px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Поле ввода */
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 336px;
+top: 1731px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 336px;
+top: 1731px;
+
+border: 1px solid #000000;
+border-radius: 10px;
+
+
+/* Ваше имʼя * */
+
+position: absolute;
+width: 130.38px;
+height: 24px;
+left: 356.6px;
+top: 1739px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Поле ввода */
+
+position: absolute;
+width: 372px;
+height: 180px;
+left: 735px;
+top: 1731px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 372px;
+height: 180px;
+left: 735px;
+top: 1731px;
+
+border: 1px solid #000000;
+border-radius: 10px;
+
+
+/* Побажання */
+
+position: absolute;
+width: 110px;
+height: 24px;
+left: 755px;
+top: 1739px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Поле ввода */
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 336px;
+top: 1801px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 336px;
+top: 1801px;
+
+border: 1px solid #000000;
+border-radius: 10px;
+
+
+/* Ваш телефон * */
+
+position: absolute;
+width: 168.51px;
+height: 24px;
+left: 356.6px;
+top: 1809px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Поле ввода */
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 336px;
+top: 1871px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 336px;
+top: 1871px;
+
+border: 1px solid #000000;
+border-radius: 10px;
+
+
+/* sort-down */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 665px;
+top: 1881px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 21.87%;
+bottom: 21.87%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 21.87%;
+bottom: 21.87%;
+
+background: #000000;
+
+
+/* Тема зустрічі * */
+
+position: absolute;
+width: 169.74px;
+height: 24px;
+left: 356.6px;
+top: 1879px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Политика */
+
+position: absolute;
+width: 283.09px;
+height: 30px;
+left: 578.26px;
+top: 4896.48px;
+
+
+
+/* чекбокс */
+
+position: absolute;
+width: 15.05px;
+height: 15px;
+left: 578.26px;
+top: 4904.48px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 15.05px;
+height: 15px;
+left: 578.26px;
+top: 4904.48px;
+
+background: #FFFFFF;
+border: 1px solid #2D5E5E;
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 11.03px;
+height: 11px;
+left: 580.26px;
+top: 4906.48px;
+
+background: #2D5E5E;
+
+
+/* Я згоден із політикою конфіденційності */
+
+position: absolute;
+width: 253px;
+height: 30px;
+left: 608.35px;
+top: 4896.48px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 30px;
+/* identical to box height, or 250% */
+
+color: #2D5E5E;
+
+
+
+/* Поле ввода */
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 536px;
+top: 4832px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 536px;
+top: 4832px;
+
+border: 1px solid #000000;
+border-radius: 10px;
+
+
+/* Ваш телефон * */
+
+position: absolute;
+width: 168.51px;
+height: 24px;
+left: 556.6px;
+top: 4840px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Поле ввода */
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 135px;
+top: 4832px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 369px;
+height: 40px;
+left: 135px;
+top: 4832px;
+
+border: 1px solid #000000;
+border-radius: 10px;
+
+
+/* Ваше имʼя * */
+
+position: absolute;
+width: 130.38px;
+height: 24px;
+left: 155.6px;
+top: 4840px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Записатися зі знижкою 50 грн */
+
+position: absolute;
+width: 617px;
+height: 72px;
+left: 412px;
+top: 4700px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Контакты */
+
+position: absolute;
+width: 1440px;
+height: 600px;
+left: 0px;
+top: 4040px;
+
+
+
+/* map */
+
+position: absolute;
+width: 1440px;
+height: 600px;
+left: 0px;
+top: 4040px;
+
+background: url(map.jpg);
+
+
+/* Блок контактов */
+
+position: absolute;
+width: 477px;
+height: 344px;
+left: 828px;
+top: 4168px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 477px;
+height: 344px;
+left: 828px;
+top: 4168px;
+
+background: #ADDDDE;
+
+
+/* Контакти */
+
+position: absolute;
+width: 186px;
+height: 72px;
+left: 858.35px;
+top: 4194.67px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #2D5E5E;
+
+
+
+/* Адреса: Вул. Центральна буд. 10, офіс 1 */
+
+position: absolute;
+width: 325px;
+height: 24px;
+left: 858.35px;
+top: 4457px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+
+/* E-mail: phyholog_sergei@gmail.com */
+
+position: absolute;
+width: 298px;
+height: 24px;
+left: 858.35px;
+top: 4423px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+
+/* Instagram: @phyholog_sergei */
+
+position: absolute;
+width: 243px;
+height: 24px;
+left: 858.35px;
+top: 4389px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+
+/* Telegram: @phyholog_sergei */
+
+position: absolute;
+width: 236px;
+height: 24px;
+left: 858.35px;
+top: 4355px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+
+/* Viber: +380 99 123 45 67 */
+
+position: absolute;
+width: 191px;
+height: 24px;
+left: 858.35px;
+top: 4321px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+
+/* Тел: +380 99 123 45 67 */
+
+position: absolute;
+width: 177px;
+height: 24px;
+left: 858.35px;
+top: 4287px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+
+/* Новости */
+
+position: absolute;
+width: 2111px;
+height: 1080px;
+left: -671px;
+top: 2932px;
+
+
+
+/* Частые вопросы */
+
+position: absolute;
+width: 944.14px;
+height: 454px;
+left: 190.86px;
+top: 3526px;
+
+
+
+/* Вопрос */
+
+position: absolute;
+width: 944.14px;
+height: 278px;
+left: 190.86px;
+top: 3526px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 190.86px;
+top: 3705.86px;
+
+background: #2D5E5E;
+transform: rotate(-45deg);
+
+
+/* Який у вас графік роботи? */
+
+position: absolute;
+width: 900px;
+height: 32px;
+left: 235px;
+top: 3704px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #2D5E5E;
+
+
+
+/* Frame 2 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 618px;
+top: 3526px;
+
+
+
+/* Я працюю, проводжу консультації з понеділка по суботу з 15:00 до 21:00. Записатися на прийом можна будь-якого дня з 9:00 до 21:00 */
+
+position: absolute;
+width: 900px;
+height: 48px;
+left: 235px;
+top: 3756px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+color: #000000;
+
+
+
+/* Вопрос */
+
+position: absolute;
+width: 940px;
+height: 32px;
+left: 195px;
+top: 3844px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 195px;
+top: 3850px;
+
+background: #000000;
+
+
+/* Скільки триває сесія? */
+
+position: absolute;
+width: 900px;
+height: 32px;
+left: 235px;
+top: 3844px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Вопрос */
+
+position: absolute;
+width: 940px;
+height: 32px;
+left: 195px;
+top: 3896px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 195px;
+top: 3902px;
+
+background: #000000;
+
+
+/* Скільки коштує консультація? */
+
+position: absolute;
+width: 900px;
+height: 32px;
+left: 235px;
+top: 3896px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Вопрос */
+
+position: absolute;
+width: 940px;
+height: 32px;
+left: 195px;
+top: 3948px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 195px;
+top: 3954px;
+
+background: #000000;
+
+
+/* Що собою представляють консультації? */
+
+position: absolute;
+width: 900px;
+height: 32px;
+left: 235px;
+top: 3948px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #000000;
+
+
+
+/* Часті запитання */
+
+position: absolute;
+width: 328px;
+height: 72px;
+left: 556px;
+top: 3554px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* news_bg */
+
+position: absolute;
+width: 1920px;
+height: 1080px;
+left: -671px;
+top: 2932px;
+
+
+
+/* counter bg */
+
+position: absolute;
+width: 1440px;
+height: 564px;
+left: 0px;
+top: 2939px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(news_bg.png);
+
+
+/* Новости */
+
+position: absolute;
+width: 1170px;
+height: 322px;
+left: 142px;
+top: 3121px;
+
+
+
+/* новость  1 */
+
+position: absolute;
+width: 334px;
+height: 318px;
+left: 142px;
+top: 3125px;
+
+
+
+/* Жити, а не боятися: як впоратися з канцерофобією */
+
+position: absolute;
+width: 334px;
+height: 64px;
+left: 142px;
+top: 3379px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+
+color: #FFFFFF;
+
+
+
+/* news-1 */
+
+position: absolute;
+width: 334px;
+height: 230px;
+left: 142px;
+top: 3125px;
+
+background: url(news-1.jpg);
+
+
+/* новость 2 */
+
+position: absolute;
+width: 334px;
+height: 318px;
+left: 560px;
+top: 3125px;
+
+
+
+/* Брате мій, мій ворог: чому ворогують брати і сестри? */
+
+position: absolute;
+width: 334px;
+height: 64px;
+left: 560px;
+top: 3379px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+
+color: #FFFFFF;
+
+
+
+/* news-2 */
+
+position: absolute;
+width: 334px;
+height: 230px;
+left: 560px;
+top: 3125px;
+
+background: url(news-2.jpg);
+
+
+/* новость 3 */
+
+position: absolute;
+width: 334px;
+height: 322px;
+left: 978px;
+top: 3121px;
+
+
+
+/* 8 порад, як залишатися продуктивним і не збожеволіти */
+
+position: absolute;
+width: 334px;
+height: 64px;
+left: 978px;
+top: 3379px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* or 133% */
+
+color: #FFFFFF;
+
+
+
+/* news-3 */
+
+position: absolute;
+width: 334px;
+height: 230px;
+left: 978px;
+top: 3121px;
+
+background: url(news-3.jpg);
+
+
+/* Останні статті */
+
+position: absolute;
+width: 284px;
+height: 72px;
+left: 142px;
+top: 2999px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Отзывы */
+
+position: absolute;
+width: 720px;
+height: 385px;
+left: 360px;
+top: 2484px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 17px;
+height: 30.3px;
+left: 1063px;
+top: 2717.24px;
+
+background: #ADDDDE;
+
+
+/* Vector */
+
+position: absolute;
+width: 17px;
+height: 30.3px;
+left: 360px;
+top: 2710.17px;
+
+background: #ADDDDE;
+transform: rotate(-180deg);
+
+
+/* Відгуки клієнтів */
+
+position: absolute;
+width: 339px;
+height: 72px;
+left: 551px;
+top: 2484px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 600px;
+height: 260px;
+left: 420px;
+top: 2609px;
+
+background: #ADDDDE;
+
+
+/* girl */
+
+position: absolute;
+width: 70px;
+height: 70px;
+left: 595px;
+top: 2629px;
+
+background: url(girl.png);
+border-radius: 100px;
+
+
+/* Марина, 25 лет */
+
+position: absolute;
+width: 142px;
+height: 24px;
+left: 697px;
+top: 2652px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+text-align: center;
+
+color: #2D5E5E;
+
+
+
+/* Звернулася до Сергія, бо нерви вже були на межі. Ситуація здавалася мені безвихідною – незважаючи на те, що я працюю і навчаюсь. Сама не помітила, як позбулася величезної грудки. Нарешті побачила вихід із ситуації, що склалася, і тепер є надія... Велике спасибі Валентину. */
+
+position: absolute;
+width: 550px;
+height: 120px;
+left: 445px;
+top: 2729px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Frame 1 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 400px;
+top: 2669px;
+
+
+
+/* Счетчики */
+
+position: absolute;
+width: 1435.31px;
+height: 306px;
+left: 0px;
+top: 2121px;
+
+
+
+/* counter bg */
+
+position: absolute;
+width: 1435.31px;
+height: 306px;
+left: 0px;
+top: 2121px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(counter bg.png);
+
+
+/* Group */
+
+position: absolute;
+width: 300px;
+height: 186px;
+left: 182.5px;
+top: 2181px;
+
+
+
+/* Оптимально для того, щоб знайти вихід та зробити черговий крок */
+
+position: absolute;
+width: 300px;
+height: 48px;
+left: 182.5px;
+top: 2319px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Тривалість консультации */
+
+position: absolute;
+width: 257px;
+height: 32px;
+left: 204.5px;
+top: 2267px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* 120 хв */
+
+position: absolute;
+width: 159px;
+height: 72px;
+left: 253px;
+top: 2181px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 302.85px;
+height: 186px;
+left: 567.15px;
+top: 2181px;
+
+
+
+/* Ціна доступна для будь-якої людини, яка потребує допомоги */
+
+position: absolute;
+width: 300px;
+height: 48px;
+left: 570px;
+top: 2319px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Вартість */
+
+position: absolute;
+width: 87px;
+height: 32px;
+left: 674.15px;
+top: 2270px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* від 500 грн */
+
+position: absolute;
+width: 301px;
+height: 72px;
+left: 567.15px;
+top: 2181px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 300px;
+height: 186px;
+left: 954px;
+top: 2181px;
+
+
+
+/* Результат — улыбка на лице и ощущение счастья */
+
+position: absolute;
+width: 300px;
+height: 48px;
+left: calc(50% - 300px/2 + 384px);
+top: calc(50% - 48px/2 - 245.5px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Задоволених клієнтів */
+
+position: absolute;
+width: 225px;
+height: 32px;
+left: calc(50% - 225px/2 + 384px);
+top: calc(50% - 32px/2 - 305.5px);
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* 250+ */
+
+position: absolute;
+width: 122px;
+height: 72px;
+left: calc(50% - 122px/2 + 384px);
+top: calc(50% - 72px/2 - 371.5px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Немного обо мне */
+
+position: absolute;
+width: 1440px;
+height: 450px;
+left: 0px;
+top: 1099px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 1440px;
+height: 450px;
+left: 0px;
+top: 1099px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(about me.png);
+
+
+/* Кнопка */
+
+position: absolute;
+width: 250px;
+height: 40px;
+left: 130px;
+top: 1448px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 250px;
+height: 40px;
+left: 130px;
+top: 1448px;
+
+border: 3px solid #2D5E5E;
+border-radius: 10px;
+
+
+/* Поставити питання */
+
+position: absolute;
+width: 183px;
+height: 24px;
+left: 163.24px;
+top: 1456px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* Кнопка */
+
+position: absolute;
+width: 250px;
+height: 40px;
+left: 410px;
+top: 1448px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 250px;
+height: 40px;
+left: 410px;
+top: 1448px;
+
+background: #2D5E5E;
+border-radius: 10px;
+
+
+/* Хочу консультацію */
+
+position: absolute;
+width: 174px;
+height: 24px;
+left: 448px;
+top: 1456px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* Далеко-далеко за словесними горами країни голосних і приголосних живуть рибні тексти. Вдалині від усіх живуть вони в буквених будинках на березі Семантика великого мовного океану. Маленький струмок Даль дзюрчить по всій країні та забезпечує її всіма необхідними правилами. Ця парадигматична країна, в якій смажені члени речення залітають прямо. */
+
+position: absolute;
+width: 570px;
+height: 150px;
+left: 130px;
+top: 1263px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+color: #FFFFFF;
+
+
+
+/* Трохи про мене */
+
+position: absolute;
+width: 230px;
+height: 54px;
+left: 130px;
+top: 1159px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 54px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* about photo */
+
+position: absolute;
+width: 469.94px;
+height: 330px;
+left: 835px;
+top: 1159px;
+
+background: url(about photo.jpg);
+
+
+/* Виды консультации */
+
+position: absolute;
+width: 1080px;
+height: 234px;
+left: 180px;
+top: 828px;
+
+
+
+/* Group */
+
+position: absolute;
+width: 300px;
+height: 234px;
+left: 180px;
+top: 828px;
+
+
+
+/* goal */
+
+position: absolute;
+width: 56px;
+height: 56px;
+left: 302px;
+top: 828px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 5.08%;
+right: 4.93%;
+top: 0%;
+bottom: 0%;
+
+background: #4A5E5E;
+
+
+/* Досягнення поставленої мети буває складним завданням, але за правильної підтримки немає нічого неможливого */
+
+position: absolute;
+width: 300px;
+height: 96px;
+left: 180px;
+top: 966px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Особисті консультації */
+
+position: absolute;
+width: 224px;
+height: 32px;
+left: 218.04px;
+top: 914px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #2D5E5E;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 300px;
+height: 234px;
+left: 570px;
+top: 828px;
+
+
+
+/* family-room */
+
+position: absolute;
+width: 56px;
+height: 56px;
+left: 692px;
+top: 828px;
+
+
+
+/* XMLID 173 */
+
+position: absolute;
+left: 3.77%;
+right: 3.77%;
+top: 0%;
+bottom: 0%;
+
+background: #4A5E5E;
+
+
+/* У будь-якої родини бувають кризові ситуації, тому в такі моменти важливо підтримувати одне одного. */
+
+position: absolute;
+width: 300px;
+height: 96px;
+left: 570px;
+top: 966px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Сімейна терапія */
+
+position: absolute;
+width: 163px;
+height: 32px;
+left: 638.5px;
+top: 914px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #2D5E5E;
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 300px;
+height: 234px;
+left: 960px;
+top: 828px;
+
+
+
+/* network */
+
+position: absolute;
+width: 56px;
+height: 56px;
+left: 1082px;
+top: 828px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 32.08%;
+right: 32.08%;
+top: 29.85%;
+bottom: 53.43%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 32.08%;
+right: 32.08%;
+top: 29.85%;
+bottom: 53.43%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 32.08%;
+right: 32.08%;
+top: 29.85%;
+bottom: 53.43%;
+
+background: #4A5E5E;
+
+
+/* Group */
+
+position: absolute;
+left: 41.04%;
+right: 41.04%;
+top: 10.04%;
+bottom: 72.04%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 41.04%;
+right: 41.04%;
+top: 10.04%;
+bottom: 72.04%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 41.04%;
+right: 41.04%;
+top: 10.04%;
+bottom: 72.04%;
+
+background: #4A5E5E;
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 64.15%;
+top: 73.25%;
+bottom: 10.04%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 64.15%;
+top: 73.25%;
+bottom: 10.04%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 64.15%;
+top: 73.25%;
+bottom: 10.04%;
+
+background: #4A5E5E;
+
+
+/* Group */
+
+position: absolute;
+left: 8.96%;
+right: 73.11%;
+top: 53.43%;
+bottom: 28.64%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 8.96%;
+right: 73.11%;
+top: 53.43%;
+bottom: 28.64%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.96%;
+right: 73.11%;
+top: 53.43%;
+bottom: 28.64%;
+
+background: #4A5E5E;
+
+
+/* Group */
+
+position: absolute;
+left: 64.15%;
+right: 0%;
+top: 73.25%;
+bottom: 10.04%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 64.15%;
+right: 0%;
+top: 73.25%;
+bottom: 10.04%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 64.15%;
+right: 0%;
+top: 73.25%;
+bottom: 10.04%;
+
+background: #4A5E5E;
+
+
+/* Group */
+
+position: absolute;
+left: 73.11%;
+right: 8.96%;
+top: 53.43%;
+bottom: 28.64%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 73.11%;
+right: 8.96%;
+top: 53.43%;
+bottom: 28.64%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 73.11%;
+right: 8.96%;
+top: 53.43%;
+bottom: 28.64%;
+
+background: #4A5E5E;
+
+
+/* Group */
+
+position: absolute;
+left: 39.68%;
+right: 39.79%;
+top: 49.06%;
+bottom: 26.81%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 39.68%;
+right: 39.79%;
+top: 49.06%;
+bottom: 26.81%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 39.68%;
+right: 39.79%;
+top: 49.06%;
+bottom: 26.81%;
+
+background: #4A5E5E;
+
+
+/* Групові заняття — чудове місце, щоб навчитися спілкуватися з оточуючими людьми та розкрити свій потенціал */
+
+position: absolute;
+width: 300px;
+height: 96px;
+left: 960px;
+top: 966px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Сенситивні групи */
+
+position: absolute;
+width: 176px;
+height: 32px;
+left: 1022px;
+top: 914px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #2D5E5E;
+
+
+
+/* Главный экран */
+
+position: absolute;
+width: 1440px;
+height: 768px;
+left: 0px;
+top: 0px;
+
+
+
+/* photo to main offer */
+
+position: absolute;
+width: 1440px;
+height: 768px;
+left: 0px;
+top: 0px;
+
+background: url(photo to main offer.png);
+
+
+/* Особисті, сімейні та групові консультації */
+
+position: absolute;
+width: 255px;
+height: 72px;
+left: 130px;
+top: 409.78px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+/* or 150% */
+
+color: #FFFFFF;
+
+
+
+/* Главное меню */
+
+position: absolute;
+width: 317.59px;
+height: 22px;
+left: 993.41px;
+top: 54px;
+
+
+
+/* Головна */
+
+position: absolute;
+width: 79px;
+height: 22px;
+left: 993.41px;
+top: 54px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #6DE1E3;
+
+
+
+/* Події */
+
+position: absolute;
+width: 50px;
+height: 22px;
+left: 1088.94px;
+top: 54px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #85AAAB;
+
+
+
+/* Контакти */
+
+position: absolute;
+width: 92px;
+height: 22px;
+left: 1155.47px;
+top: 54px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #85AAAB;
+
+
+
+/* Блог */
+
+position: absolute;
+width: 47px;
+height: 22px;
+left: 1264px;
+top: 54px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #85AAAB;
+
+
+
+/* Line */
+
+position: absolute;
+width: 79px;
+height: 0px;
+left: 993.41px;
+top: 76px;
+
+border: 2px solid #6DE1E3;
+
+
+/* Ваш особистий психолог У Кривому Розі */
+
+position: absolute;
+width: 416px;
+height: 120px;
+left: 130px;
+top: 241px;
+
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 60px;
+/* or 150% */
+
+color: #FFFFFF;
+
+
+
+/* Кнопка */
+
+position: absolute;
+width: 250px;
+height: 48px;
+left: 130px;
+top: 529.78px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 250px;
+height: 48px;
+left: 130px;
+top: 529.78px;
+
+background: #2D5E5E;
+border-radius: 10px;
+
+
+/* Більше */
+
+position: absolute;
+width: 68px;
+height: 24px;
+left: 221.5px;
+top: 541.78px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+color: #FFFFFF;
+
+
+
+/* logo */
+
+position: absolute;
+width: 180px;
+height: 62.16px;
+left: 130px;
+top: 29.47px;
+
+background: url(Gemini_Generated_Image_d3upnxd3upnxd3up-Photoroom.png);
+
+
+/* logo */
+
+position: absolute;
+width: 200px;
+height: 69.06px;
+left: 135px;
+top: 5044.44px;
+
+background: url(Gemini_Generated_Image_d3upnxd3upnxd3up-Photoroom.png);

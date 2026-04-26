@@ -23,6 +23,7 @@
 - `home-work-11C.D`
 - `home-work-13C.D`
 - `home-work-14C.D`
+- `home-work-18C.D_JS`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -76,6 +77,22 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/Web_Site_Bonus/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/Web_Site_Bonus
+
+## Домашнє завдання №18 (JavaScript)
+
+Тема роботи: **Основи JavaScript: Працюємо зі змінними, типами даних та операторами**.
+
+Що реалізовано:
+
+- створено змінні різних типів (`Number`, `String`, `Boolean`, `Array`, `Object`) із відповідними значеннями;
+- продемонстровано роботу з методом `toFixed()` для форматування чисел;
+- створено та модифіковано змінну типу `BigInt` (наприклад, `123n`);
+- для зручного перегляду результатів зроблено `index.html` сторінку з мінімалістичним дизайном, де автоматично виводяться результати виконання JS-коду та сам код із `main.js`.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-18C.D_JS/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-18C.D_JS
 
 ## Фінальний проєкт HTML та CSS
 

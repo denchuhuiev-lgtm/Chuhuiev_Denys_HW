@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ 18 - Основи JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        .result {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        .label {
+            font-weight: 600;
+            color: #2980b9;
+            display: inline-block;
+            min-width: 250px;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Домашнє завдання №18 (JavaScript)</h1>
+    
+    <div class="card">
+        <h2>Опис</h2>
+        <p>Основи JavaScript: Працюємо зі змінними, типами даних та операторами.</p>
+    </div>
+
+    <div class="card">
+        <h2>Результати виконання коду:</h2>
+        <div id="output"></div>
+    </div>
+
+    <div class="card">
+        <h2>Код файлу (main.js)</h2>
+        <pre class="code-block"><code id="code-display"></code></pre>
+    </div>
+
+    <!-- Підключаємо зовнішній файл скрипта (Правильний, професійний підхід) -->
+    <script src="main.js/main.js"></script>
+    
+    <!-- Скрипт для виведення результатів на сторінку -->
+    <script>
+        // Код з main.js у вигляді рядка для відображення
+        const sourceCode = `console.log('JS #1. Домашнє завдання. Основи JavaScript: Працюємо зі змінними, типами даних');
+
+/*
+ * #1
+ *
+ * Створюю змінні зі значеннями.
+ */
+
+// ім'я змінної: myNum, значення: 10
+let myNum = 10;
+
+// ім'я змінної: myStr, значення: 'some string'
+let myStr = 'some string';
+
+// ім'я змінної: myBool, значення: true
+let myBool = true;
+
+// ім'я змінної: myArr, значення: 1, 2, 3, 4, 5
+let myArr = [1, 2, 3, 4, 5];
+
+// ім'я змінної: myObj, значення: first: 'First Name', last: 'Last Name'
+let myObj = { first: 'First Name', last: 'Last Name' };
+
+/*
+ * #2
+ *
+ * Відформатовую ціле число, яке зберігається в змінній myNum, щоб отримати результат з 2 знаками після коми.
+ * Результат зберігаю у змінній decimal2.
+ */
+
+// decimal2
+let decimal2 = myNum.toFixed(2);
+
+/*
+ * #3
+ *
+ * Створюю змінну myBigInt і записую в неї число 123n (BigInt).
+ * Потім збільшую його на 1 та записую в цю ж саму змінну.
+ */
+
+// myBigInt
+let myBigInt = 123n;
+myBigInt++;`;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const outputDiv = document.getElementById('output');
+            
+            try {
+                // Беремо змінні, які ми створили у main.js/main.js
+                const results = [
+                    { label: 'Змінна myNum', value: myNum },
+                    { label: 'Змінна myStr', value: '"' + myStr + '"' },
+                    { label: 'Змінна myBool', value: myBool },
+                    { label: 'Змінна myArr', value: '[' + myArr.join(', ') + ']' },
+                    { label: 'Змінна myObj', value: JSON.stringify(myObj) },
+                    { label: 'Форматування (decimal2)', value: decimal2 },
+                    { label: 'BigInt (myBigInt після +1)', value: myBigInt.toString() + 'n' }
+                ];
+
+                results.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'result';
+                    div.innerHTML = '<span class="label">' + item.label + ':</span> <span>' + item.value + '</span>';
+                    outputDiv.appendChild(div);
+                });
+            } catch (error) {
+                outputDiv.innerHTML = '<div class="result" style="border-left-color: #e74c3c;">Помилка зчитування змінних: ' + error.message + '</div>';
+            }
+
+            // Відображаємо код (не через fetch, щоб уникнути помилки CORS при відкритті локального файлу)
+            document.getElementById('code-display').textContent = sourceCode;
+        });
+    </script>
+
+    <!-- Футер з кнопкою "На головну" -->
+    <div style="text-align: center; margin-top: 30px; padding-bottom: 20px;">
+        <a href="../index.html" style="display: inline-block; padding: 12px 24px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            ← На головну сторінку
+        </a>
+    </div>
+</body>
+</html>
