@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Фінальний проєкт HTML та CSS на Tailwind CSS з адаптивним лендингом TechnInnov."
+  >
+  <title>Фінальний проєкт | TechnInnov</title>
+  <!-- Тег script підключає Tailwind CSS через CDN для використання utility-класів у розмітці. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Тег link підключає окремий CSS-файл для шрифтів, фонів і допоміжних класів. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Тег body містить увесь видимий контент сторінки сайту. -->
+<body class="site-body bg-[#FAFAFA] text-[#222831]">
+  <!-- Блок div використовується як зовнішня обгортка для всього фінального лендінгу. -->
+  <div class="min-h-screen overflow-x-hidden">
+    <!-- Блок header використовується для верхньої панелі навігації та hero-секції. -->
+    <header class="bg-[#FAFAFA]">
+      <!-- Тег div обмежує ширину контенту та центрує його на сторінці. -->
+      <div class="mx-auto max-w-[1280px]">
+        <!-- Блок section використовується для верхньої навігаційної панелі. -->
+        <section class="bg-[#222831] px-4 py-2 md:px-6">
+          <!-- Тег div створює гнучкий контейнер для логотипа, меню та кнопок. -->
+          <div class="mx-auto flex max-w-[1248px] items-center justify-between gap-4">
+            <!-- Тег a створює клікабельний логотип з переходом на початок сторінки. -->
+            <a href="#top" class="inline-flex items-center gap-2 rounded-md px-2 py-1 text-[#FAFAFA]">
+              <!-- Тег img використовується для відображення логотипа бренду. -->
+              <img src="Vector - logo.svg" alt="Логотип TechnInnov" class="h-6 w-6">
+              <!-- Тег span використовується для короткого текстового напису бренду. -->
+              <span class="font-inter text-sm font-semibold">TechInnov</span>
+            </a>
+
+            <!-- Блок nav використовується для основного меню на планшеті та комп'ютері. -->
+            <nav class="hidden items-center gap-3 md:flex" aria-label="Основна навігація">
+              <!-- Тег ul створює список навігаційних посилань. -->
+              <ul class="flex items-center gap-1 lg:gap-3">
+                <!-- Тег li містить окремий пункт навігаційного списку. -->
+                <li><a class="nav-link" href="#top">Begin</a></li>
+                <li><a class="nav-link" href="#vision">Perspective</a></li>
+                <li><a class="nav-link" href="#team">Inventors</a></li>
+              </ul>
+              <!-- Тег button створює інтерактивну кнопку для заклику до дії. -->
+              <button type="button" class="nav-btn nav-btn--outline">Proceed</button>
+              <button type="button" class="nav-btn nav-btn--primary">Register Today</button>
+            </nav>
+
+            <!-- Блок details використовується як мобільне меню без JavaScript. -->
+            <details class="relative md:hidden">
+              <!-- Тег summary створює кнопку-розкривач для мобільного меню. -->
+              <summary class="mobile-menu-toggle list-none rounded border border-white/30 px-3 py-2 text-[#FAFAFA]">
+                <span class="sr-only">Відкрити мобільне меню</span>
+                <span class="block h-0.5 w-5 bg-current"></span>
+                <span class="mt-1 block h-0.5 w-5 bg-current"></span>
+                <span class="mt-1 block h-0.5 w-5 bg-current"></span>
+              </summary>
+              <div class="absolute right-0 top-[calc(100%+12px)] z-30 w-56 rounded-xl border border-white/10 bg-[#222831] p-4 shadow-2xl">
+                <nav aria-label="Мобільна навігація">
+                  <ul class="space-y-2">
+                    <li><a class="mobile-link" href="#top">Begin</a></li>
+                    <li><a class="mobile-link" href="#vision">Perspective</a></li>
+                    <li><a class="mobile-link" href="#team">Inventors</a></li>
+                  </ul>
+                  <div class="mt-4 grid gap-2">
+                    <button type="button" class="nav-btn nav-btn--outline w-full">Proceed</button>
+                    <button type="button" class="nav-btn nav-btn--primary w-full">Register Today</button>
+                  </div>
+                </nav>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- Блок section використовується для головного hero-блоку з текстом і зображенням. -->
+        <section id="top" class="grid items-stretch lg:grid-cols-2">
+          <div class="flex items-center px-4 py-16 sm:px-8 md:px-10 lg:px-6 xl:px-12">
+            <div class="w-full max-w-[592px]">
+              <!-- Тег h1 задає головний заголовок усього лендінгу. -->
+              <h1 class="font-inter text-[44px] font-bold leading-[1.04] tracking-[-0.02em] text-[#222831] sm:text-[56px] lg:text-[67px]">
+                Transforming Technology
+              </h1>
+              <!-- Тег p використовується для короткого пояснювального підзаголовка. -->
+              <p class="mt-4 font-inter text-lg leading-[1.3] text-[#818181] sm:text-[22px]">
+                Pioneer with us today.
+              </p>
+              <button type="button" class="hero-cta mt-8 sm:mt-10">Learn More</button>
+            </div>
+          </div>
+          <div class="hero-image min-h-[340px] sm:min-h-[520px] lg:min-h-[725px]"></div>
+        </section>
+      </div>
+    </header>
+
+    <!-- Тег main містить основний змістовий контент сторінки після hero-секції. -->
+    <main>
+      <!-- Блок section використовується для темного блоку з великими та малими feature-картками. -->
+      <section class="bg-[#222831] px-4 py-16 sm:px-6 md:px-8 lg:px-4 lg:py-[120px]">
+        <div class="mx-auto max-w-[1248px] space-y-6">
+          <!-- Тег article позначає окрему самостійну картку-контейнер з контентом. -->
+          <article class="feature-card feature-card--primary">
+            <div class="feature-card__content">
+              <!-- Тег h2 використовується для заголовків великих секцій сайту. -->
+              <h2 class="feature-card__title">Effortless Merging</h2>
+              <p class="feature-card__text">Consolidate your digital journey.</p>
+            </div>
+          </article>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="feature-card feature-card--secondary">
+              <div class="feature-card__content">
+                <h2 class="feature-card__title feature-card__title--small">Solid Protection</h2>
+                <p class="feature-card__text feature-card__text--small">Safeguarding your data&apos;s authenticity.</p>
+              </div>
+            </article>
+            <article class="feature-card feature-card--tertiary">
+              <div class="feature-card__content">
+                <h2 class="feature-card__title feature-card__title--small">User-Focused Layout</h2>
+                <p class="feature-card__text feature-card__text--small">Weaving easy-to-use user platforms.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок section використовується для великої текстової заяви "Our Aim". -->
+      <section id="vision" class="bg-[#FAFAFA] px-4 py-16 sm:px-6 md:px-8 lg:px-4 lg:py-[144px]">
+        <div class="mx-auto max-w-[1024px]">
+          <p class="font-inter text-[28px] font-bold leading-[1.2] text-[#00ADB5]">Our Aim</p>
+          <h2 class="mt-2 font-inter text-[42px] font-bold leading-[1.2] tracking-[-0.02em] text-[#818181] sm:text-[51px]">
+            We&apos;re here to pioneer and lead in tech, creating significant shifts in the digital landscape.
+          </h2>
+        </div>
+      </section>
+
+      <!-- Блок section використовується для секції з перевагами та списком напрямків. -->
+      <section class="bg-[#FAFAFA] px-4 py-16 sm:px-6 md:px-8 lg:px-4 lg:py-[160px]">
+        <div class="mx-auto max-w-[1200px]">
+          <div class="mx-auto max-w-[800px] text-center">
+            <h2 class="font-inter text-[42px] font-bold leading-[1.2] tracking-[-0.02em] text-[#222831] sm:text-[51px]">
+              Progressive Data Analytics
+            </h2>
+            <p class="mt-3 font-inter text-sm leading-[1.5] text-[#818181]">
+              Uncover patterns and prompt action.
+            </p>
+          </div>
+          <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <article class="benefit-item">
+              <img src="Vector.png" alt="Іконка Cloud-Based Solutions" class="benefit-item__icon">
+              <div>
+                <h3 class="benefit-item__title">Cloud-Based Solutions</h3>
+                <p class="benefit-item__text">Expand with adaptability and simplicity.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <img src="Vector.png" alt="Іконка IoT Linkages" class="benefit-item__icon">
+              <div>
+                <!-- Тег h3 використовується для підзаголовків усередині секцій і карток. -->
+                <h3 class="benefit-item__title">IoT Linkages</h3>
+                <p class="benefit-item__text">Your passage to a smarter tomorrow.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <img src="Vector.png" alt="Іконка Blockchain Technology" class="benefit-item__icon">
+              <div>
+                <h3 class="benefit-item__title">Blockchain Technology</h3>
+                <p class="benefit-item__text">Decentralizing for safety &amp; trust.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <img src="Vector.png" alt="Іконка Machine Learning" class="benefit-item__icon">
+              <div>
+                <h3 class="benefit-item__title">Machine Learning</h3>
+                <p class="benefit-item__text">AI that enhances and adapts.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <img src="Vector.png" alt="Іконка Augmented Reality" class="benefit-item__icon">
+              <div>
+                <h3 class="benefit-item__title">Augmented Reality</h3>
+                <p class="benefit-item__text">Immersive scenarios altering reality.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <img src="Vector.png" alt="Іконка Data Framework" class="benefit-item__icon">
+              <div>
+                <h3 class="benefit-item__title">Data Framework</h3>
+                <p class="benefit-item__text">Develop on a platform of dependability.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок section використовується для команди піонерів та карток учасників. -->
+      <section id="team" class="bg-[#222831] px-4 py-16 text-[#FAFAFA] sm:px-6 md:px-8 lg:px-4 lg:py-[144px]">
+        <div class="mx-auto max-w-[1232px]">
+          <div class="mx-auto max-w-[800px] rounded-[16px] border border-[#008A91]/20 px-6 py-8 text-center">
+            <h2 class="font-inter text-[42px] font-bold leading-[1.2] tracking-[-0.02em] sm:text-[51px]">Meet the Pioneers</h2>
+            <p class="mt-2 font-inter text-lg leading-[1.4] text-[#FAFAFA]">The intellects behind the advancements.</p>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <article class="team-card">
+              <img src="Avatar --lummi=avatars.png" alt="Фото Max Henderson" class="team-card__image">
+              <div class="team-card__info">
+                <h3 class="team-card__name">Max Henderson</h3>
+                <p class="team-card__role">Founder &amp; CEO</p>
+              </div>
+            </article>
+            <article class="team-card">
+              <img src="Avatar --lummi=avatars (1).png" alt="Фото James Carter" class="team-card__image">
+              <div class="team-card__info">
+                <h3 class="team-card__name">James Carter</h3>
+                <p class="team-card__role">Chief Engineer</p>
+              </div>
+            </article>
+            <article class="team-card">
+              <img src="Avatar --lummi=avatars (2).png" alt="Фото Sara Tucker" class="team-card__image">
+              <div class="team-card__info">
+                <h3 class="team-card__name">Sara Tucker</h3>
+                <p class="team-card__role">Design Director</p>
+              </div>
+            </article>
+            <article class="team-card">
+              <img src="Avatar --lummi=avatars (3).png" alt="Фото David Black" class="team-card__image">
+              <div class="team-card__info">
+                <h3 class="team-card__name">David Black</h3>
+                <p class="team-card__role">Marketing Guru</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок section використовується для секції про інноваційний процес компанії. -->
+      <section class="bg-[#222831] px-4 pb-16 text-[#FAFAFA] sm:px-6 md:px-8 lg:px-4 lg:pb-[80px]">
+        <div class="mx-auto max-w-[1232px] rounded-[16px] border border-[#008A91]/20 p-6 sm:p-8">
+          <div class="grid gap-8 lg:grid-cols-[minmax(0,560px)_minmax(0,1fr)] lg:items-center">
+            <div class="process-image min-h-[320px] rounded-[16px]"></div>
+            <div>
+              <h2 class="font-inter text-[42px] font-bold leading-[1.15] tracking-[-0.02em] sm:text-[51px]">
+                Our Innovation Process
+              </h2>
+              <p class="mt-3 font-inter text-lg leading-[1.4] text-[#FAFAFA]">
+                Our journey to market disruption.
+              </p>
+              <button type="button" class="hero-cta mt-8">Discover Now</button>
+            </div>
+          </div>
+          <div class="mt-10 grid gap-8 md:grid-cols-3">
+            <article class="step-card">
+              <img src="Vector_icon2.svg" alt="Іконка Preliminary Idea" class="step-card__icon">
+              <h3 class="step-card__title">Preliminary Idea</h3>
+              <p class="step-card__text">Where creativity sparks innovation.</p>
+            </article>
+            <article class="step-card">
+              <img src="Vector_icon3.svg" alt="Іконка Speedy Prototyping" class="step-card__icon">
+              <h3 class="step-card__title">Speedy Prototyping</h3>
+              <p class="step-card__text">Transform ideas into concrete solutions.</p>
+            </article>
+            <article class="step-card">
+              <img src="Vector_icon4.svg" alt="Іконка Constant Quality Check" class="step-card__icon">
+              <h3 class="step-card__title">Constant Quality Check</h3>
+              <p class="step-card__text">Polishing products to excellence.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої частини сайту з брендингом, посиланнями та кнопкою повернення. -->
+    <footer class="bg-[#222831] px-4 py-12 text-[#FAFAFA] sm:px-6 md:px-8 lg:px-4">
+      <div class="mx-auto max-w-[1216px] space-y-8">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div class="space-y-4">
+            <a href="#top" class="inline-flex items-center gap-2 text-[#FAFAFA]">
+              <img src="Vector - logo.svg" alt="Логотип TechnInnov у футері" class="h-8 w-8">
+              <span class="font-inter text-xl font-semibold">TechInnov</span>
+            </a>
+            <p class="font-inter text-sm leading-[1.6] text-white/85">All rights reserved 2024</p>
+          </div>
+          <div class="flex flex-col gap-6 md:items-center">
+            <nav aria-label="Нижня навігація">
+              <ul class="flex flex-wrap items-center gap-6 font-inter text-sm font-semibold text-[#FAFAFA]">
+                <li><a class="transition hover:text-[#00ADB5]" href="#top">Begin</a></li>
+                <li><a class="transition hover:text-[#00ADB5]" href="#vision">Perspective</a></li>
+                <li><a class="transition hover:text-[#00ADB5]" href="#team">Inventors</a></li>
+              </ul>
+            </nav>
+            <div class="flex items-center gap-4">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-link">
+                <img src="Vector_icon_Twitter.svg" alt="Twitter" class="h-6 w-6">
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-link">
+                <img src="Vector_icon_Instagram.svg" alt="Instagram" class="h-6 w-6">
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-link">
+                <img src="Vector_icon_LinkIndDin.svg" alt="LinkedIn" class="h-6 w-6">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center pt-2">
+          <a
+            href="../index.html"
+            class="inline-flex min-h-11 items-center justify-center rounded-md border border-white/50 px-6 font-inter text-sm font-semibold text-[#FAFAFA] transition hover:bg-[#FAFAFA] hover:text-[#222831]"
+          >
+            Повернутися на головний індекс
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,369 @@
+/* Блок @import підключає шрифт Inter для всіх текстових елементів макета. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+/* Блок body налаштовує плавне відображення шрифту на різних пристроях. */
+.site-body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Блок .font-inter використовується як службовий клас для явного звернення до основного шрифту. */
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Блок .nav-link задає вигляд навігаційних посилань у верхньому меню. */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 43px;
+  padding: 0 16px;
+  border-radius: 4px;
+  color: #fafafa;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 160%;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+/* Блок .nav-link:hover додає реакцію при наведенні на посилання меню. */
+.nav-link:hover {
+  color: #00adb5;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Блок .nav-btn задає спільний вигляд кнопок у навігації. */
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 160%;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+/* Блок .nav-btn:hover додає легке підняття кнопок при наведенні курсора. */
+.nav-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Блок .nav-btn--outline створює контурну кнопку для другорядної дії. */
+.nav-btn--outline {
+  border: 1px solid #fafafa;
+  background: transparent;
+  color: #fafafa;
+}
+
+/* Блок .nav-btn--outline:hover підсвічує контурну кнопку при наведенні. */
+.nav-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Блок .nav-btn--primary створює акцентну кнопку з бірюзовим фоном. */
+.nav-btn--primary {
+  border: 1px solid transparent;
+  background: #008a91;
+  color: #ffffff;
+}
+
+/* Блок .nav-btn--primary:hover затемнює основну кнопку для візуального відгуку. */
+.nav-btn--primary:hover {
+  background: #00757b;
+}
+
+/* Блок .mobile-menu-toggle прибирає стандартний маркер summary та оформлює бургер-кнопку. */
+.mobile-menu-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Блок .mobile-menu-toggle::-webkit-details-marker ховає маркер details у браузерах WebKit. */
+.mobile-menu-toggle::-webkit-details-marker {
+  display: none;
+}
+
+/* Блок .mobile-link оформлює посилання в мобільному випадаючому меню. */
+.mobile-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #fafafa;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+/* Блок .mobile-link:hover додає фон і акцентний колір для мобільних посилань. */
+.mobile-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #00adb5;
+}
+
+/* Блок .hero-cta оформлює основні бірюзові кнопки hero та процесу. */
+.hero-cta {
+  display: inline-flex;
+  min-height: 53px;
+  min-width: 182px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #008a91;
+  padding: 16px 40px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок .hero-cta:hover підсилює візуальний відгук кнопки заклику до дії. */
+.hero-cta:hover {
+  background: #00757b;
+  transform: translateY(-1px);
+}
+
+/* Блок .hero-image підключає фонове зображення для правої частини hero-секції. */
+.hero-image {
+  background: url("Image  --lummi.png") center/cover no-repeat;
+}
+
+/* Блок .feature-card задає спільну структуру великих image-card секцій у темному блоці. */
+.feature-card {
+  display: flex;
+  align-items: flex-end;
+  min-height: 320px;
+  padding: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #1c232d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Блок .feature-card__content створює внутрішній контейнер для тексту поверх картинки. */
+.feature-card__content {
+  width: 100%;
+}
+
+/* Блок .feature-card__title оформлює заголовки feature-карток. */
+.feature-card__title {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 118%;
+  letter-spacing: -0.02em;
+}
+
+/* Блок .feature-card__title--small зменшує заголовки малих карток. */
+.feature-card__title--small {
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+/* Блок .feature-card__text оформлює описи карток поверх темного фону. */
+.feature-card__text {
+  margin-top: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* Блок .feature-card__text--small зменшує текст для допоміжних карток. */
+.feature-card__text--small {
+  font-size: 12px;
+  line-height: 160%;
+}
+
+/* Блок .feature-card--primary підключає картинку для великої верхньої картки. */
+.feature-card--primary {
+  min-height: 516px;
+  background-image:
+    linear-gradient(0deg, rgba(34, 40, 49, 0.12), rgba(34, 40, 49, 0.12)),
+    url("Feature  --lummi.png");
+}
+
+/* Блок .feature-card--secondary підключає картинку для лівої малої картки. */
+.feature-card--secondary {
+  min-height: 420px;
+  background-image:
+    linear-gradient(0deg, rgba(34, 40, 49, 0.16), rgba(34, 40, 49, 0.16)),
+    url("Image  --lummi (1).png");
+}
+
+/* Блок .feature-card--tertiary підключає картинку для правої малої картки. */
+.feature-card--tertiary {
+  min-height: 420px;
+  background-image:
+    linear-gradient(0deg, rgba(34, 40, 49, 0.16), rgba(34, 40, 49, 0.16)),
+    url("Cards  --lummi.png");
+}
+
+/* Блок .benefit-item оформлює окремий елемент списку переваг. */
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Блок .benefit-item__icon задає розмір іконок у секції аналітики. */
+.benefit-item__icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* Блок .benefit-item__title оформлює назви переваг. */
+.benefit-item__title {
+  color: #222831;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+/* Блок .benefit-item__text оформлює короткі описи переваг. */
+.benefit-item__text {
+  margin-top: 8px;
+  color: #818181;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* Блок .team-card створює оформлення для карток учасників команди. */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Блок .team-card__image керує розміром фото учасника та округленням кутів. */
+.team-card__image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 1.36 / 1;
+  background: #d9d9d9;
+}
+
+/* Блок .team-card__info об'єднує ім'я та роль учасника. */
+.team-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Блок .team-card__name стилізує ім'я учасника команди. */
+.team-card__name {
+  color: #fafafa;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+/* Блок .team-card__role стилізує роль учасника команди. */
+.team-card__role {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* Блок .process-image підключає фонове фото для секції інноваційного процесу. */
+.process-image {
+  background: url("Feature  --lummi (1).png") center/cover no-repeat;
+}
+
+/* Блок .step-card оформлює одну картку кроку в процесі роботи. */
+.step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Блок .step-card__icon задає розмір іконок у секції процесу. */
+.step-card__icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Блок .step-card__title оформлює назву кожного етапу процесу. */
+.step-card__title {
+  color: #fafafa;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+/* Блок .step-card__text оформлює короткий опис етапу процесу. */
+.step-card__text {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* Блок .social-link оформлює іконки соціальних мереж у футері. */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+/* Блок .social-link:hover додає легкий рух та прозорість при наведенні. */
+.social-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
+}
+
+/* Блок @media (max-width: 1023px) коригує розміри секцій на планшетах. */
+@media (max-width: 1023px) {
+  .feature-card--primary {
+    min-height: 420px;
+  }
+
+  .hero-image {
+    background-position: center top;
+  }
+}
+
+/* Блок @media (max-width: 767px) адаптує висоти та typography під телефон. */
+@media (max-width: 767px) {
+  .feature-card {
+    min-height: 280px;
+  }
+
+  .feature-card--primary,
+  .feature-card--secondary,
+  .feature-card--tertiary {
+    min-height: 260px;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+}

@@ -24,6 +24,7 @@
 - `home-work-13C.D`
 - `home-work-14C.D`
 - `Web_Site_Bonus`
+- `Final_HTML_CSS`
 
 ## Домашнє завдання №13
 
@@ -75,6 +76,24 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/Web_Site_Bonus/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/Web_Site_Bonus
+
+## Фінальний проєкт HTML та CSS
+
+Тема роботи: **Фінальний адаптивний лендинг на Tailwind CSS**.
+
+Що реалізовано:
+
+- створено окрему сторінку `Final_HTML_CSS/index.html` за макетом для desktop, tablet і mobile;
+- основний layout, adaptive grid, typography, spacing і responsive-поведінку побудовано на Tailwind CSS;
+- власні шрифти, фонові зображення, reusable-класи та додаткову адаптацію винесено в `Final_HTML_CSS/styles.css`;
+- зібрано навігацію, hero, feature-картки, statement-секцію, benefits, team, innovation process і footer;
+- додано мобільне меню на `details/summary`, а у футері розміщено кнопку повернення на головний індекс;
+- у HTML та CSS додано українські коментарі над блоками і пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/Final_HTML_CSS/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/Final_HTML_CSS
 
 ## Як переглянути
 
