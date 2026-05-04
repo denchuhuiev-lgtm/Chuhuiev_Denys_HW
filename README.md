@@ -26,6 +26,7 @@
 - `home-work-18C.D_JS`
 - `home-work-19C.D_js`
 - `home-work-20C.D_js`
+- `home-work-21C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -130,6 +131,24 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-20C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-20C.D_js
+
+## Домашнє завдання №21 (JavaScript Currying)
+
+Тема роботи: **Карування, вкладені функції, замикання та higher-order functions**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-21C.D_js/index.html` для презентації рішень домашнього завдання;
+- стилі винесено в `home-work-21C.D_js/styles.css`, а логіку відображення прикладів у `home-work-21C.D_js/main.js`;
+- реалізовано функції `curriedAdd`, `curriedDomain`, `originalFunction`, `modifyFunction` і `outerFunction` на основі шаблону з папки `base (1)`;
+- у шаблонних файлах із `home-work-21C.D_js/base (1)` замінено заготовки на готові рішення;
+- на сторінці показано код функцій та приклади результатів їх виконання;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-21C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-21C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

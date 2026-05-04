@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Домашнє завдання №21 з JavaScript: карування, вкладені функції та функції вищого порядку."
+  >
+  <title>Home Work 21 | JavaScript Currying</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-body">
+  <!-- Тег div використовується як зовнішня оболонка для всього вмісту сторінки. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для короткого вступу та опису теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової позначки всередині блоку. -->
+      <span class="hero__eyebrow">Home Work 21</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">Карування, вкладені функції та higher-order function</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        На цій сторінці зібрано виконання чотирьох практичних задач з JavaScript:
+        послідовне додавання через карування, побудова доменного імені, модифікація
+        функції через множник та трирівнева вкладеність із замиканням.
+      </p>
+      <!-- Блок meta використовується для коротких тематичних міток сторінки. -->
+      <div class="hero__meta">
+        <span class="hero__chip">Currying</span>
+        <span class="hero__chip">Closures</span>
+        <span class="hero__chip">Higher-order Functions</span>
+        <span class="hero__chip">Nested Functions</span>
+      </div>
+    </header>
+
+    <!-- Тег main використовується для основного унікального вмісту сторінки. -->
+    <main class="content">
+      <!-- Блок introduction використовується для загальної інформації про структуру роботи. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="panel">
+        <h2 class="panel__title">Що реалізовано в домашній роботі</h2>
+        <p class="panel__text">
+          Усі приклади побудовано на основі шаблону з папки <code>base (1)</code>.
+          На сторінці показано код функцій і приклади результатів їх виклику, щоб
+          було зручно перевірити логіку кожного рішення.
+        </p>
+      </section>
+
+      <!-- Блок tasks використовується для відображення всіх практичних завдань у вигляді карток. -->
+      <section class="tasks" aria-label="Картки з рішеннями домашнього завдання №21">
+        <!-- Тег article використовується для окремого самостійного блоку з одним завданням. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. curriedAdd(a)(b)(c)</h2>
+          <p class="task-card__text">
+            Функція демонструє карування: кожен наступний аргумент передається окремим
+            викликом, а підсумок повертається лише на третьому кроці.
+          </p>
+          <!-- Тег pre використовується для відображення форматованого коду зі збереженням відступів. -->
+          <pre class="code-block"><!-- Тег code використовується для позначення фрагмента програмного коду. --><code id="curriedAddCode"></code></pre>
+          <div class="results" id="curriedAddResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. curriedDomain(protocol)(domain)(tld)</h2>
+          <p class="task-card__text">
+            Функція послідовно приймає протокол, назву домену і домен верхнього рівня,
+            після чого формує готове повне посилання.
+          </p>
+          <pre class="code-block"><code id="curriedDomainCode"></code></pre>
+          <div class="results" id="curriedDomainResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">3. modifyFunction(originalFunc, multiplier)</h2>
+          <p class="task-card__text">
+            Це приклад функції вищого порядку, яка приймає іншу функцію та повертає
+            нову модифіковану поведінку з домноженням результату.
+          </p>
+          <pre class="code-block"><code id="modifyFunctionCode"></code></pre>
+          <div class="results" id="modifyFunctionResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">4. outerFunction(arg1)(arg2)(arg3)</h2>
+          <p class="task-card__text">
+            Приклад трирівневої вкладеності функцій із замиканням, де фінальна функція
+            має доступ до всіх попередніх аргументів і повертає їхній добуток.
+          </p>
+          <pre class="code-block"><code id="outerFunctionCode"></code></pre>
+          <div class="results" id="outerFunctionResults"></div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для завершення сторінки та навігації назад. -->
+    <!-- Тег footer використовується для нижньої службової частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №21 оформлене як окрема сторінка з прикладами виконання та
+        підключенням рішень із шаблонної папки.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__link" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
