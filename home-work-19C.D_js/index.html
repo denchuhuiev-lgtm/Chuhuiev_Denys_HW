@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Домашнє завдання №19 з JavaScript: функції для привітання, випадкового числа та суми великих чисел."
+  >
+  <title>ДЗ 19 | JavaScript Functions</title>
+  <!-- Тег link підключає зовнішній CSS-файл для окремої стилізації сторінки. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Тег body містить увесь видимий вміст сторінки домашнього завдання. -->
+<body class="page-body">
+  <!-- Блок div використовується як загальна обгортка для всього контенту сторінки. -->
+  <div class="page-shell">
+    <!-- Блок header використовується для вступної частини сторінки з назвою та коротким описом. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої службової позначки секції. -->
+      <span class="hero__eyebrow">Home Work 19</span>
+      <!-- Тег h1 задає головний заголовок сторінки домашньої роботи. -->
+      <h1 class="hero__title">Функції JavaScript на основі шаблону з уроку</h1>
+      <!-- Тег p використовується для короткого пояснення, що саме реалізовано у домашній роботі. -->
+      <p class="hero__text">
+        На цій сторінці зібрані три реалізовані функції: привітання за ім&apos;ям,
+        генерація випадкового цілого числа в діапазоні та підсумовування великих чисел через <code>BigInt</code>.
+      </p>
+      <!-- Блок div використовується як контейнер для коротких інформаційних бейджів. -->
+      <div class="hero__meta">
+        <span class="hero__chip">Шаблон: <code>base (1)</code></span>
+        <span class="hero__chip">3 реалізовані функції</span>
+        <span class="hero__chip">HTML + CSS + JavaScript</span>
+      </div>
+    </header>
+
+    <!-- Тег main містить основний зміст домашнього завдання. -->
+    <main class="content">
+      <!-- Блок section використовується для вступного пояснення до виконаних завдань. -->
+      <section class="panel">
+        <h2 class="panel__title">Що реалізовано</h2>
+        <p class="panel__text">
+          Усі завдання з шаблону-заготовки виконані у JavaScript. Нижче відображаються
+          короткі описи, приклади запуску та результати виконання кожної функції.
+        </p>
+      </section>
+
+      <!-- Блок section використовується для виведення результатів виконання функцій. -->
+      <section class="tasks" aria-label="Список виконаних JavaScript завдань">
+        <!-- Тег article позначає окрему самостійну картку з одним завданням. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. `greetByName(msg, name)`</h2>
+          <p class="task-card__text">
+            Функція приймає текст привітання та ім&apos;я, після чого повертає готовий рядок у форматі <code>Hi, John</code>.
+          </p>
+          <!-- Тег pre використовується для виведення коду зі збереженням форматування. -->
+          <pre class="code-block"><code id="code-greet"></code></pre>
+          <!-- Блок div використовується як контейнер для результатів прикладів виконання. -->
+          <div class="results" id="results-greet"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. `getRandomInt(min, max)`</h2>
+          <p class="task-card__text">
+            Функція генерує випадкове ціле число в діапазоні від <code>min</code> до <code>max</code> включно за допомогою <code>Math.random()</code> і <code>Math.floor()</code>.
+          </p>
+          <pre class="code-block"><code id="code-random"></code></pre>
+          <div class="results" id="results-random"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">3. `sumBigIntegers(numStr1, numStr2)`</h2>
+          <p class="task-card__text">
+            Функція перетворює рядки з великими числами у <code>BigInt</code> та повертає їх суму без втрати точності.
+          </p>
+          <pre class="code-block"><code id="code-bigint"></code></pre>
+          <div class="results" id="results-bigint"></div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої частини сторінки з кнопкою повернення. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №19 оформлене як окрема сторінка з прикладами запуску функцій і результатами на екрані.
+      </p>
+      <!-- Тег a створює кнопку-посилання для повернення на головний індекс домашніх завдань. -->
+      <a class="footer__link" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script підключає зовнішній JavaScript-файл з реалізацією функцій та виведенням результатів. -->
+  <script src="main.js"></script>
+</body>
+</html>

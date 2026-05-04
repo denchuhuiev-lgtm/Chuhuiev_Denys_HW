@@ -24,6 +24,7 @@
 - `home-work-13C.D`
 - `home-work-14C.D`
 - `home-work-18C.D_JS`
+- `home-work-19C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -93,6 +94,23 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-18C.D_JS/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-18C.D_JS
+
+## Домашнє завдання №19 (JavaScript Functions)
+
+Тема роботи: **Практика функцій у JavaScript**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-19C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в окремий файл `home-work-19C.D_js/styles.css`, а логіку в `home-work-19C.D_js/main.js`;
+- реалізовано функції `greetByName`, `getRandomInt` і `sumBigIntegers` на основі шаблону з папки `base (1)`;
+- на сторінці виводяться пояснення до кожного завдання, код функцій і приклади результатів виконання;
+- у HTML та CSS додано українські коментарі над блоками і пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-19C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-19C.D_js
 
 ## Фінальний проєкт HTML та CSS
 
