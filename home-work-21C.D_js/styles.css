@@ -65,15 +65,13 @@ code {
 
 /* Блок hero__title використовується для головного заголовка сторінки. */
 .hero__title {
-  max-width: 13ch;
   margin: 0 0 16px;
   font-size: clamp(34px, 5vw, 54px);
-  line-height: 1;
+  line-height: 1.08;
 }
 
 /* Блок hero__text використовується для вступного опису домашньої роботи. */
 .hero__text {
-  max-width: 760px;
   margin: 0 0 24px;
   color: var(--muted);
   font-size: clamp(17px, 2.2vw, 21px);
@@ -152,8 +150,10 @@ code {
 /* Блок task-card__title використовується для заголовка картки. */
 .task-card__title {
   margin: 0;
-  font-size: 24px;
+  font-size: clamp(21px, 2vw, 24px);
   line-height: 1.2;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Блок task-card__text використовується для пояснювального тексту картки. */
