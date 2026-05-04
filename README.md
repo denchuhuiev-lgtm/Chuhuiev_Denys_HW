@@ -25,6 +25,7 @@
 - `home-work-14C.D`
 - `home-work-18C.D_JS`
 - `home-work-19C.D_js`
+- `home-work-20C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -111,6 +112,24 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-19C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-19C.D_js
+
+## Домашнє завдання №20 (JavaScript Practice)
+
+Тема роботи: **Об'єкти, цикли, switch, тернарний оператор та callback-функції**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-20C.D_js/index.html` для візуального представлення виконаних завдань;
+- стилі винесено в `home-work-20C.D_js/styles.css`, а логіку та приклади обчислень у `home-work-20C.D_js/main.js`;
+- реалізовано об&apos;єкт `userObj`, функції `defUpperStr`, `evenFn`, `weekFn`, `ageClassification`, `oddFn`, `mainFunc`, а також callback-функції `cbRandom`, `cbPow` і `cbAdd`;
+- у шаблонному файлі `home-work-20C.D_js/main (1)/main.js` також підставлено готові рішення замість заготовок;
+- на сторінці показуються код функцій та приклади результатів їх виконання;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-20C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-20C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

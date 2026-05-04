@@ -1,0 +1,261 @@
+/* Блок :root містить CSS-змінні з основними кольорами, тінями та радіусами сторінки. */
+:root {
+  --bg: #f6f7fb;
+  --surface: rgba(255, 255, 255, 0.94);
+  --surface-strong: #ffffff;
+  --text: #1f2533;
+  --muted: #5c667b;
+  --accent: #8d4ef7;
+  --accent-dark: #6536b5;
+  --line: rgba(31, 37, 51, 0.12);
+  --shadow: 0 18px 44px rgba(72, 62, 146, 0.14);
+  --radius: 24px;
+}
+
+/* Блок * задає єдину box-model поведінку для всіх елементів на сторінці. */
+* {
+  box-sizing: border-box;
+}
+
+/* Блок body задає базовий шрифт, фон і зовнішні відступи сторінки. */
+.page-body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(141, 78, 247, 0.14), transparent 24%),
+    radial-gradient(circle at right, rgba(79, 144, 255, 0.12), transparent 22%),
+    linear-gradient(180deg, #fbfbff 0%, #eef1ff 100%);
+}
+
+/* Блок code стилізує короткі інлайн-фрагменти коду у тексті сторінки. */
+code {
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  background: rgba(141, 78, 247, 0.08);
+  font-family: Consolas, "Courier New", monospace;
+}
+
+/* Блок .page-shell створює центральний контейнер для всього контенту сторінки. */
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+
+/* Блок .hero оформлює вступний банер з назвою домашньої роботи. */
+.hero {
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(241, 237, 255, 0.96));
+  box-shadow: var(--shadow);
+}
+
+/* Блок .hero__eyebrow стилізує службову позначку над заголовком. */
+.hero__eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(141, 78, 247, 0.1);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Блок .hero__title оформлює головний заголовок сторінки. */
+.hero__title {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.05;
+}
+
+/* Блок .hero__text стилізує вступний опис під заголовком. */
+.hero__text {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Блок .hero__meta створює контейнер для інформаційних бейджів під описом. */
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Блок .hero__chip оформлює окремий інформаційний бейдж. */
+.hero__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Блок .content задає вертикальний ритм між основними секціями сторінки. */
+.content {
+  display: grid;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+/* Блок .panel оформлює інформаційну панель з описом структури домашньої роботи. */
+.panel {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок .panel__title стилізує заголовок інформаційної панелі. */
+.panel__title {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+/* Блок .panel__text оформлює текст всередині інформаційної панелі. */
+.panel__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Блок .tasks створює адаптивну сітку для карток з JavaScript завданнями. */
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Блок .task-card оформлює окрему картку з одним завданням і прикладами. */
+.task-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+/* Блок .task-card__title стилізує заголовок картки завдання. */
+.task-card__title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+/* Блок .task-card__text стилізує опис завдання в картці. */
+.task-card__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Блок .code-block оформлює великі фрагменти коду в окремому темному контейнері. */
+.code-block {
+  margin: 0;
+  padding: 16px;
+  border-radius: 18px;
+  background: #181d2a;
+  color: #dde6ff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Блок .results створює контейнер для результатів прикладів виконання. */
+.results {
+  display: grid;
+  gap: 10px;
+}
+
+/* Блок .result-item оформлює один виведений результат роботи функції. */
+.result-item {
+  padding: 12px 14px;
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  background: rgba(141, 78, 247, 0.07);
+  line-height: 1.6;
+}
+
+/* Блок .result-item__label виділяє підпис перед значенням результату. */
+.result-item__label {
+  display: inline-block;
+  margin-right: 6px;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+/* Блок .footer оформлює нижню секцію сторінки з поясненням і кнопкою. */
+.footer {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  margin-top: 28px;
+  padding: 28px 18px 10px;
+  border-top: 1px solid var(--line);
+}
+
+/* Блок .footer__text стилізує текст у футері сторінки. */
+.footer__text {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Блок .footer__link оформлює кнопку-посилання для повернення на головний індекс. */
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок .footer__link:hover додає реакцію при наведенні на кнопку футера. */
+.footer__link:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* Блок @media адаптує відступи та сітку карток під малі екрани. */
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding-top: 20px;
+  }
+
+  .hero,
+  .panel,
+  .task-card {
+    padding: 20px;
+  }
+
+  .tasks {
+    grid-template-columns: 1fr;
+  }
+}

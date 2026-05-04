@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Домашнє завдання №20 з JavaScript: об'єкти, цикли, switch, тернарний оператор та callback-функції."
+  >
+  <title>ДЗ 20 | JavaScript Practice</title>
+  <!-- Тег link підключає зовнішній CSS-файл для окремого оформлення сторінки. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Тег body містить увесь видимий контент сторінки домашнього завдання. -->
+<body class="page-body">
+  <!-- Блок div використовується як головна обгортка для всіх секцій сторінки. -->
+  <div class="page-shell">
+    <!-- Блок header використовується для вступної секції з назвою та коротким описом роботи. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої службової позначки сторінки. -->
+      <span class="hero__eyebrow">Home Work 20</span>
+      <!-- Тег h1 задає головний заголовок поточної сторінки. -->
+      <h1 class="hero__title">Практика з об&apos;єктами, циклами та callback-функціями</h1>
+      <!-- Тег p використовується для вступного пояснювального тексту під заголовком. -->
+      <p class="hero__text">
+        На сторінці зібрані всі завдання з шаблону <code>main (1)</code>:
+        робота з об&apos;єктом користувача, рядками, масивами, <code>switch</code>,
+        тернарним оператором, циклами <code>for</code>/<code>while</code> та callback-функціями.
+      </p>
+      <!-- Блок div використовується як контейнер для коротких інформаційних бейджів. -->
+      <div class="hero__meta">
+        <span class="hero__chip">8 виконаних завдань</span>
+        <span class="hero__chip">Шаблон: <code>main (1)</code></span>
+        <span class="hero__chip">HTML + CSS + JavaScript</span>
+      </div>
+    </header>
+
+    <!-- Тег main містить основний зміст домашнього завдання. -->
+    <main class="content">
+      <!-- Блок section використовується для короткого опису структури сторінки. -->
+      <section class="panel">
+        <h2 class="panel__title">Структура виконання</h2>
+        <p class="panel__text">
+          Нижче для кожного завдання показано короткий опис, реалізований код та приклади
+          результатів, які обчислюються безпосередньо у браузері через підключений файл <code>main.js</code>.
+        </p>
+      </section>
+
+      <!-- Блок section використовується для сітки карток з усіма JavaScript завданнями. -->
+      <section class="tasks" aria-label="Список виконаних завдань JavaScript">
+        <!-- Тег article позначає окрему самостійну картку з описом одного завдання. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. Об&apos;єкт `userObj`</h2>
+          <p class="task-card__text">
+            Створено об&apos;єкт користувача з полями <code>firstName</code>, <code>lastName</code>, <code>age</code> та методом <code>fullName()</code>.
+          </p>
+          <!-- Тег pre використовується для відображення коду зі збереженням форматування. -->
+          <pre class="code-block"><code id="code-user"></code></pre>
+          <!-- Блок div використовується як контейнер для результатів прикладів запуску. -->
+          <div class="results" id="results-user"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. `defUpperStr(str)`</h2>
+          <p class="task-card__text">
+            Функція переводить текст у верхній регістр, а якщо параметр не передано, використовує значення за замовчуванням через оператор <code>||</code>.
+          </p>
+          <pre class="code-block"><code id="code-upper"></code></pre>
+          <div class="results" id="results-upper"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">3. `evenFn(n)`</h2>
+          <p class="task-card__text">
+            Функція через цикл <code>for</code> повертає масив парних чисел від <code>2</code> до <code>n</code> включно.
+          </p>
+          <pre class="code-block"><code id="code-even"></code></pre>
+          <div class="results" id="results-even"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">4. `weekFn(n)`</h2>
+          <p class="task-card__text">
+            Функція через конструкцію <code>switch / case / default</code> повертає назву дня тижня або <code>null</code> для некоректного значення.
+          </p>
+          <pre class="code-block"><code id="code-week"></code></pre>
+          <div class="results" id="results-week"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">5. `ageClassification(n)`</h2>
+          <p class="task-card__text">
+            Функція класифікує вік тільки через ланцюжок тернарних операторів та повертає потрібну категорію або <code>null</code>.
+          </p>
+          <pre class="code-block"><code id="code-age"></code></pre>
+          <div class="results" id="results-age"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">6. `oddFn(n)`</h2>
+          <p class="task-card__text">
+            Функція через цикл <code>while</code> повертає масив непарних чисел від <code>1</code> до <code>n</code> включно.
+          </p>
+          <pre class="code-block"><code id="code-odd"></code></pre>
+          <div class="results" id="results-odd"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">7. `mainFunc(a, b, callback)`</h2>
+          <p class="task-card__text">
+            Основна функція перевіряє, чи є третій параметр функцією, і повертає результат виклику callback або <code>false</code>.
+          </p>
+          <pre class="code-block"><code id="code-main"></code></pre>
+          <div class="results" id="results-main"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">8. Callback-функції</h2>
+          <p class="task-card__text">
+            Реалізовано callback-функції <code>cbRandom</code>, <code>cbPow</code> і <code>cbAdd</code> для генерації випадкового числа, піднесення до степеня та додавання.
+          </p>
+          <pre class="code-block"><code id="code-callbacks"></code></pre>
+          <div class="results" id="results-callbacks"></div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої секції з кнопкою повернення на головний індекс. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №20 оформлене як окрема демонстраційна сторінка з прикладами запуску та виведенням результатів виконання JavaScript-коду.
+      </p>
+      <!-- Тег a створює кнопку-посилання для переходу на головну сторінку всіх робіт. -->
+      <a class="footer__link" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script підключає зовнішній JavaScript-файл з реалізацією логіки та рендером результатів. -->
+  <script src="main.js"></script>
+</body>
+</html>
