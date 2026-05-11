@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, назви сторінки та підключення стилів. -->
+<!-- Тег head використовується для метаданих, які не відображаються як основний контент сторінки. -->
+<head>
+  <!-- Тег meta використовується для налаштування кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для коректної адаптації сторінки на різних екранах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки в браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №22 з JavaScript: замикання, рекурсія, Math.apply, bind, strict mode та обробка винятків."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 22 | JavaScript Essentials</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу зі стилями. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер для елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для короткого представлення теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової мітки без створення окремого абзацу. -->
+      <span class="hero__eyebrow">Home Work 22</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">JavaScript Essentials: замикання, рекурсія та контекст</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        На сторінці показано виконання задач із шаблону <code class="inline-code">Main.js</code>:
+        лічильники через замикання, рекурсивне піднесення до степеня, пошук максимуму
+        через <code class="inline-code">apply()</code> та прив'язування аргументів через
+        <code class="inline-code">bind()</code>.
+      </p>
+      <!-- Блок hero__tags використовується для тематичних міток уроку. -->
+      <div class="hero__tags" aria-label="Теми уроку">
+        <span class="hero__tag">Exceptions</span>
+        <span class="hero__tag">Arrow functions</span>
+        <span class="hero__tag">Use strict</span>
+        <span class="hero__tag">This</span>
+        <span class="hero__tag">Accessors</span>
+      </div>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту домашнього завдання. -->
+    <!-- Тег main використовується для головної частини сторінки. -->
+    <main class="content">
+      <!-- Блок lesson-panel використовується для стислого підсумку матеріалу з уроку. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-panel">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="lesson-panel__title">Що взято з уроку</h2>
+        <p class="lesson-panel__text">
+          Урок №22 був про надійніший JavaScript: <code class="inline-code">throw</code>,
+          <code class="inline-code">try...catch...finally</code>, стрілкові функції,
+          строгий режим, контекст <code class="inline-code">this</code>, методи
+          <code class="inline-code">call()</code>, <code class="inline-code">apply()</code>,
+          <code class="inline-code">bind()</code>, а також гетери, сетери та дескриптори
+          властивостей.
+        </p>
+        <!-- Блок lesson-list використовується для короткого списку застосованих прийомів. -->
+        <!-- Тег ul використовується для невпорядкованого списку пунктів. -->
+        <ul class="lesson-list">
+          <!-- Тег li використовується для одного пункту списку. -->
+          <li class="lesson-list__item">Замикання зберігають стан лічильників між викликами.</li>
+          <li class="lesson-list__item">Рекурсія рахує степінь, зокрема нульовий і від'ємний.</li>
+          <li class="lesson-list__item">Винятки обробляють некоректні дані без падіння сторінки.</li>
+          <li class="lesson-list__item">Методи <code class="inline-code">apply()</code> і <code class="inline-code">bind()</code> керують аргументами та контекстом.</li>
+        </ul>
+      </section>
+
+      <!-- Блок tasks використовується для виведення всіх практичних задач у вигляді карток. -->
+      <section class="tasks" aria-label="Рішення домашнього завдання №22">
+        <!-- Тег article використовується для окремої самостійної картки з одним завданням. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. counter()</h2>
+          <p class="task-card__text">
+            Функція-лічильник створена через замикання: внутрішнє значення не доступне
+            напряму ззовні, але зберігається між викликами.
+          </p>
+          <!-- Тег pre використовується для показу форматованого коду зі збереженням відступів. -->
+          <pre class="code-block"><!-- Тег code використовується для позначення фрагмента програмного коду. --><code class="code-block__code" id="counterCode"></code></pre>
+          <div class="results" id="counterResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. counterFactory</h2>
+          <p class="task-card__text">
+            Об'єкт має методи <code class="inline-code">value()</code>,
+            <code class="inline-code">increment()</code> і <code class="inline-code">decrement()</code>,
+            які працюють зі спільним прихованим значенням.
+          </p>
+          <pre class="code-block"><code class="code-block__code" id="counterFactoryCode"></code></pre>
+          <div class="results" id="counterFactoryResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">3. myPow(a, b, myPrint)</h2>
+          <p class="task-card__text">
+            Функція рахує степінь рекурсивно, а готовий рядок повертає через
+            callback-функцію <code class="inline-code">myPrint</code>.
+          </p>
+          <pre class="code-block"><code class="code-block__code" id="myPowCode"></code></pre>
+          <div class="results" id="myPowResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">4. myMax(arr)</h2>
+          <p class="task-card__text">
+            Максимальне число знаходиться через <code class="inline-code">Math.max()</code>
+            і <code class="inline-code">apply()</code>. Некоректний масив демонструє
+            обробку помилки через <code class="inline-code">try...catch</code>.
+          </p>
+          <pre class="code-block"><code class="code-block__code" id="myMaxCode"></code></pre>
+          <div class="results" id="myMaxResults"></div>
+        </article>
+
+        <article class="task-card task-card--wide">
+          <h2 class="task-card__title">5. myMul, myDouble та myTriple</h2>
+          <p class="task-card__text">
+            Базова функція множення використовується повторно, а подвоєння та потроєння
+            створюються через <code class="inline-code">bind()</code> без додаткових
+            математичних операцій усередині нових функцій.
+          </p>
+          <pre class="code-block"><code class="code-block__code" id="bindTasksCode"></code></pre>
+          <div class="results results--compact" id="bindTasksResults"></div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для завершення сторінки та переходу назад на головний індекс. -->
+    <!-- Тег footer використовується для нижньої службової частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №22 оформлене окремою сторінкою з підключеним CSS і модульним JavaScript.
+      </p>
+      <!-- Тег a використовується для переходу на іншу сторінку за посиланням. -->
+      <a class="footer__button" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script використовується для підключення JavaScript-файлу з логікою сторінки. -->
+  <script type="module" src="Main.js"></script>
+</body>
+</html>
