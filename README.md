@@ -28,6 +28,7 @@
 - `home-work-20C.D_js`
 - `home-work-21C.D_js`
 - `home-work-22C.D_js`
+- `home-work-23C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -167,6 +168,24 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-22C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-22C.D_js
+
+## Домашнє завдання №23 (JavaScript Data Modeling)
+
+Тема роботи: **Map, Set, WeakSet, WeakMap, прототипи, конструктори, класи та спадкування**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-23C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-23C.D_js/styles.css`, а логіку та приклади виконання розміщено в `home-work-23C.D_js/main (2)/main.js`;
+- на основі шаблону реалізовано клас `CalorieCalculator`, який використовує `new Map()` для збереження продуктів і калорійності;
+- реалізовано клас `UniqueUsernames`, який використовує `new Set()` для збереження унікальних імен користувачів;
+- на сторінці показано код класів, результати викликів методів, таблицю продуктів і список унікальних користувачів;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-23C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-23C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

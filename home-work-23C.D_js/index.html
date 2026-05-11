@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, назви сторінки та підключення стилів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для коректного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №23 з JavaScript: Map, Set, класи, прототипи, конструктори та ООП."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 23 | Map, Set and Classes</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як основний контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка всієї сторінки. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+      <span class="hero__eyebrow">Home Work 23</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">Моделювання даних у JavaScript через Map, Set і класи</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        На цій сторінці виконано завдання з шаблону
+        <code class="inline-code">main (2)/main.js</code>: калькулятор калорійності
+        продуктів на <code class="inline-code">Map</code> та менеджер унікальних
+        імен користувачів на <code class="inline-code">Set</code>.
+      </p>
+      <!-- Блок hero__tags використовується для тематичних міток уроку. -->
+      <div class="hero__tags" aria-label="Теми уроку">
+        <span class="hero__tag">Map</span>
+        <span class="hero__tag">Set</span>
+        <span class="hero__tag">WeakMap</span>
+        <span class="hero__tag">WeakSet</span>
+        <span class="hero__tag">Classes</span>
+        <span class="hero__tag">Inheritance</span>
+      </div>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту домашнього завдання. -->
+    <!-- Тег main використовується для головної частини сторінки. -->
+    <main class="content">
+      <!-- Блок lesson-panel використовується для стислого підсумку матеріалу уроку. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-panel">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="lesson-panel__title">Що взято з уроку</h2>
+        <p class="lesson-panel__text">
+          Урок №23 пояснює колекції <code class="inline-code">Map</code>,
+          <code class="inline-code">Set</code>, <code class="inline-code">WeakMap</code>
+          і <code class="inline-code">WeakSet</code>, а також основи ООП:
+          інкапсуляцію, спадкування, поліморфізм, абстракцію, прототипи,
+          конструктори, класи та оператор <code class="inline-code">instanceof</code>.
+        </p>
+        <!-- Блок lesson-grid використовується для короткого переліку важливих понять уроку. -->
+        <div class="lesson-grid">
+          <!-- Тег article використовується для окремої змістовної картки всередині секції. -->
+          <article class="concept-card">
+            <h3 class="concept-card__title">Map</h3>
+            <p class="concept-card__text">
+              Зберігає пари ключ-значення та дозволяє зручно отримувати дані через ключ.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3 class="concept-card__title">Set</h3>
+            <p class="concept-card__text">
+              Зберігає тільки унікальні значення й добре підходить для списків без дублікатів.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3 class="concept-card__title">Class</h3>
+            <p class="concept-card__text">
+              Дає шаблон для створення об'єктів із властивостями, методами та власним станом.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Блок tasks використовується для відображення практичних задач із шаблону. -->
+      <section class="tasks" aria-label="Рішення домашнього завдання №23">
+        <!-- Тег article використовується для окремої самостійної картки із завданням. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. CalorieCalculator</h2>
+          <p class="task-card__text">
+            Клас використовує <code class="inline-code">new Map()</code> як внутрішнє
+            сховище продуктів, додає продукти, повертає калорійність і видаляє записи.
+          </p>
+          <!-- Тег pre використовується для показу форматованого коду зі збереженням відступів. -->
+          <pre class="code-block"><!-- Тег code використовується для позначення фрагмента програмного коду. --><code class="code-block__code" id="calorieCalculatorCode"></code></pre>
+          <div class="results" id="calorieCalculatorResults"></div>
+          <!-- Блок productsTable використовується для таблиці з поточними даними Map. -->
+          <div class="table-wrap">
+            <!-- Тег table використовується для табличного відображення продуктів і калорійності. -->
+            <table class="data-table">
+              <!-- Тег thead використовується для групування заголовків таблиці. -->
+              <thead class="data-table__head">
+                <!-- Тег tr використовується для одного рядка таблиці. -->
+                <tr class="data-table__row">
+                  <!-- Тег th використовується для заголовної комірки таблиці. -->
+                  <th class="data-table__cell data-table__cell--head" scope="col">Продукт</th>
+                  <th class="data-table__cell data-table__cell--head" scope="col">Калорійність</th>
+                </tr>
+              </thead>
+              <!-- Тег tbody використовується для групування рядків з основними даними таблиці. -->
+              <tbody class="data-table__body" id="productsTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. UniqueUsernames</h2>
+          <p class="task-card__text">
+            Клас використовує <code class="inline-code">new Set()</code>, тому повторне
+            додавання однакового імені не збільшує кількість користувачів.
+          </p>
+          <pre class="code-block"><code class="code-block__code" id="uniqueUsernamesCode"></code></pre>
+          <div class="results" id="uniqueUsernamesResults"></div>
+          <div class="user-badges" id="userBadges"></div>
+        </article>
+
+        <article class="task-card task-card--wide">
+          <h2 class="task-card__title">3. Приклад з колекціями</h2>
+          <p class="task-card__text">
+            Невеликий фрагмент нижче показує різницю між <code class="inline-code">Map</code>
+            і <code class="inline-code">Set</code>: перший працює з парами ключ-значення,
+            другий автоматично прибирає дублікати.
+          </p>
+          <pre class="code-block code-block--short"><code class="code-block__code" id="lessonConceptsCode"></code></pre>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для завершення сторінки та переходу назад на головний індекс. -->
+    <!-- Тег footer використовується для нижньої службової частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №23 оформлене окремою сторінкою з HTML, CSS і модульним JavaScript.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script використовується для підключення JavaScript-файлу з рішеннями та демонстраціями. -->
+  <script type="module" src="./main%20(2)/main.js"></script>
+</body>
+</html>
