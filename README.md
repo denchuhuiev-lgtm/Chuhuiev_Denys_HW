@@ -29,6 +29,7 @@
 - `home-work-21C.D_js`
 - `home-work-22C.D_js`
 - `home-work-23C.D_js`
+- `home-work-24C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -186,6 +187,24 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-23C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-23C.D_js
+
+## Домашнє завдання №24 (Method Chaining, Array and Date)
+
+Тема роботи: **Ланцюгові виклики методів, методи масивів та Date**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-24C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-24C.D_js/styles.css`, а логіку та приклади виконання розміщено в `home-work-24C.D_js/main.js`;
+- на основі шаблону реалізовано `sumArray`, `doubleArrayElements`, клас `SkillsManager` і функцію-конструктор `DateCalculator`;
+- додано приклад method chaining з послідовним використанням `filter()`, `sort()`, `map()` і `reduce()`;
+- на сторінці показано код функцій, результати виконання, список навичок і покрокову зміну дати;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-24C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-24C.D_js
 
 ## Фінальний проєкт HTML та CSS
 
