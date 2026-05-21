@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, назви сторінки та підключення стилів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для коректного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №25 з JavaScript: Window, DOM, BOM, Events, cookies та sessionStorage."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 25 | Window, DOM, BOM and Events</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка всієї сторінки. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+      <span class="hero__eyebrow">Home Work 25</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">Window, DOM, BOM та події у браузері</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        На цій сторінці виконано задачі з шаблону
+        <code class="inline-code">main.js</code>: створення DOM-елемента,
+        встановлення cookie на 10 секунд і робота з
+        <code class="inline-code">sessionStorage</code>.
+      </p>
+      <!-- Блок hero__tags використовується для тематичних міток уроку. -->
+      <div class="hero__tags" aria-label="Теми уроку">
+        <span class="hero__tag">Window</span>
+        <span class="hero__tag">BOM</span>
+        <span class="hero__tag">DOM</span>
+        <span class="hero__tag">Events</span>
+        <span class="hero__tag">Cookies</span>
+        <span class="hero__tag">Web Storage</span>
+      </div>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту домашнього завдання. -->
+    <!-- Тег main використовується для головної частини сторінки. -->
+    <main class="content">
+      <!-- Блок lesson-panel використовується для стислого підсумку матеріалу уроку. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-panel">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="lesson-panel__title">Що взято з уроку</h2>
+        <p class="lesson-panel__text">
+          Урок №25 пояснює об'єкт <code class="inline-code">window</code>,
+          Browser Object Model, роботу з <code class="inline-code">screen</code>,
+          <code class="inline-code">navigator</code>, <code class="inline-code">location</code>,
+          cookies, Web Storage API, DOM-деревом, вузлами документа та подіями.
+        </p>
+        <!-- Блок lesson-grid використовується для короткого переліку важливих понять уроку. -->
+        <div class="lesson-grid">
+          <!-- Тег article використовується для окремої змістовної картки всередині секції. -->
+          <article class="concept-card">
+            <!-- Тег h3 використовується для заголовка картки третього рівня. -->
+            <h3 class="concept-card__title">BOM</h3>
+            <p class="concept-card__text">
+              Дає доступ до частин браузера поза HTML-документом: адреси,
+              екрана, історії, таймерів і сховищ.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3 class="concept-card__title">DOM</h3>
+            <p class="concept-card__text">
+              Представляє сторінку як дерево вузлів і дозволяє створювати,
+              змінювати, додавати та видаляти елементи.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3 class="concept-card__title">Events</h3>
+            <p class="concept-card__text">
+              Події реагують на дії користувача: відправлення форми,
+              натискання кнопки, зміну розміру вікна та інші взаємодії.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Блок browser-panel використовується для демонстрації даних BOM у поточному браузері. -->
+      <section class="browser-panel">
+        <h2 class="browser-panel__title">Поточне браузерне середовище</h2>
+        <p class="browser-panel__text">
+          Дані нижче читаються з об'єктів <code class="inline-code">window</code>,
+          <code class="inline-code">screen</code>, <code class="inline-code">navigator</code>
+          та <code class="inline-code">location</code>.
+        </p>
+        <div class="results results--compact" id="browserInfoResults"></div>
+      </section>
+
+      <!-- Блок tasks використовується для відображення практичних задач із шаблону. -->
+      <section class="tasks" aria-label="Рішення домашнього завдання №25">
+        <!-- Тег article використовується для окремої самостійної картки із завданням. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. createDomElement()</h2>
+          <p class="task-card__text">
+            Функція створює новий DOM-елемент, додає текстовий вміст і вставляє
+            його до вказаного контейнера.
+          </p>
+          <!-- Тег form використовується для введення даних і запуску DOM-демонстрації. -->
+          <form class="control-form" id="domForm">
+            <!-- Тег label використовується для підпису поля форми. -->
+            <label class="control-form__label" for="tagName">Тег елемента</label>
+            <!-- Тег select використовується для вибору одного варіанта зі списку. -->
+            <select class="control-form__field" id="tagName" name="tagName">
+              <!-- Тег option використовується для одного варіанта у списку select. -->
+              <option value="p">p</option>
+              <option value="strong">strong</option>
+              <option value="span">span</option>
+            </select>
+            <label class="control-form__label" for="textContent">Текст елемента</label>
+            <!-- Тег input використовується для введення короткого текстового значення. -->
+            <input
+              class="control-form__field"
+              id="textContent"
+              name="textContent"
+              type="text"
+              value="Цей елемент створено через DOM"
+            >
+            <!-- Тег button використовується для запуску дії форми. -->
+            <button class="control-form__button" type="submit">Створити елемент</button>
+          </form>
+          <!-- Блок domSandbox використовується як контейнер для нових DOM-елементів. -->
+          <div class="dom-sandbox" id="domSandbox" aria-label="Контейнер для створених DOM-елементів"></div>
+          <button class="task-card__button" id="clearSandboxButton" type="button">Очистити контейнер</button>
+          <!-- Тег pre використовується для показу форматованого коду зі збереженням відступів. -->
+          <pre class="code-block"><!-- Тег code використовується для позначення фрагмента програмного коду. --><code class="code-block__code" id="createDomElementCode"></code></pre>
+          <div class="results" id="domResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. setUserInfoCookie()</h2>
+          <p class="task-card__text">
+            Функція встановлює cookie <code class="inline-code">userInfo</code>
+            у форматі <code class="inline-code">key=value</code>, кодує значення
+            та задає термін дії 10 секунд.
+          </p>
+          <form class="control-form" id="cookieForm">
+            <label class="control-form__label" for="cookieKey">Ключ cookie</label>
+            <input class="control-form__field" id="cookieKey" name="cookieKey" type="text" value="language">
+            <label class="control-form__label" for="cookieValue">Значення cookie</label>
+            <input class="control-form__field" id="cookieValue" name="cookieValue" type="text" value="uk">
+            <button class="control-form__button" type="submit">Зберегти cookie</button>
+          </form>
+          <pre class="code-block"><code class="code-block__code" id="cookieCode"></code></pre>
+          <div class="results" id="cookieResults"></div>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">3. sessionStorage</h2>
+          <p class="task-card__text">
+            Функції <code class="inline-code">saveUserInfo()</code> і
+            <code class="inline-code">getUserInfo()</code> зберігають та отримують
+            дані користувача у межах поточної сесії вкладки.
+          </p>
+          <form class="control-form" id="storageForm">
+            <label class="control-form__label" for="storageKey">Ключ у sessionStorage</label>
+            <input class="control-form__field" id="storageKey" name="storageKey" type="text" value="username">
+            <label class="control-form__label" for="storageValue">Значення</label>
+            <input class="control-form__field" id="storageValue" name="storageValue" type="text" value="Denys">
+            <button class="control-form__button" type="submit">Зберегти в sessionStorage</button>
+          </form>
+          <button class="task-card__button" id="storageReadButton" type="button">Прочитати значення</button>
+          <pre class="code-block"><code class="code-block__code" id="storageCode"></code></pre>
+          <div class="results" id="storageResults"></div>
+        </article>
+
+        <article class="task-card task-card--wide">
+          <h2 class="task-card__title">4. Події на сторінці</h2>
+          <p class="task-card__text">
+            Форми та кнопки працюють через <code class="inline-code">addEventListener()</code>,
+            а блок з BOM-даними оновлюється при події
+            <code class="inline-code">resize</code>.
+          </p>
+          <pre class="code-block code-block--short"><code class="code-block__code" id="eventsCode"></code></pre>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для завершення сторінки та переходу назад на головний індекс. -->
+    <!-- Тег footer використовується для нижньої службової частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №25 оформлене окремою сторінкою з HTML, CSS і JavaScript-подіями.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script використовується для підключення JavaScript-файлу з рішеннями та демонстраціями. -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>

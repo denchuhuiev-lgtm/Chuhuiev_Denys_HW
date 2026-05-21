@@ -30,6 +30,7 @@
 - `home-work-22C.D_js`
 - `home-work-23C.D_js`
 - `home-work-24C.D_js`
+- `home-work-25C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -205,6 +206,25 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-24C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-24C.D_js
+
+## Домашнє завдання №25 (Window, DOM, BOM and Events)
+
+Тема роботи: **Window, DOM, BOM, Events, cookies та sessionStorage**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-25C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-25C.D_js/styles.css`, а логіку та приклади виконання розміщено в `home-work-25C.D_js/main.js`;
+- на основі шаблону реалізовано `createDomElement`, `setUserInfoCookie`, `saveUserInfo` і `getUserInfo`;
+- додано інтерактивну демонстрацію створення DOM-елементів через форму та подію `submit`;
+- реалізовано приклади роботи з cookie `userInfo` на 10 секунд і з `sessionStorage`;
+- на сторінці показано дані BOM з `window`, `screen`, `navigator` і `location`;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-25C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-25C.D_js
 
 ## Фінальний проєкт HTML та CSS
 
