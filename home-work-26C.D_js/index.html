@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, назви сторінки та підключення стилів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для коректного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №26 з JavaScript: Events, addEventListener, removeEventListener, Bubbling, Capturing and Propagation."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 26 | Events and Delegation</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка всієї сторінки. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+      <span class="hero__eyebrow">Home Work 26</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">Events, addEventListener та делегування подій</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        На сторінці виконано задачі з шаблону <code class="inline-code">main.js</code>:
+        обробка кліку по кнопці, відстеження координат миші та делегування кліків
+        для пунктів списку.
+      </p>
+      <!-- Блок hero__tags використовується для тематичних міток уроку. -->
+      <div class="hero__tags" aria-label="Теми уроку">
+        <span class="hero__tag">Events</span>
+        <span class="hero__tag">addEventListener</span>
+        <span class="hero__tag">removeEventListener</span>
+        <span class="hero__tag">Event object</span>
+        <span class="hero__tag">Bubbling</span>
+        <span class="hero__tag">Delegation</span>
+      </div>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту домашнього завдання. -->
+    <!-- Тег main використовується для головної частини сторінки. -->
+    <main class="content">
+      <!-- Блок lesson-panel використовується для стислого підсумку матеріалу уроку. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-panel">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="lesson-panel__title">Що взято з уроку</h2>
+        <p class="lesson-panel__text">
+          Урок №26 пояснює типи подій, способи призначення обробників, об'єкт
+          <code class="inline-code">Event</code>, методи
+          <code class="inline-code">addEventListener()</code> і
+          <code class="inline-code">removeEventListener()</code>, а також фази
+          поширення події: захоплення, цільову фазу та спливання.
+        </p>
+        <!-- Блок lesson-grid використовується для короткого переліку важливих понять уроку. -->
+        <div class="lesson-grid">
+          <!-- Тег article використовується для окремої змістовної картки всередині секції. -->
+          <article class="concept-card">
+            <!-- Тег h3 використовується для заголовка картки третього рівня. -->
+            <h3 class="concept-card__title">Event object</h3>
+            <p class="concept-card__text">
+              Об'єкт події містить тип події, цільовий елемент, координати миші
+              та методи керування стандартною дією або поширенням.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3 class="concept-card__title">Propagation</h3>
+            <p class="concept-card__text">
+              Подія проходить фази захоплення, цільову фазу і спливання, а
+              <code class="inline-code">stopPropagation()</code> може зупинити шлях.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3 class="concept-card__title">Delegation</h3>
+            <p class="concept-card__text">
+              Один обробник на батьківському елементі може керувати кліками
+              багатьох дочірніх елементів, навіть якщо вони додані пізніше.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Блок tasks використовується для відображення практичних задач із шаблону. -->
+      <section class="tasks" aria-label="Рішення домашнього завдання №26">
+        <!-- Тег article використовується для окремої самостійної картки із завданням. -->
+        <article class="task-card">
+          <h2 class="task-card__title">1. handleButtonClick()</h2>
+          <p class="task-card__text">
+            Функція знаходить кнопку за ID і призначає їй обробник події
+            <code class="inline-code">click</code>, який виводить повідомлення в консоль.
+          </p>
+          <!-- Тег button використовується для запуску клікової події. -->
+          <button class="event-button" id="demoButton" type="button">Натисни кнопку</button>
+          <div class="results" id="buttonResults"></div>
+          <!-- Тег ul використовується для списку останніх подій кнопки. -->
+          <ul class="event-log" id="buttonLog" aria-label="Журнал кліків кнопки"></ul>
+          <!-- Тег pre використовується для показу форматованого коду зі збереженням відступів. -->
+          <pre class="code-block"><!-- Тег code використовується для позначення фрагмента програмного коду. --><code class="code-block__code" id="buttonClickCode"></code></pre>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">2. trackMousePosition()</h2>
+          <p class="task-card__text">
+            Функція додає обробник <code class="inline-code">mousemove</code> на
+            <code class="inline-code">document</code> і виводить координати курсору.
+          </p>
+          <!-- Блок mouse-board використовується для видимого показу координат миші. -->
+          <div class="mouse-board">
+            <span class="mouse-board__label">Поточні координати</span>
+            <strong class="mouse-board__value" id="mousePosition">X: 0, Y: 0</strong>
+          </div>
+          <pre class="code-block"><code class="code-block__code" id="mousePositionCode"></code></pre>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">3. setupEventDelegation()</h2>
+          <p class="task-card__text">
+            Функція ставить один обробник на весь список і реагує лише тоді,
+            коли клік відбувся по елементу <code class="inline-code">li</code>.
+          </p>
+          <button class="event-button event-button--secondary" id="addDelegationItem" type="button">Додати пункт</button>
+          <ul class="delegation-list" id="delegationList">
+            <!-- Тег li використовується для одного пункту списку. -->
+            <li class="delegation-list__item">Пункт 1</li>
+            <li class="delegation-list__item">Пункт 2</li>
+            <li class="delegation-list__item">Пункт 3</li>
+          </ul>
+          <div class="results" id="delegationResults"></div>
+          <ul class="event-log" id="delegationLog" aria-label="Журнал делегованих кліків"></ul>
+          <pre class="code-block"><code class="code-block__code" id="eventDelegationCode"></code></pre>
+        </article>
+
+        <article class="task-card">
+          <h2 class="task-card__title">4. Capturing, Bubbling, Propagation</h2>
+          <p class="task-card__text">
+            Додатковий блок показує порядок фаз події та роботу
+            <code class="inline-code">stopPropagation()</code> на дочірньому елементі.
+          </p>
+          <div class="propagation-box" id="propagationParent">
+            <span class="propagation-box__label">Parent: capturing listener</span>
+            <button class="propagation-box__button" id="propagationChild" type="button">Child button</button>
+          </div>
+          <ul class="event-log" id="propagationLog" aria-label="Журнал фаз події"></ul>
+          <pre class="code-block code-block--short"><code class="code-block__code" id="propagationCode"></code></pre>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для завершення сторінки та переходу назад на головний індекс. -->
+    <!-- Тег footer використовується для нижньої службової частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №26 оформлене окремою сторінкою з HTML, CSS і JavaScript-подіями.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">Повернутися на головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script використовується для підключення JavaScript-файлу з рішеннями та демонстраціями. -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>

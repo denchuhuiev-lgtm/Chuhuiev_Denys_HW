@@ -31,6 +31,7 @@
 - `home-work-23C.D_js`
 - `home-work-24C.D_js`
 - `home-work-25C.D_js`
+- `home-work-26C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -225,6 +226,26 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-25C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-25C.D_js
+
+## Домашнє завдання №26 (Events and Event Delegation)
+
+Тема роботи: **Events, addEventListener, removeEventListener, Bubbling, Capturing та Propagation**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-26C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-26C.D_js/styles.css`, а логіку та приклади виконання розміщено в `home-work-26C.D_js/main.js`;
+- на основі шаблону реалізовано `handleButtonClick`, `trackMousePosition` і `setupEventDelegation`;
+- додано інтерактивну демонстрацію кліку по кнопці з журналом подій;
+- реалізовано відстеження координат миші через подію `mousemove`;
+- додано делегування кліків на списку з динамічним додаванням нових пунктів;
+- показано приклад фаз події: capturing, target, bubbling і `stopPropagation()`;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-26C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-26C.D_js
 
 ## Фінальний проєкт HTML та CSS
 
