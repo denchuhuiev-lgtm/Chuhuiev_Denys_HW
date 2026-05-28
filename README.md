@@ -33,6 +33,7 @@
 - `home-work-25C.D_js`
 - `home-work-26C.D_js`
 - `home-work-27C.D_js`
+- `home-work-28C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -267,6 +268,32 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-27C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-27C.D_js
+
+## Домашнє завдання №28 (Prototypes, Classes and Inheritance)
+
+Тема роботи: **Розробка повнофункціонального слайдера на чистому JavaScript з використанням прототипів, класів та наслідування**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-28C.D_js/index.html` для демонстрації двох версій слайдера;
+- стилі винесено в `home-work-28C.D_js/styles.css`, а логіку розміщено в `home-work-28C.D_js/main.js`;
+- реалізовано слайдер на функції-конструкторі, прототипах та наслідуванні через `DraggablePrototypeSlider`;
+- реалізовано альтернативний слайдер на класах через `BaseClassSlider` і `HoverPauseClassSlider`;
+- кнопки навігації, кнопка паузи та індикатори створюються динамічно через JavaScript;
+- додано конфігурацію для інтервалу автопрокручування, індикаторів, кнопки паузи, swipe-відстані та текстів кнопок;
+- у класовій версії додано автоматичну паузу при наведенні миші;
+- обидві версії підтримують drag/swipe через pointer-події;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Гілки для вимоги уроку:
+
+- `homework-28-prototypes` - гілка для версії на прототипах;
+- `homework-28-classes` - гілка для версії на класах.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-28C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-28C.D_js
 
 ## Фінальний проєкт HTML та CSS
 
