@@ -32,6 +32,7 @@
 - `home-work-24C.D_js`
 - `home-work-25C.D_js`
 - `home-work-26C.D_js`
+- `home-work-27C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -246,6 +247,26 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-26C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-26C.D_js
+
+## Домашнє завдання №27 (Pure JavaScript Slider)
+
+Тема роботи: **Розробка повнофункціонального слайдера на чистому JavaScript з використанням функціонального підходу**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-27C.D_js/index.html` для демонстрації слайдера;
+- стилі винесено в `home-work-27C.D_js/styles.css`, а логіку компонента розміщено в `home-work-27C.D_js/main.js`;
+- реалізовано перемикання слайдів кнопками вперед і назад з циклічним переходом;
+- додано автоматичне перегортання з кнопкою паузи та відновлення;
+- створено індикатори поточного слайду з переходом до конкретної позиції;
+- додано керування клавішами ArrowLeft і ArrowRight;
+- реалізовано touch-свайпи та перетягування мишею через pointer-події;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-27C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-27C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

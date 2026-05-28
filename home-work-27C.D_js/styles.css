@@ -1,0 +1,532 @@
+/* Блок root використовується для зберігання спільних кольорів, розмірів і тіней сторінки. */
+:root {
+  --page-bg: #f5f7f6;
+  --surface: #ffffff;
+  --surface-muted: #eef3f1;
+  --surface-strong: #10212b;
+  --text: #172027;
+  --muted: #5c6972;
+  --accent: #0f766e;
+  --accent-dark: #0d4f4b;
+  --accent-warm: #c15a2d;
+  --accent-blue: #2f5f98;
+  --line: rgba(23, 32, 39, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.24);
+  --shadow: 0 18px 46px rgba(22, 42, 50, 0.14);
+  --radius: 8px;
+}
+
+/* Блок universal selector використовується для однакового box-model на всіх елементах. */
+* {
+  box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового фону, шрифту та кольору тексту сторінки. */
+.page-body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.12), transparent 34%),
+    linear-gradient(225deg, rgba(193, 90, 45, 0.1), transparent 32%),
+    var(--page-bg);
+}
+
+/* Блок page-shell використовується як центральний контейнер сторінки. */
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+/* Блок hero використовується для вступної частини домашньої роботи. */
+.hero {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки над головним заголовком. */
+.hero__eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title {
+  max-width: 930px;
+  margin: 0 0 14px;
+  font-size: 44px;
+  line-height: 1.12;
+}
+
+/* Блок hero__text використовується для вступного опису домашнього завдання. */
+.hero__text {
+  max-width: 920px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Блок hero__tags використовується для розміщення тематичних міток уроку. */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок hero__tag використовується для стилізації однієї тематичної мітки. */
+.hero__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fbfcfc;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок content використовується для вертикального розділення основних секцій. */
+.content {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* Блок lesson-summary використовується для короткого підсумку уроку. */
+.lesson-summary {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок section-title використовується для заголовків основних секцій. */
+.section-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* Блок lesson-summary__text використовується для тексту підсумку заняття. */
+.lesson-summary__text {
+  max-width: 920px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Блок slider-section використовується для секції з інтерактивним слайдером. */
+.slider-section {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  color: #f8fbfb;
+  box-shadow: var(--shadow);
+}
+
+/* Блок section-heading використовується для групування мітки та заголовка секції. */
+.section-heading {
+  display: grid;
+  gap: 8px;
+}
+
+/* Блок section-heading__label використовується для маленької службової мітки над заголовком. */
+.section-heading__label {
+  color: #8bd4c8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок slider використовується як основна оболонка компонента слайдера. */
+.slider {
+  display: grid;
+  gap: 16px;
+}
+
+/* Блок slider__topbar використовується для лічильника слайдів і кнопки паузи. */
+.slider__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* Блок slider__counter використовується для показу номера поточного слайду. */
+.slider__counter {
+  margin: 0;
+  color: #cfe7e4;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Блок slider__play-button використовується для кнопки паузи або відновлення автопрокручування. */
+.slider__play-button {
+  min-width: 118px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #ffffff;
+  color: var(--accent-dark);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+/* Блок slider__play-button hover використовується для реакції кнопки на наведення. */
+.slider__play-button:hover {
+  background: #dff3ef;
+  transform: translateY(-1px);
+}
+
+/* Блок slider__viewport використовується як видиме вікно одного слайду. */
+.slider__viewport {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #0b161d;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+/* Блок slider__viewport active використовується для стану перетягування мишею або пальцем. */
+.slider__viewport:active {
+  cursor: grabbing;
+}
+
+/* Блок slider__track використовується для горизонтального розташування всіх слайдів. */
+.slider__track {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 420ms ease;
+}
+
+/* Блок slider__track.is-dragging використовується для вимкнення анімації під час перетягування. */
+.slider__track.is-dragging {
+  transition: none;
+}
+
+/* Блок slide використовується для одного екрану всередині слайдера. */
+.slide {
+  position: relative;
+  display: grid;
+  min-width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Блок slide::after використовується для затемнення зображення під текстом. */
+.slide::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(10, 19, 25, 0.9), rgba(10, 19, 25, 0.52) 48%, rgba(10, 19, 25, 0.12));
+  content: "";
+}
+
+/* Блок slide__image використовується для фонового зображення слайду. */
+.slide__image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+/* Блок slide__content використовується для текстової частини активного слайду. */
+.slide__content {
+  align-self: end;
+  max-width: 590px;
+  padding: 46px;
+}
+
+/* Блок slide__number використовується для порядкового номера слайду. */
+.slide__number {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin-bottom: 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  color: #b7eee5;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Блок slide__title використовується для заголовка конкретного слайду. */
+.slide__title {
+  margin: 0 0 12px;
+  font-size: 36px;
+  line-height: 1.14;
+}
+
+/* Блок slide__text використовується для пояснювального тексту слайду. */
+.slide__text {
+  margin: 0;
+  color: #e8f3f2;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Блок slider__controls використовується для розміщення кнопок навігації. */
+.slider__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок slider__button використовується для кнопок переходу між слайдами. */
+.slider__button {
+  min-width: 120px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #18333d;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+/* Блок slider__button hover використовується для реакції кнопок навігації на наведення. */
+.slider__button:hover {
+  border-color: rgba(255, 255, 255, 0.52);
+  background: #23505b;
+  transform: translateY(-1px);
+}
+
+/* Блок slider__dots використовується для індикаторів позиції слайдера. */
+.slider__dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Блок slider__dot використовується для однієї кнопки-індикатора. */
+.slider__dot {
+  width: 42px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+/* Блок slider__dot.is-active використовується для активного індикатора. */
+.slider__dot.is-active {
+  width: 58px;
+  background: #8bd4c8;
+}
+
+/* Блок feature-grid використовується для карток з можливостями виконаного слайдера. */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Блок feature-card використовується для окремої картки реалізованої можливості. */
+.feature-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок feature-card__title використовується для заголовка картки можливості. */
+.feature-card__title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+/* Блок feature-card__text використовується для опису картки можливості. */
+.feature-card__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Блок footer використовується для нижньої частини сторінки з поверненням на головний індекс. */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок footer__text використовується для короткого підсумкового тексту в футері. */
+.footer__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Блок footer__button використовується для посилання-кнопки на головний індекс. */
+.footer__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--radius);
+  background: var(--accent-warm);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease;
+  white-space: nowrap;
+}
+
+/* Блок footer__button hover використовується для реакції кнопки футера на наведення. */
+.footer__button:hover {
+  background: #a84820;
+  transform: translateY(-1px);
+}
+
+/* Блок focus-visible використовується для помітного фокуса при навігації клавіатурою. */
+.slider__button:focus-visible,
+.slider__play-button:focus-visible,
+.slider__dot:focus-visible,
+.footer__button:focus-visible {
+  outline: 3px solid #f4b942;
+  outline-offset: 3px;
+}
+
+/* Блок media max-width 900px використовується для адаптації слайдера та карток на планшетах. */
+@media (max-width: 900px) {
+  /* Блок hero__title у media використовується для зменшення заголовка на вузьких екранах. */
+  .hero__title {
+    font-size: 36px;
+  }
+
+  /* Блок feature-grid у media використовується для однієї колонки карток на планшетах. */
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Блок slide у media використовується для компактнішої висоти слайду. */
+  .slide {
+    min-height: 430px;
+  }
+}
+
+/* Блок media max-width 640px використовується для адаптації сторінки на телефонах. */
+@media (max-width: 640px) {
+  /* Блок page-shell у media використовується для зменшення бокових відступів на телефонах. */
+  .page-shell {
+    width: min(100% - 20px, 1180px);
+    padding: 16px 0 28px;
+  }
+
+  /* Блок hero у media використовується для компактнішого вступного блоку. */
+  .hero {
+    padding: 22px;
+  }
+
+  /* Блок hero__title у media використовується для мобільного розміру головного заголовка. */
+  .hero__title {
+    font-size: 30px;
+  }
+
+  /* Блок hero__text у media використовується для зручнішого читання вступу на телефонах. */
+  .hero__text {
+    font-size: 16px;
+  }
+
+  /* Блок lesson-summary у media використовується для меншого внутрішнього відступу. */
+  .lesson-summary {
+    padding: 20px;
+  }
+
+  /* Блок slider-section у media використовується для компактнішого темного блоку слайдера. */
+  .slider-section {
+    padding: 18px;
+  }
+
+  /* Блок slider__topbar у media використовується для перенесення кнопки паузи під лічильник. */
+  .slider__topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  /* Блок slider__play-button у media використовується для розтягування кнопки паузи на всю ширину. */
+  .slider__play-button {
+    width: 100%;
+  }
+
+  /* Блок slide у media використовується для мобільної висоти слайду. */
+  .slide {
+    min-height: 460px;
+  }
+
+  /* Блок slide::after у media використовується для сильнішого затемнення текстової зони. */
+  .slide::after {
+    background: linear-gradient(180deg, rgba(10, 19, 25, 0.2), rgba(10, 19, 25, 0.92));
+  }
+
+  /* Блок slide__content у media використовується для менших відступів тексту на слайді. */
+  .slide__content {
+    padding: 26px;
+  }
+
+  /* Блок slide__title у media використовується для мобільного розміру заголовка слайду. */
+  .slide__title {
+    font-size: 30px;
+  }
+
+  /* Блок slide__text у media використовується для мобільного розміру тексту слайду. */
+  .slide__text {
+    font-size: 16px;
+  }
+
+  /* Блок slider__button у media використовується для однакової ширини кнопок навігації. */
+  .slider__button {
+    flex: 1 1 140px;
+  }
+
+  /* Блок footer у media використовується для вертикального розміщення тексту та кнопки. */
+  .footer {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 20px;
+  }
+}

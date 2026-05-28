@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, SEO-опису та підключення файлів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для правильного масштабу сторінки на мобільних пристроях. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки у браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №27: повнофункціональний слайдер на чистому JavaScript з функціональним підходом."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 27 | Pure JavaScript Slider</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу зі стилями. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки домашнього завдання. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+      <span class="hero__eyebrow">Home Work 27</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">Розробка повнофункціонального слайдера на чистому JavaScript</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        Сторінка демонструє слайдер із функціональним підходом: стан зберігається
+        окремо від DOM, а керування виконується через невеликі чисті функції та
+        обробники подій.
+      </p>
+      <!-- Блок hero__tags використовується для коротких міток з темами уроку. -->
+      <div class="hero__tags" aria-label="Теми уроку">
+        <span class="hero__tag">DOM</span>
+        <span class="hero__tag">Events</span>
+        <span class="hero__tag">State</span>
+        <span class="hero__tag">Autoplay</span>
+        <span class="hero__tag">Keyboard</span>
+        <span class="hero__tag">Swipe</span>
+      </div>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту сторінки. -->
+    <!-- Тег main використовується для головної частини документа. -->
+    <main class="content">
+      <!-- Блок lesson-summary використовується для стислого підсумку матеріалу заняття. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-summary">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="section-title">Що взято з уроку</h2>
+        <p class="lesson-summary__text">
+          На занятті розглядали створення інтерактивного слайдера без сторонніх
+          бібліотек: структура HTML і CSS, зв'язок між станом і DOM, обробка
+          кліків, клавіатури, touch-жестів та автоматичне перемикання слайдів.
+        </p>
+      </section>
+
+      <!-- Блок slider-section використовується для розміщення готового JavaScript-слайдера. -->
+      <section class="slider-section" aria-labelledby="slider-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Functional Slider</span>
+          <h2 class="section-title" id="slider-title">Інтерактивна демонстрація</h2>
+        </div>
+
+        <!-- Блок slider використовується як головний контейнер компонента слайдера. -->
+        <div class="slider" data-slider>
+          <!-- Блок slider__topbar використовується для статусу та кнопки паузи автопрокручування. -->
+          <div class="slider__topbar">
+            <p class="slider__counter" data-slider-counter aria-live="polite">Слайд 1 з 5</p>
+            <!-- Тег button використовується для інтерактивних елементів керування. -->
+            <button class="slider__play-button" type="button" data-slider-toggle>
+              Пауза
+            </button>
+          </div>
+
+          <!-- Блок slider__viewport використовується як видима область одного активного слайду. -->
+          <div class="slider__viewport" data-slider-viewport>
+            <!-- Блок slider__track використовується для горизонтального переміщення всіх слайдів. -->
+            <div class="slider__track" data-slider-track>
+              <!-- Тег article використовується для окремого самостійного слайду. -->
+              <article class="slide" data-slide>
+                <!-- Тег img використовується для візуального зображення всередині слайду. -->
+                <img
+                  class="slide__image"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df0852?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  alt="Робочий стіл розробника з кодом на екрані"
+                  draggable="false"
+                >
+                <div class="slide__content">
+                  <span class="slide__number">01</span>
+                  <!-- Тег h3 використовується для заголовка картки або слайду третього рівня. -->
+                  <h3 class="slide__title">Стан слайдера</h3>
+                  <p class="slide__text">
+                    Поточний індекс, режим автопрокручування та дані перетягування
+                    зберігаються в одному об'єкті стану.
+                  </p>
+                </div>
+              </article>
+
+              <article class="slide" data-slide>
+                <img
+                  class="slide__image"
+                  src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  alt="Фрагмент JavaScript-коду на моніторі"
+                  draggable="false"
+                >
+                <div class="slide__content">
+                  <span class="slide__number">02</span>
+                  <h3 class="slide__title">Функції без класів</h3>
+                  <p class="slide__text">
+                    Перехід між слайдами, оновлення DOM і створення індикаторів
+                    виконуються окремими функціями.
+                  </p>
+                </div>
+              </article>
+
+              <article class="slide" data-slide>
+                <img
+                  class="slide__image"
+                  src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  alt="Кольорова панель із цифровими елементами керування"
+                  draggable="false"
+                >
+                <div class="slide__content">
+                  <span class="slide__number">03</span>
+                  <h3 class="slide__title">Автопрокручування</h3>
+                  <p class="slide__text">
+                    Слайдер сам переходить вперед за інтервалом, а користувач може
+                    поставити автоматичну зміну на паузу.
+                  </p>
+                </div>
+              </article>
+
+              <article class="slide" data-slide>
+                <img
+                  class="slide__image"
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  alt="Ноутбук з відкритим інтерфейсом веб-додатку"
+                  draggable="false"
+                >
+                <div class="slide__content">
+                  <span class="slide__number">04</span>
+                  <h3 class="slide__title">Клавіатура</h3>
+                  <p class="slide__text">
+                    Стрілки вліво та вправо керують навігацією, тому компонент
+                    зручний не лише для миші.
+                  </p>
+                </div>
+              </article>
+
+              <article class="slide" data-slide>
+                <img
+                  class="slide__image"
+                  src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  alt="Рука користується мобільним телефоном із веб-інтерфейсом"
+                  draggable="false"
+                >
+                <div class="slide__content">
+                  <span class="slide__number">05</span>
+                  <h3 class="slide__title">Touch і drag</h3>
+                  <p class="slide__text">
+                    Pointer-події дозволяють свайпати на телефоні та перетягувати
+                    слайди мишею на десктопі.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Блок slider__controls використовується для кнопок переходу назад і вперед. -->
+          <div class="slider__controls" aria-label="Керування слайдером">
+            <button class="slider__button" type="button" data-slider-prev aria-label="Попередній слайд">
+              Назад
+            </button>
+            <button class="slider__button" type="button" data-slider-next aria-label="Наступний слайд">
+              Вперед
+            </button>
+          </div>
+
+          <!-- Блок slider__dots використовується для індикаторів поточного слайду. -->
+          <div class="slider__dots" data-slider-dots aria-label="Індикатори слайдів"></div>
+        </div>
+      </section>
+
+      <!-- Блок feature-grid використовується для переліку реалізованих можливостей. -->
+      <section class="feature-grid" aria-label="Можливості слайдера">
+        <article class="feature-card">
+          <h3 class="feature-card__title">Кнопки навігації</h3>
+          <p class="feature-card__text">
+            Кнопки назад і вперед змінюють активний слайд з циклічним переходом.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-card__title">Індикатори</h3>
+          <p class="feature-card__text">
+            Активна точка показує позицію, а клік по точці відкриває конкретний слайд.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-card__title">Події користувача</h3>
+          <p class="feature-card__text">
+            Компонент реагує на кліки, клавіатуру, свайпи та перетягування мишею.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої навігації сторінки. -->
+    <!-- Тег footer використовується для завершальної частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №27 виконано як окрема сторінка з HTML, CSS і чистим JavaScript.
+      </p>
+      <!-- Тег a використовується для переходу на іншу сторінку за посиланням. -->
+      <a class="footer__button" href="../index.html">На головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Тег script використовується для підключення окремого JavaScript-файлу. -->
+  <script src="main.js"></script>
+</body>
+</html>
