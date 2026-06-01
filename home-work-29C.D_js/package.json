@@ -1,0 +1,16 @@
+{
+  "name": "home-work-29c.d_js",
+  "version": "1.0.0",
+  "description": "Home Work 29: Jest unit tests for ageClassification and weekFn.",
+  "main": "main.js/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}

@@ -34,6 +34,7 @@
 - `home-work-26C.D_js`
 - `home-work-27C.D_js`
 - `home-work-28C.D_js`
+- `home-work-29C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -294,6 +295,25 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-28C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-28C.D_js
+
+## Домашнє завдання №29 (Jest Unit Tests)
+
+Тема роботи: **Jasmine framework, Jest, BDD та базові юніт-тести JavaScript**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-29C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-29C.D_js/styles.css`, а логіку залишено в шаблонному файлі `home-work-29C.D_js/main.js/main.js`;
+- ініціалізовано npm-проєкт, встановлено Jest як dev dependency та додано скрипт `"test": "jest"`;
+- реалізовано експорт функцій `ageClassification` і `weekFn`, щоб їх можна було тестувати через Jest;
+- написано тести в `home-work-29C.D_js/main.test.js` для всіх значень із прикладів уроку та додаткових некоректних значень;
+- на сторінці показано стислий підсумок уроку, кроки налаштування Jest, таблиці очікуваних і фактичних результатів;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-29C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-29C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

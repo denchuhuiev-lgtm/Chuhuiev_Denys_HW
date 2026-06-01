@@ -1,0 +1,373 @@
+/* Блок root використовується для зберігання спільних кольорів, відступів і тіней сторінки. */
+:root {
+  --page-bg: #f3f6f8;
+  --surface: #ffffff;
+  --surface-soft: #edf5f1;
+  --surface-blue: #e8f1fb;
+  --surface-warm: #fff3df;
+  --text: #17212b;
+  --muted: #5c6875;
+  --accent: #17786c;
+  --accent-dark: #0d524b;
+  --accent-blue: #2e5d9f;
+  --accent-warm: #b85c20;
+  --line: rgba(23, 33, 43, 0.14);
+  --shadow: 0 18px 44px rgba(23, 33, 43, 0.13);
+  --radius: 8px;
+}
+
+/* Блок universal selector використовується для однакового box-model на всіх елементах. */
+* {
+  box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового фону, шрифту та кольору тексту сторінки. */
+.page-body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(23, 120, 108, 0.12), transparent 34%),
+    linear-gradient(225deg, rgba(184, 92, 32, 0.1), transparent 28%),
+    linear-gradient(180deg, var(--page-bg), #e9eff3);
+}
+
+/* Блок page-shell використовується як центральний контейнер сторінки. */
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+/* Блок inline-code використовується для коротких назв команд, функцій і налаштувань. */
+.inline-code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: rgba(23, 120, 108, 0.12);
+  color: var(--accent-dark);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
+/* Блок hero використовується для вступної частини домашньої роботи. */
+.hero {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки над головним заголовком. */
+.hero__eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(23, 120, 108, 0.12);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title {
+  max-width: 900px;
+  margin: 0 0 14px;
+  font-size: 44px;
+  line-height: 1.12;
+}
+
+/* Блок hero__text використовується для вступного опису домашнього завдання. */
+.hero__text {
+  max-width: 900px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Блок hero__tags використовується для розміщення тематичних міток уроку. */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок hero__tag використовується для стилізації однієї тематичної мітки. */
+.hero__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fbfcfd;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок content використовується для вертикального розділення основних секцій. */
+.content {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* Блок lesson-summary використовується для короткого підсумку заняття. */
+.lesson-summary {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок section-title використовується для заголовків основних секцій. */
+.section-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* Блок lesson-summary__text використовується для тексту підсумку заняття. */
+.lesson-summary__text {
+  max-width: 940px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Блок setup-panel використовується для секції з кроками налаштування Jest. */
+.setup-panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  box-shadow: var(--shadow);
+}
+
+/* Блок section-heading використовується для групування мітки та заголовка секції. */
+.section-heading {
+  display: grid;
+  gap: 8px;
+}
+
+/* Блок section-heading__label використовується для маленької службової мітки над заголовком. */
+.section-heading__label {
+  color: var(--accent-blue);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок setup-list використовується для нумерованого списку кроків запуску тестів. */
+.setup-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Блок setup-list__item використовується для одного пункту налаштування. */
+.setup-list__item {
+  padding-left: 4px;
+}
+
+/* Блок tests-grid використовується для двох карток із результатами функцій. */
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Блок function-card використовується для окремої картки тестованої функції. */
+.function-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок function-card__title використовується для заголовка картки з функцією. */
+.function-card__title {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+/* Блок function-card__text використовується для короткого опису поведінки функції. */
+.function-card__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Блок table-wrapper використовується для адаптивного скролу широкої таблиці. */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Блок results-table використовується для таблиці прикладів виконання функції. */
+.results-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  background: #fbfcfd;
+}
+
+/* Блок results-table__head використовується для верхньої частини таблиці. */
+.results-table__head {
+  background: var(--surface-blue);
+}
+
+/* Блок results-table__row використовується для одного рядка таблиці. */
+.results-table__row {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Блок results-table__header використовується для заголовків колонок таблиці. */
+.results-table__header {
+  padding: 12px;
+  color: var(--accent-blue);
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Блок results-table__body використовується для рядків із прикладами з JavaScript. */
+.results-table__body {
+  color: var(--text);
+}
+
+/* Блок results-table__cell використовується для однієї комірки результатів. */
+.results-table__cell {
+  padding: 11px 12px;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+/* Блок code-panel використовується для секції з фрагментом Jest-тесту. */
+.code-panel {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок code-panel__pre використовується для темного контейнера з кодом. */
+.code-panel__pre {
+  margin: 0;
+  overflow-x: auto;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: #13212b;
+  color: #eff8f6;
+}
+
+/* Блок code-panel__code використовується для стилю тексту програмного коду. */
+.code-panel__code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Блок footer використовується для нижньої частини сторінки та кнопки повернення. */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Блок footer__text використовується для короткого фінального повідомлення. */
+.footer__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Блок footer__button використовується для кнопки-посилання на головний індекс. */
+.footer__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+/* Блок footer__button hover використовується для стану наведення та фокусу кнопки. */
+.footer__button:hover,
+.footer__button:focus-visible {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* Блок media max-width 760 використовується для адаптації сторінки на планшетах і телефонах. */
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100% - 20px, 1120px);
+    padding-top: 20px;
+  }
+
+  .hero,
+  .lesson-summary,
+  .setup-panel,
+  .function-card,
+  .code-panel {
+    padding: 20px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .tests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .footer__button {
+    width: 100%;
+  }
+}

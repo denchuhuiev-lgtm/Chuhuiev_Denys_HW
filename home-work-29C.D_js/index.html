@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, опису сторінки та підключення файлів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для правильного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки у браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №29: налаштування Jest і юніт-тести для функцій ageClassification та weekFn."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 29 | Jest Unit Tests</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Тег script використовується для підключення JavaScript-файлу з функціями та демонстрацією. -->
+  <script src="main.js/main.js" defer></script>
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки домашнього завдання. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+      <span class="hero__eyebrow">Home Work 29</span>
+      <!-- Тег h1 використовується для головного заголовка сторінки. -->
+      <h1 class="hero__title">Jest: юніт-тести для JavaScript-функцій</h1>
+      <!-- Тег p використовується для текстового абзацу з поясненням. -->
+      <p class="hero__text">
+        У цій роботі налаштовано npm-проєкт із Jest, підготовлено функції
+        <span class="inline-code">ageClassification</span> та
+        <span class="inline-code">weekFn</span>, а також написано тести для всіх
+        значень із прикладів уроку.
+      </p>
+      <!-- Блок hero__tags використовується для коротких міток з темами уроку. -->
+      <div class="hero__tags" aria-label="Теми уроку">
+        <span class="hero__tag">Jest</span>
+        <span class="hero__tag">Unit Tests</span>
+        <span class="hero__tag">Matchers</span>
+        <span class="hero__tag">BDD</span>
+        <span class="hero__tag">npm test</span>
+      </div>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту сторінки. -->
+    <!-- Тег main використовується для головної частини документа. -->
+    <main class="content">
+      <!-- Блок lesson-summary використовується для стислого підсумку матеріалу заняття. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-summary">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="section-title">Що взято з уроку</h2>
+        <p class="lesson-summary__text">
+          На занятті розглядали Jasmine і Jest як інструменти для перевірки
+          JavaScript-коду, структуру тестів через
+          <span class="inline-code">describe</span>,
+          <span class="inline-code">test</span> / <span class="inline-code">it</span>
+          та <span class="inline-code">expect</span>, а також підхід BDD, де тест
+          описує очікувану поведінку функції.
+        </p>
+      </section>
+
+      <!-- Блок setup-panel використовується для показу кроків налаштування Jest. -->
+      <section class="setup-panel" aria-labelledby="setup-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Project setup</span>
+          <h2 class="section-title" id="setup-title">Налаштування проєкту</h2>
+        </div>
+        <!-- Тег ol використовується для нумерованого списку кроків. -->
+        <ol class="setup-list">
+          <!-- Тег li використовується для одного пункту списку. -->
+          <li class="setup-list__item">
+            Створено <span class="inline-code">package.json</span> командою
+            <span class="inline-code">npm init -y</span>.
+          </li>
+          <li class="setup-list__item">
+            Встановлено Jest як dev dependency:
+            <span class="inline-code">npm install --save-dev jest</span>.
+          </li>
+          <li class="setup-list__item">
+            У скриптах додано запуск тестів:
+            <span class="inline-code">"test": "jest"</span>.
+          </li>
+          <li class="setup-list__item">
+            Перевірка виконується командою <span class="inline-code">npm test</span>.
+          </li>
+        </ol>
+      </section>
+
+      <!-- Блок tests-grid використовується для розміщення двох карток із тестованими функціями. -->
+      <section class="tests-grid" aria-label="Тестовані функції">
+        <!-- Тег article використовується для окремої змістовної картки з функцією. -->
+        <article class="function-card">
+          <div class="section-heading">
+            <span class="section-heading__label">Function 01</span>
+            <!-- Тег h3 використовується для заголовка картки третього рівня. -->
+            <h3 class="function-card__title">ageClassification(num)</h3>
+          </div>
+          <p class="function-card__text">
+            Функція класифікує вік за діапазонами та повертає
+            <span class="inline-code">null</span> для некоректних або
+            позамежних значень.
+          </p>
+          <!-- Блок table-wrapper використовується для горизонтального скролу таблиці на малих екранах. -->
+          <div class="table-wrapper">
+            <!-- Тег table використовується для табличного показу вхідних значень і результатів. -->
+            <table class="results-table">
+              <!-- Тег thead використовується для групування заголовків колонок таблиці. -->
+              <thead class="results-table__head">
+                <!-- Тег tr використовується для одного рядка таблиці. -->
+                <tr class="results-table__row">
+                  <!-- Тег th використовується для комірок-заголовків у таблиці. -->
+                  <th class="results-table__header" scope="col">Вхід</th>
+                  <th class="results-table__header" scope="col">Очікується</th>
+                  <th class="results-table__header" scope="col">Результат</th>
+                </tr>
+              </thead>
+              <!-- Тег tbody використовується для основних рядків таблиці з даними. -->
+              <tbody class="results-table__body" data-age-results></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="function-card">
+          <div class="section-heading">
+            <span class="section-heading__label">Function 02</span>
+            <h3 class="function-card__title">weekFn(cond)</h3>
+          </div>
+          <p class="function-card__text">
+            Функція повертає назву дня тижня для чисел від
+            <span class="inline-code">1</span> до <span class="inline-code">7</span>
+            і <span class="inline-code">null</span> для інших значень.
+          </p>
+          <div class="table-wrapper">
+            <table class="results-table">
+              <thead class="results-table__head">
+                <tr class="results-table__row">
+                  <th class="results-table__header" scope="col">Вхід</th>
+                  <th class="results-table__header" scope="col">Очікується</th>
+                  <th class="results-table__header" scope="col">Результат</th>
+                </tr>
+              </thead>
+              <tbody class="results-table__body" data-week-results></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <!-- Блок code-panel використовується для короткого прикладу тесту Jest. -->
+      <section class="code-panel" aria-labelledby="code-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Jest spec</span>
+          <h2 class="section-title" id="code-title">Приклад тесту</h2>
+        </div>
+        <!-- Тег pre використовується для збереження форматування багаторядкового коду. -->
+        <pre class="code-panel__pre"><!-- Тег code використовується для фрагмента програмного коду. --><code class="code-panel__code">describe('weekFn', () =&gt; {
+  test.each(weekExamples)('повертає $expected для значення $value', ({ value, expected }) =&gt; {
+    expect(weekFn(value)).toBe(expected);
+  });
+});</code></pre>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої навігації назад до головного індексу. -->
+    <!-- Тег footer використовується для завершальної частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №29 готове до перевірки через Jest і перегляду в браузері.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">На головний індекс</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,3 +1,6 @@
 Thumbs.db
 .DS_Store
 Desktop.ini
+node_modules/
+coverage/
+__MACOSX/
