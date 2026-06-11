@@ -36,6 +36,7 @@
 - `home-work-28C.D_js`
 - `home-work-29C.D_js`
 - `home-work-30C.D_js`
+- `home-work-31C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -333,6 +334,26 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-30C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-30C.D_js
+
+## Домашнє завдання №31 (Event Loop, Fetch and CRUD)
+
+Тема роботи: **Event Loop, Callback, Promise, Async/Await, JSON, XHR, Fetch, AJAX, HTTP methods, CRUD та status codes**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-31C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-31C.D_js/styles.css`, а логіку розміщено в шаблонному файлі `home-work-31C.D_js/main.js/main.js`;
+- на основі шаблону реалізовано асинхронні функції `getData`, `postData`, `putData`, `patchData` і `deleteData`;
+- усі CRUD-функції працюють через `fetch`, `async/await`, JSON-тіло запиту, перевірку `response.ok` та обробку помилок;
+- додано інтерактивну панель запуску GET, POST, PUT, PATCH і DELETE запитів до JSONPlaceholder;
+- додано міні-демо Event Loop з порядком виконання синхронного коду, microtask і macrotask;
+- на сторінці показано таблицю HTTP-методів, CRUD-відповідності та короткий огляд груп status codes;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-31C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-31C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

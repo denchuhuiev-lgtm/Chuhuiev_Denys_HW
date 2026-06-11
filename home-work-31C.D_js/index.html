@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, опису сторінки та підключення файлів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для правильного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки у браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №31: Event Loop, Promise, async/await, JSON, Fetch, AJAX, CRUD та HTTP status codes."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 31 | Event Loop, Fetch and CRUD</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Тег script використовується для підключення JavaScript-файлу з шаблонною логікою завдання. -->
+  <script type="module" src="main.js/main.js"></script>
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки домашнього завдання. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Блок hero__content використовується для текстового вступу до роботи. -->
+      <div class="hero__content">
+        <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+        <span class="hero__eyebrow">Home Work 31</span>
+        <!-- Тег h1 використовується для головного заголовка сторінки. -->
+        <h1 class="hero__title">Event Loop, Fetch API та CRUD-запити</h1>
+        <!-- Тег p використовується для текстового абзацу з поясненням. -->
+        <p class="hero__text">
+          У цій роботі реалізовано асинхронні функції
+          <span class="inline-code">getData</span>,
+          <span class="inline-code">postData</span>,
+          <span class="inline-code">putData</span>,
+          <span class="inline-code">patchData</span> та
+          <span class="inline-code">deleteData</span>. Вони працюють з API через
+          <span class="inline-code">fetch</span>, <span class="inline-code">async</span>
+          і <span class="inline-code">await</span>.
+        </p>
+        <!-- Блок hero__tags використовується для коротких міток з темами уроку. -->
+        <div class="hero__tags" aria-label="Теми уроку">
+          <span class="hero__tag">Event Loop</span>
+          <span class="hero__tag">Promise</span>
+          <span class="hero__tag">Async/Await</span>
+          <span class="hero__tag">Fetch</span>
+          <span class="hero__tag">CRUD</span>
+        </div>
+      </div>
+
+      <!-- Блок hero__visual використовується для схеми пріоритету асинхронних задач. -->
+      <!-- Тег aside використовується для додаткового тематичного блоку поруч із вступом. -->
+      <aside class="hero__visual" aria-label="Схема Event Loop">
+        <span class="hero__visual-label">Execution order</span>
+        <!-- Тег ol використовується для нумерованого списку порядку виконання. -->
+        <ol class="hero__steps">
+          <!-- Тег li використовується для одного пункту списку. -->
+          <li class="hero__step">Call Stack</li>
+          <li class="hero__step">Microtask Queue</li>
+          <li class="hero__step">Macrotask Queue</li>
+        </ol>
+      </aside>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту сторінки. -->
+    <!-- Тег main використовується для головної частини документа. -->
+    <main class="content">
+      <!-- Блок lesson-summary використовується для стислого підсумку матеріалу заняття. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-summary">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="section-title">Що взято з уроку</h2>
+        <p class="lesson-summary__text">
+          На занятті розглядали синхронний та асинхронний код, Event Loop,
+          Call Stack, microtask і macrotask черги, callback, Promise,
+          <span class="inline-code">async/await</span>, JSON, XHR, Fetch, AJAX,
+          HTTP-методи, CRUD-операції та status codes.
+        </p>
+      </section>
+
+      <!-- Блок concepts-grid використовується для короткого пояснення ключових понять уроку. -->
+      <section class="concepts-grid" aria-label="Ключові поняття уроку">
+        <!-- Тег article використовується для окремої змістовної картки. -->
+        <article class="concept-card">
+          <!-- Тег h3 використовується для заголовка картки третього рівня. -->
+          <h3 class="concept-card__title">Event Loop</h3>
+          <p class="concept-card__text">
+            Керує виконанням синхронного коду, microtask і macrotask черг, коли
+            стек викликів стає порожнім.
+          </p>
+        </article>
+        <article class="concept-card">
+          <h3 class="concept-card__title">Promise</h3>
+          <p class="concept-card__text">
+            Описує майбутній результат асинхронної операції та дозволяє обробляти
+            успіх або помилку.
+          </p>
+        </article>
+        <article class="concept-card">
+          <h3 class="concept-card__title">JSON</h3>
+          <p class="concept-card__text">
+            Формат обміну даними між клієнтом і сервером, який зручно читати через
+            <span class="inline-code">JSON.parse()</span> і створювати через
+            <span class="inline-code">JSON.stringify()</span>.
+          </p>
+        </article>
+      </section>
+
+      <!-- Блок api-panel використовується для інтерактивного запуску CRUD-запитів. -->
+      <section class="api-panel" aria-labelledby="api-panel-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Fetch API</span>
+          <h2 class="section-title" id="api-panel-title">CRUD-запити до JSONPlaceholder</h2>
+          <p class="section-heading__text">
+            Кнопки запускають функції з шаблонного файлу та показують JSON-відповідь
+            або статус помилки.
+          </p>
+        </div>
+
+        <!-- Блок api-panel__actions використовується для кнопок HTTP-методів. -->
+        <div class="api-panel__actions" aria-label="HTTP методи">
+          <!-- Тег button використовується для запуску конкретного API-запиту. -->
+          <button class="api-panel__button api-panel__button--get" type="button" data-api-action="get">GET</button>
+          <button class="api-panel__button api-panel__button--post" type="button" data-api-action="post">POST</button>
+          <button class="api-panel__button api-panel__button--put" type="button" data-api-action="put">PUT</button>
+          <button class="api-panel__button api-panel__button--patch" type="button" data-api-action="patch">PATCH</button>
+          <button class="api-panel__button api-panel__button--delete" type="button" data-api-action="delete">DELETE</button>
+        </div>
+
+        <!-- Блок api-panel__result використовується для статусу та JSON-відповіді. -->
+        <div class="api-panel__result">
+          <!-- Тег p використовується для короткого статусного повідомлення. -->
+          <p class="api-panel__status api-panel__status--neutral" data-api-status>
+            Оберіть HTTP-метод, щоб виконати запит.
+          </p>
+          <!-- Тег pre використовується для збереження форматування JSON-відповіді. -->
+          <pre class="api-panel__pre"><!-- Тег code використовується для фрагмента програмного коду або JSON. --><code class="api-panel__code" data-api-output>{
+  "message": "Тут з'явиться відповідь сервера"
+}</code></pre>
+        </div>
+      </section>
+
+      <!-- Блок loop-demo використовується для демонстрації порядку виконання Event Loop. -->
+      <section class="loop-demo" aria-labelledby="loop-demo-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Microtask vs Macrotask</span>
+          <h2 class="section-title" id="loop-demo-title">Міні-демо Event Loop</h2>
+        </div>
+        <p class="loop-demo__text">
+          Натисніть кнопку, щоб побачити порядок: синхронний код, Promise microtask,
+          а потім <span class="inline-code">setTimeout</span> macrotask.
+        </p>
+        <button class="loop-demo__button" type="button" data-loop-button>Запустити демо</button>
+        <ol class="loop-demo__list">
+          <li class="loop-demo__item" data-loop-step>Очікує виконання...</li>
+          <li class="loop-demo__item" data-loop-step>Очікує виконання...</li>
+          <li class="loop-demo__item" data-loop-step>Очікує виконання...</li>
+        </ol>
+      </section>
+
+      <!-- Блок methods-table-section використовується для таблиці HTTP-методів і CRUD-операцій. -->
+      <section class="methods-table-section" aria-labelledby="methods-title">
+        <div class="section-heading">
+          <span class="section-heading__label">HTTP methods</span>
+          <h2 class="section-title" id="methods-title">HTTP-методи та CRUD</h2>
+        </div>
+        <!-- Блок table-wrapper використовується для горизонтального скролу таблиці на малих екранах. -->
+        <div class="table-wrapper">
+          <!-- Тег table використовується для табличного показу методів і дій. -->
+          <table class="methods-table">
+            <!-- Тег thead використовується для групування заголовків колонок таблиці. -->
+            <thead class="methods-table__head">
+              <!-- Тег tr використовується для одного рядка таблиці. -->
+              <tr class="methods-table__row">
+                <!-- Тег th використовується для комірок-заголовків у таблиці. -->
+                <th class="methods-table__header" scope="col">Метод</th>
+                <th class="methods-table__header" scope="col">CRUD</th>
+                <th class="methods-table__header" scope="col">Призначення</th>
+              </tr>
+            </thead>
+            <!-- Тег tbody використовується для основних рядків таблиці з даними. -->
+            <tbody class="methods-table__body">
+              <tr class="methods-table__row">
+                <!-- Тег td використовується для звичайної комірки таблиці. -->
+                <td class="methods-table__cell">GET</td>
+                <td class="methods-table__cell">Read</td>
+                <td class="methods-table__cell">Отримати ресурс або список ресурсів.</td>
+              </tr>
+              <tr class="methods-table__row">
+                <td class="methods-table__cell">POST</td>
+                <td class="methods-table__cell">Create</td>
+                <td class="methods-table__cell">Створити новий ресурс на сервері.</td>
+              </tr>
+              <tr class="methods-table__row">
+                <td class="methods-table__cell">PUT</td>
+                <td class="methods-table__cell">Update</td>
+                <td class="methods-table__cell">Повністю оновити існуючий ресурс.</td>
+              </tr>
+              <tr class="methods-table__row">
+                <td class="methods-table__cell">PATCH</td>
+                <td class="methods-table__cell">Update</td>
+                <td class="methods-table__cell">Частково змінити існуючий ресурс.</td>
+              </tr>
+              <tr class="methods-table__row">
+                <td class="methods-table__cell">DELETE</td>
+                <td class="methods-table__cell">Delete</td>
+                <td class="methods-table__cell">Видалити ресурс за ідентифікатором.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Блок status-grid використовується для короткого огляду груп HTTP status codes. -->
+      <section class="status-grid" aria-label="Групи HTTP статусів">
+        <article class="status-card">
+          <span class="status-card__code">2xx</span>
+          <h3 class="status-card__title">Успішні</h3>
+          <p class="status-card__text">200 OK, 201 Created, 204 No Content.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-card__code">4xx</span>
+          <h3 class="status-card__title">Помилки клієнта</h3>
+          <p class="status-card__text">400 Bad Request, 401 Unauthorized, 404 Not Found.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-card__code">5xx</span>
+          <h3 class="status-card__title">Помилки сервера</h3>
+          <p class="status-card__text">500 Internal Server Error, 503 Service Unavailable.</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої навігації назад до головного індексу. -->
+    <!-- Тег footer використовується для завершальної частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №31 демонструє асинхронність, Fetch API та базові CRUD-операції.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">На головний індекс</a>
+    </footer>
+  </div>
+</body>
+</html>

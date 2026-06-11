@@ -1,0 +1,653 @@
+/* Блок root використовується для зберігання спільних кольорів, відступів і тіней сторінки. */
+:root {
+  --page-bg: #f3f6f8;
+  --surface: #ffffff;
+  --surface-blue: #e8f1fb;
+  --surface-mint: #e7f5ef;
+  --surface-warm: #fff0df;
+  --surface-dark: #101d26;
+  --text: #17212b;
+  --muted: #5c6875;
+  --accent: #2563a6;
+  --accent-dark: #174878;
+  --accent-green: #0f766e;
+  --accent-warm: #bd5b2b;
+  --danger: #b93636;
+  --success: #137a3f;
+  --line: rgba(23, 33, 43, 0.14);
+  --line-light: rgba(255, 255, 255, 0.22);
+  --shadow: 0 18px 44px rgba(23, 33, 43, 0.13);
+  --radius: 8px;
+}
+
+/* Блок universal selector використовується для однакового box-model на всіх елементах. */
+* {
+  box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового фону, шрифту та кольору тексту сторінки. */
+.page-body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 166, 0.12), transparent 34%),
+    linear-gradient(225deg, rgba(15, 118, 110, 0.1), transparent 30%),
+    linear-gradient(180deg, var(--page-bg), #e9eef3);
+}
+
+/* Блок page-shell використовується як центральний контейнер сторінки. */
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+/* Блок inline-code використовується для коротких назв методів, функцій і синтаксису. */
+.inline-code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: rgba(37, 99, 166, 0.11);
+  color: var(--accent-dark);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
+/* Блок hero використовується для вступної частини домашньої роботи. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+  gap: 22px;
+  align-items: stretch;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок hero__content використовується для текстового вступу в hero. */
+.hero__content {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки над головним заголовком. */
+.hero__eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(37, 99, 166, 0.12);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title {
+  max-width: 850px;
+  margin: 0 0 14px;
+  font-size: 42px;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+/* Блок hero__text використовується для вступного опису домашнього завдання. */
+.hero__text {
+  max-width: 860px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Блок hero__tags використовується для розміщення тематичних міток уроку. */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок hero__tag використовується для стилізації однієї тематичної мітки. */
+.hero__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fbfcfd;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок hero__visual використовується для візуальної схеми Event Loop. */
+.hero__visual {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  min-width: 0;
+  margin: 0;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #163d66, #0b5f59);
+  color: #ffffff;
+}
+
+/* Блок hero__visual-label використовується для підпису схеми Event Loop. */
+.hero__visual-label {
+  color: #d8f4f1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__steps використовується для нумерованого списку порядку виконання. */
+.hero__steps {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+/* Блок hero__step використовується для одного кроку схеми Event Loop. */
+.hero__step {
+  padding: 12px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 700;
+}
+
+/* Блок content використовується для вертикального розділення основних секцій. */
+.content {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* Блок lesson-summary використовується для короткого підсумку заняття. */
+.lesson-summary {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок section-title використовується для заголовків основних секцій. */
+.section-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* Блок lesson-summary__text використовується для тексту підсумку заняття. */
+.lesson-summary__text {
+  max-width: 960px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Блок concepts-grid використовується для сітки карток з поняттями уроку. */
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Блок concept-card використовується для окремої картки з поняттям. */
+.concept-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок concept-card__title використовується для заголовка картки поняття. */
+.concept-card__title {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+/* Блок concept-card__text використовується для опису поняття. */
+.concept-card__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Блок api-panel використовується для інтерактивної секції CRUD-запитів. */
+.api-panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface-dark);
+  color: #f8fbfb;
+  box-shadow: var(--shadow);
+}
+
+/* Блок section-heading використовується для групування мітки, заголовка та опису секції. */
+.section-heading {
+  display: grid;
+  gap: 8px;
+}
+
+/* Блок section-heading__label використовується для маленької службової мітки над заголовком. */
+.section-heading__label {
+  color: #78d3c6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок section-heading__text використовується для короткого пояснення секції. */
+.section-heading__text {
+  max-width: 900px;
+  margin: 0;
+  color: currentColor;
+  font-size: 16px;
+  line-height: 1.65;
+  opacity: 0.82;
+}
+
+/* Блок api-panel__actions використовується для кнопок запуску HTTP-запитів. */
+.api-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок api-panel__button використовується для однієї кнопки HTTP-методу. */
+.api-panel__button {
+  min-width: 108px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: var(--radius);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+/* Блок api-panel__button hover використовується для стану наведення кнопки. */
+.api-panel__button:hover,
+.api-panel__button:focus-visible {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* Блок api-panel__button--get використовується для кольору кнопки GET. */
+.api-panel__button--get {
+  background: var(--accent);
+}
+
+/* Блок api-panel__button--post використовується для кольору кнопки POST. */
+.api-panel__button--post {
+  background: var(--accent-green);
+}
+
+/* Блок api-panel__button--put використовується для кольору кнопки PUT. */
+.api-panel__button--put {
+  background: #6b5fb8;
+}
+
+/* Блок api-panel__button--patch використовується для кольору кнопки PATCH. */
+.api-panel__button--patch {
+  background: var(--accent-warm);
+}
+
+/* Блок api-panel__button--delete використовується для кольору кнопки DELETE. */
+.api-panel__button--delete {
+  background: var(--danger);
+}
+
+/* Блок api-panel__result використовується для області статусу та JSON. */
+.api-panel__result {
+  display: grid;
+  gap: 12px;
+}
+
+/* Блок api-panel__status використовується для повідомлення про стан запиту. */
+.api-panel__status {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  line-height: 1.5;
+}
+
+/* Блок api-panel__status--neutral використовується для початкового стану запиту. */
+.api-panel__status--neutral {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Блок api-panel__status--pending використовується для стану очікування відповіді. */
+.api-panel__status--pending {
+  background: rgba(37, 99, 166, 0.26);
+}
+
+/* Блок api-panel__status--success використовується для успішного стану запиту. */
+.api-panel__status--success {
+  background: rgba(19, 122, 63, 0.26);
+}
+
+/* Блок api-panel__status--error використовується для помилкового стану запиту. */
+.api-panel__status--error {
+  background: rgba(185, 54, 54, 0.28);
+}
+
+/* Блок api-panel__pre використовується для темного контейнера з JSON. */
+.api-panel__pre {
+  min-height: 220px;
+  max-height: 440px;
+  margin: 0;
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  background: #08131a;
+}
+
+/* Блок api-panel__code використовується для стилю JSON-тексту. */
+.api-panel__code {
+  color: #e9f8f5;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Блок loop-demo використовується для секції демонстрації Event Loop. */
+.loop-demo {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-mint);
+}
+
+/* Блок loop-demo label використовується для іншого кольору мітки у світлій секції. */
+.loop-demo .section-heading__label,
+.methods-table-section .section-heading__label {
+  color: var(--accent-dark);
+}
+
+/* Блок loop-demo__text використовується для пояснення міні-демо. */
+.loop-demo__text {
+  max-width: 850px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Блок loop-demo__button використовується для кнопки запуску Event Loop демо. */
+.loop-demo__button {
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent-green);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок loop-demo__button hover використовується для стану наведення кнопки демо. */
+.loop-demo__button:hover,
+.loop-demo__button:focus-visible {
+  background: #0b5954;
+  transform: translateY(-1px);
+}
+
+/* Блок loop-demo__list використовується для списку результатів Event Loop. */
+.loop-demo__list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+/* Блок loop-demo__item використовується для одного кроку Event Loop. */
+.loop-demo__item {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Блок methods-table-section використовується для секції з таблицею HTTP-методів. */
+.methods-table-section {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок table-wrapper використовується для адаптивного скролу широкої таблиці. */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Блок methods-table використовується для таблиці HTTP-методів. */
+.methods-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  background: #fbfcfd;
+}
+
+/* Блок methods-table__head використовується для верхньої частини таблиці. */
+.methods-table__head {
+  background: var(--surface-blue);
+}
+
+/* Блок methods-table__row використовується для одного рядка таблиці. */
+.methods-table__row {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Блок methods-table__header використовується для заголовків колонок таблиці. */
+.methods-table__header {
+  padding: 12px;
+  color: var(--accent-dark);
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Блок methods-table__body використовується для рядків із прикладами HTTP-методів. */
+.methods-table__body {
+  color: var(--text);
+}
+
+/* Блок methods-table__cell використовується для однієї комірки таблиці. */
+.methods-table__cell {
+  padding: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Блок status-grid використовується для сітки карток HTTP-статусів. */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Блок status-card використовується для однієї картки групи статусів. */
+.status-card {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface-blue), var(--surface-warm));
+}
+
+/* Блок status-card__code використовується для великої позначки групи статусів. */
+.status-card__code {
+  color: var(--accent-warm);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Блок status-card__title використовується для назви групи статусів. */
+.status-card__title {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+/* Блок status-card__text використовується для прикладів status codes. */
+.status-card__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Блок footer використовується для нижньої частини сторінки та кнопки повернення. */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Блок footer__text використовується для короткого фінального повідомлення. */
+.footer__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Блок footer__button використовується для кнопки-посилання на головний індекс. */
+.footer__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  background: var(--accent-warm);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок footer__button hover використовується для стану наведення та фокусу кнопки. */
+.footer__button:hover,
+.footer__button:focus-visible {
+  background: #a84920;
+  transform: translateY(-1px);
+}
+
+/* Блок media max-width 920px використовується для адаптації сторінки на планшетах. */
+@media (max-width: 920px) {
+  /* Блок hero у media використовується для переходу hero в одну колонку. */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Блок concepts-grid у media використовується для однієї колонки карток понять. */
+  .concepts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Блок status-grid у media використовується для однієї колонки карток статусів. */
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Блок media max-width 640px використовується для адаптації сторінки на телефонах. */
+@media (max-width: 640px) {
+  /* Блок page-shell у media використовується для зменшення бокових відступів на телефонах. */
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding: 18px 0 30px;
+  }
+
+  /* Блок hero у media використовується для компактнішого вступного блоку. */
+  .hero {
+    padding: 20px;
+  }
+
+  /* Блок hero__title у media використовується для мобільного розміру головного заголовка. */
+  .hero__title {
+    font-size: 31px;
+  }
+
+  /* Блок hero__text у media використовується для зручнішого читання вступу на телефонах. */
+  .hero__text {
+    font-size: 16px;
+  }
+
+  /* Блок lesson-summary у media використовується для меншого внутрішнього відступу. */
+  .lesson-summary,
+  .concept-card,
+  .api-panel,
+  .loop-demo,
+  .methods-table-section,
+  .status-card {
+    padding: 20px;
+  }
+
+  /* Блок api-panel__button у media використовується для однакової ширини кнопок. */
+  .api-panel__button {
+    flex: 1 1 118px;
+  }
+
+  /* Блок loop-demo__button у media використовується для повної ширини кнопки демо. */
+  .loop-demo__button {
+    width: 100%;
+  }
+
+  /* Блок footer у media використовується для вертикального розміщення тексту та кнопки. */
+  .footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  /* Блок footer__button у media використовується для повної ширини кнопки на телефоні. */
+  .footer__button {
+    width: 100%;
+  }
+}
