@@ -1,0 +1,507 @@
+/* Блок root використовується для зберігання спільних кольорів, відступів і тіней сторінки. */
+:root {
+  --page-bg: #f3f5f1;
+  --surface: #ffffff;
+  --surface-soft: #edf4f0;
+  --surface-blue: #e7f0f8;
+  --surface-warm: #fff1df;
+  --surface-dark: #111b22;
+  --text: #17212b;
+  --muted: #5c6875;
+  --accent: #0f766e;
+  --accent-dark: #0b534e;
+  --accent-blue: #2f5f98;
+  --accent-warm: #bd5b2b;
+  --danger: #b93636;
+  --line: rgba(23, 33, 43, 0.14);
+  --line-light: rgba(255, 255, 255, 0.24);
+  --shadow: 0 18px 44px rgba(23, 33, 43, 0.13);
+  --radius: 8px;
+}
+
+/* Блок universal selector використовується для однакового box-model на всіх елементах. */
+* {
+  box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового фону, шрифту та кольору тексту сторінки. */
+.page-body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.13), transparent 34%),
+    linear-gradient(225deg, rgba(189, 91, 43, 0.1), transparent 30%),
+    linear-gradient(180deg, var(--page-bg), #e9eff2);
+}
+
+/* Блок page-shell використовується як центральний контейнер сторінки. */
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+/* Блок inline-code використовується для коротких назв операторів, методів і API. */
+.inline-code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-dark);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
+/* Блок hero використовується для вступної частини домашньої роботи. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+  gap: 22px;
+  align-items: stretch;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок hero__content використовується для текстового вступу в hero. */
+.hero__content {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки над головним заголовком. */
+.hero__eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title {
+  max-width: 860px;
+  margin: 0 0 14px;
+  font-size: 42px;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+/* Блок hero__text використовується для вступного опису домашнього завдання. */
+.hero__text {
+  max-width: 860px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Блок hero__tags використовується для розміщення тематичних міток уроку. */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок hero__tag використовується для стилізації однієї тематичної мітки. */
+.hero__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fbfcfd;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок hero__panel використовується для візуальної API-панелі. */
+.hero__panel {
+  display: grid;
+  align-content: end;
+  gap: 14px;
+  min-width: 0;
+  margin: 0;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #163d66, #0b5f59);
+  color: #ffffff;
+}
+
+/* Блок hero__panel-label використовується для службової мітки API-панелі. */
+.hero__panel-label {
+  color: #d8f4f1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__panel-text використовується для короткого опису API-панелі. */
+.hero__panel-text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Блок hero__endpoint використовується для показу URL endpoint з перенесенням. */
+.hero__endpoint {
+  display: block;
+  max-width: 100%;
+  padding: 14px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  background: rgba(10, 22, 31, 0.36);
+  color: #e9f8f5;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+/* Блок content використовується для вертикального розділення основних секцій. */
+.content {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* Блок lesson-summary використовується для короткого підсумку заняття. */
+.lesson-summary {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок section-title використовується для заголовків основних секцій. */
+.section-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* Блок lesson-summary__text використовується для тексту підсумку заняття. */
+.lesson-summary__text {
+  max-width: 980px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Блок search-panel використовується для секції пошуку фільмів. */
+.search-panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  box-shadow: var(--shadow);
+}
+
+/* Блок section-heading використовується для групування мітки, заголовка та опису секції. */
+.section-heading {
+  display: grid;
+  gap: 8px;
+}
+
+/* Блок section-heading__label використовується для маленької службової мітки над заголовком. */
+.section-heading__label {
+  color: var(--accent-blue);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок search-form використовується для семантичного контейнера поля пошуку. */
+.search-form {
+  display: grid;
+  gap: 8px;
+}
+
+/* Блок search-form__label використовується для підпису поля пошуку. */
+.search-form__label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок search-form__input використовується для стилізації поля live search. */
+.search-form__input {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+}
+
+/* Блок search-form__input focus використовується для помітного стану фокуса поля. */
+.search-form__input:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(15, 118, 110, 0.16);
+}
+
+/* Блок search-panel__meta використовується для статусу та лічильника результатів. */
+.search-panel__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Блок search-panel__status використовується для повідомлення про стан live search. */
+.search-panel__status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Блок search-panel__status error використовується для помилкового стану пошуку. */
+.search-panel__status.is-error {
+  color: var(--danger);
+}
+
+/* Блок search-panel__count використовується для лічильника знайдених фільмів. */
+.search-panel__count {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок results-section використовується для секції результатів пошуку. */
+.results-section {
+  display: grid;
+  gap: 18px;
+}
+
+/* Блок movie-grid використовується для адаптивної сітки карток фільмів. */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+/* Блок movie-card використовується для однієї картки фільму, створеної JavaScript. */
+.movie-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок movie-card__poster-wrap використовується для стабільної області постера. */
+.movie-card__poster-wrap {
+  aspect-ratio: 2 / 3;
+  background: var(--surface-dark);
+}
+
+/* Блок movie-card__poster використовується для зображення постера фільму. */
+.movie-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Блок movie-card__content використовується для текстової частини картки фільму. */
+.movie-card__content {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 16px;
+}
+
+/* Блок movie-card__title використовується для назви фільму. */
+.movie-card__title {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+/* Блок movie-card__meta використовується для року та типу фільму. */
+.movie-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+/* Блок movie-card__badge використовується для коротких міток у картці. */
+.movie-card__badge {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--surface-blue);
+  color: var(--accent-blue);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Блок movie-card__link використовується для посилання на IMDb. */
+.movie-card__link {
+  width: fit-content;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Блок movie-card__link hover використовується для стану наведення посилання. */
+.movie-card__link:hover,
+.movie-card__link:focus-visible {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+/* Блок empty-state використовується для повідомлення про порожній результат або помилку. */
+.empty-state {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-warm);
+}
+
+/* Блок empty-state hidden використовується для повного приховування порожнього стану. */
+.empty-state[hidden] {
+  display: none;
+}
+
+/* Блок empty-state__title використовується для заголовка порожнього стану. */
+.empty-state__title {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+/* Блок empty-state__text використовується для тексту порожнього стану. */
+.empty-state__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Блок footer використовується для нижньої частини сторінки та кнопки повернення. */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Блок footer__text використовується для короткого фінального повідомлення. */
+.footer__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Блок footer__button використовується для кнопки-посилання на головний індекс. */
+.footer__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  background: var(--accent-warm);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок footer__button hover використовується для стану наведення та фокусу кнопки. */
+.footer__button:hover,
+.footer__button:focus-visible {
+  background: #a84920;
+  transform: translateY(-1px);
+}
+
+/* Блок media max-width 860px використовується для адаптації сторінки на планшетах. */
+@media (max-width: 860px) {
+  /* Блок hero у media використовується для переходу hero в одну колонку. */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Блок media max-width 640px використовується для адаптації сторінки на телефонах. */
+@media (max-width: 640px) {
+  /* Блок page-shell у media використовується для зменшення бокових відступів на телефонах. */
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding: 18px 0 30px;
+  }
+
+  /* Блок hero у media використовується для компактнішого вступного блоку. */
+  .hero {
+    padding: 20px;
+  }
+
+  /* Блок hero__title у media використовується для мобільного розміру головного заголовка. */
+  .hero__title {
+    font-size: 31px;
+  }
+
+  /* Блок hero__text у media використовується для зручнішого читання вступу на телефонах. */
+  .hero__text {
+    font-size: 16px;
+  }
+
+  /* Блок lesson-summary у media використовується для меншого внутрішнього відступу. */
+  .lesson-summary,
+  .search-panel,
+  .empty-state {
+    padding: 20px;
+  }
+
+  /* Блок movie-grid у media використовується для більшої мінімальної ширини картки на телефоні. */
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Блок footer у media використовується для вертикального розміщення тексту та кнопки. */
+  .footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  /* Блок footer__button у media використовується для повної ширини кнопки на телефоні. */
+  .footer__button {
+    width: 100%;
+  }
+}

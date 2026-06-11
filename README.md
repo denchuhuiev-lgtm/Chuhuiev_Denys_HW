@@ -37,6 +37,7 @@
 - `home-work-29C.D_js`
 - `home-work-30C.D_js`
 - `home-work-31C.D_js`
+- `home-work-32C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -354,6 +355,26 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-31C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-31C.D_js
+
+## Домашнє завдання №32 (Movie LiveSearch API)
+
+Тема роботи: **Spread, Rest, Destructuring Assignment, Generators, Symbol iterators, Optional chaining та live search із зовнішнім API**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-32C.D_js/index.html` для домашнього завдання 32.1;
+- стилі винесено в `home-work-32C.D_js/styles.css`, а JavaScript-логіку розміщено в `home-work-32C.D_js/main.js`;
+- інтегровано зовнішній `OMDb API` для живого пошуку фільмів без натискання кнопки;
+- результати оновлюються в реальному часі з debounce-затримкою та скасуванням попереднього запиту через `AbortController`;
+- кожна картка фільму показує назву, рік випуску, тип, постер і посилання на IMDb;
+- додано обробку порожнього запиту, відсутніх результатів, відсутнього постера та помилок API;
+- у коді застосовано destructuring, spread, rest, генератор `function*`, `Symbol.iterator` і optional chaining;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-32C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-32C.D_js
 
 ## Фінальний проєкт HTML та CSS
 

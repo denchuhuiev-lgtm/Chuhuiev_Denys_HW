@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, опису сторінки та підключення файлів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для правильного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки у браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №32: live search фільмів через OMDb API, spread, rest, destructuring, generators та optional chaining."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 32 | Movie Live Search</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Тег script використовується для підключення JavaScript-файлу з live search логікою. -->
+  <script src="main.js" defer></script>
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки домашнього завдання. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Блок hero__content використовується для текстового вступу до роботи. -->
+      <div class="hero__content">
+        <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+        <span class="hero__eyebrow">Home Work 32.1</span>
+        <!-- Тег h1 використовується для головного заголовка сторінки. -->
+        <h1 class="hero__title">LiveSearch фільмів через зовнішній API</h1>
+        <!-- Тег p використовується для текстового абзацу з поясненням. -->
+        <p class="hero__text">
+          Сторінка шукає фільми в реальному часі через
+          <span class="inline-code">OMDb API</span>. Результати оновлюються під час
+          введення запиту без кнопки пошуку, а картки показують назву, рік, тип і постер.
+        </p>
+        <!-- Блок hero__tags використовується для коротких міток з темами уроку. -->
+        <div class="hero__tags" aria-label="Теми уроку">
+          <span class="hero__tag">Spread</span>
+          <span class="hero__tag">Rest</span>
+          <span class="hero__tag">Destructuring</span>
+          <span class="hero__tag">Generators</span>
+          <span class="hero__tag">Optional chaining</span>
+        </div>
+      </div>
+
+      <!-- Блок hero__panel використовується для короткого опису API та станів пошуку. -->
+      <!-- Тег aside використовується для додаткового тематичного блоку поруч із вступом. -->
+      <aside class="hero__panel" aria-label="Інформація про API">
+        <span class="hero__panel-label">External API</span>
+        <!-- Тег p використовується для короткого тексту всередині панелі. -->
+        <p class="hero__panel-text">OMDb Search endpoint</p>
+        <!-- Тег code використовується для фрагмента URL API. -->
+        <code class="hero__endpoint">https://www.omdbapi.com/?s=query&amp;type=movie</code>
+      </aside>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту сторінки. -->
+    <!-- Тег main використовується для головної частини документа. -->
+    <main class="content">
+      <!-- Блок lesson-summary використовується для стислого підсумку матеріалу заняття. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-summary">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="section-title">Що взято з уроку</h2>
+        <p class="lesson-summary__text">
+          У live search використано <span class="inline-code">destructuring</span>
+          для даних фільмів, <span class="inline-code">spread</span> для створення
+          нового масиву результатів, <span class="inline-code">rest</span> для
+          службових повідомлень, <span class="inline-code">function*</span> для
+          генератора карток і <span class="inline-code">?.</span> для безпечного
+          доступу до властивостей API-відповіді.
+        </p>
+      </section>
+
+      <!-- Блок search-panel використовується для поля live search і статусу пошуку. -->
+      <section class="search-panel" aria-labelledby="search-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Movie LiveSearch</span>
+          <h2 class="section-title" id="search-title">Почніть вводити назву фільму</h2>
+        </div>
+
+        <!-- Блок search-form використовується для групування поля пошуку без кнопки submit. -->
+        <!-- Тег form використовується для семантичного групування елементів пошуку. -->
+        <form class="search-form" role="search">
+          <!-- Тег label використовується для підпису поля введення. -->
+          <label class="search-form__label" for="movie-search">Назва фільму</label>
+          <!-- Тег input використовується для введення пошукового запиту користувачем. -->
+          <input
+            class="search-form__input"
+            id="movie-search"
+            name="movie-search"
+            type="search"
+            value="matrix"
+            placeholder="Наприклад: matrix, batman, avatar"
+            autocomplete="off"
+            data-search-input
+          >
+        </form>
+
+        <!-- Блок search-panel__meta використовується для статусу та лічильника результатів. -->
+        <div class="search-panel__meta">
+          <!-- Тег p використовується для повідомлення про стан пошуку. -->
+          <p class="search-panel__status" data-search-status>Готуємо пошук...</p>
+          <p class="search-panel__count" data-result-count>0 результатів</p>
+        </div>
+      </section>
+
+      <!-- Блок results-section використовується для відображення знайдених фільмів. -->
+      <section class="results-section" aria-labelledby="results-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Results</span>
+          <h2 class="section-title" id="results-title">Результати пошуку</h2>
+        </div>
+        <!-- Блок movie-grid використовується як контейнер для карток, створених JavaScript. -->
+        <div class="movie-grid" data-results-grid></div>
+      </section>
+
+      <!-- Блок empty-state використовується для повідомлення, коли результатів немає або сталася помилка. -->
+      <section class="empty-state" data-empty-state hidden>
+        <!-- Тег h2 використовується для заголовка повідомлення про порожній стан. -->
+        <h2 class="empty-state__title">Немає результатів</h2>
+        <p class="empty-state__text">
+          Спробуйте ввести іншу назву фільму або перевірте підключення до інтернету.
+        </p>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої навігації назад до головного індексу. -->
+    <!-- Тег footer використовується для завершальної частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №32.1 демонструє live search, зовнішній API та сучасні можливості JavaScript.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">На головний індекс</a>
+    </footer>
+  </div>
+</body>
+</html>
