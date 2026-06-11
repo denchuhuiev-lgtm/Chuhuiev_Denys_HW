@@ -1,0 +1,616 @@
+/* Блок root використовується для зберігання спільних кольорів, відступів і тіней сторінки. */
+:root {
+  --page-bg: #f4f7f5;
+  --surface: #ffffff;
+  --surface-mint: #e8f4ef;
+  --surface-blue: #e9f1fb;
+  --surface-warm: #fff1df;
+  --text: #17212b;
+  --muted: #5c6875;
+  --accent: #0f766e;
+  --accent-dark: #0b534e;
+  --accent-blue: #2f5f98;
+  --accent-warm: #bd5b2b;
+  --success: #137a3f;
+  --danger: #b93636;
+  --line: rgba(23, 33, 43, 0.14);
+  --shadow: 0 18px 44px rgba(23, 33, 43, 0.13);
+  --radius: 8px;
+}
+
+/* Блок universal selector використовується для однакового box-model на всіх елементах. */
+* {
+  box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового фону, шрифту та кольору тексту сторінки. */
+.page-body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.12), transparent 34%),
+    linear-gradient(225deg, rgba(189, 91, 43, 0.1), transparent 30%),
+    linear-gradient(180deg, var(--page-bg), #ebf0f3);
+}
+
+/* Блок page-shell використовується як центральний контейнер сторінки. */
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+/* Блок inline-code використовується для коротких назв методів, функцій і шаблонів. */
+.inline-code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-dark);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
+/* Блок hero використовується для вступної частини домашньої роботи. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+  gap: 22px;
+  align-items: stretch;
+  max-width: 100%;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок hero__content використовується для текстового вступу в hero. */
+.hero__content {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки над головним заголовком. */
+.hero__eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title {
+  max-width: 820px;
+  margin: 0 0 14px;
+  font-size: 42px;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+/* Блок hero__text використовується для вступного опису домашнього завдання. */
+.hero__text {
+  max-width: 830px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+/* Блок hero__tags використовується для розміщення тематичних міток уроку. */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Блок hero__tag використовується для стилізації однієї тематичної мітки. */
+.hero__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fbfcfd;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок hero__visual використовується для візуального прикладу регулярного виразу. */
+.hero__visual {
+  display: grid;
+  align-content: end;
+  gap: 16px;
+  min-width: 0;
+  width: 100%;
+  min-height: 240px;
+  margin: 0;
+  padding: 22px;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(47, 95, 152, 0.92), rgba(15, 83, 78, 0.92)),
+    var(--accent-blue);
+  color: #ffffff;
+}
+
+/* Блок hero__caption використовується для підпису візуального прикладу. */
+.hero__caption {
+  color: #d9f4ef;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок hero__regex використовується для великого фрагмента регулярного виразу. */
+.hero__regex {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  word-break: break-all;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius);
+  background: rgba(10, 22, 31, 0.36);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* Блок content використовується для вертикального розділення основних секцій. */
+.content {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* Блок lesson-summary використовується для короткого підсумку заняття. */
+.lesson-summary {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок section-title використовується для заголовків основних секцій. */
+.section-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* Блок lesson-summary__text використовується для тексту підсумку заняття. */
+.lesson-summary__text {
+  max-width: 960px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Блок validators-section використовується для секції з інтерактивними формами. */
+.validators-section {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface-mint);
+  box-shadow: var(--shadow);
+}
+
+/* Блок section-heading використовується для групування мітки та заголовка секції. */
+.section-heading {
+  display: grid;
+  gap: 8px;
+}
+
+/* Блок section-heading__label використовується для маленької службової мітки над заголовком. */
+.section-heading__label {
+  color: var(--accent-blue);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Блок validators-grid використовується для розміщення двох форм перевірки. */
+.validators-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Блок validator-card використовується для окремої картки валідатора. */
+.validator-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок validator-card__title використовується для назви функції в картці. */
+.validator-card__title {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+/* Блок validator-card__text використовується для короткого опису функції. */
+.validator-card__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Блок validator-card__form використовується для вертикального розміщення елементів форми. */
+.validator-card__form {
+  display: grid;
+  gap: 10px;
+}
+
+/* Блок validator-card__label використовується для підпису поля введення. */
+.validator-card__label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Блок validator-card__input використовується для стилізації текстового поля. */
+.validator-card__input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+}
+
+/* Блок validator-card__input focus використовується для помітного стану фокуса поля. */
+.validator-card__input:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(15, 118, 110, 0.16);
+}
+
+/* Блок validator-card__button використовується для кнопки запуску перевірки. */
+.validator-card__button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок validator-card__button hover використовується для реакції кнопки на наведення. */
+.validator-card__button:hover,
+.validator-card__button:focus-visible {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* Блок validator-card__result використовується для повідомлення про результат перевірки. */
+.validator-card__result {
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* Блок validator-card__result valid використовується для успішного результату перевірки. */
+.validator-card__result.is-valid {
+  border-color: rgba(19, 122, 63, 0.3);
+  background: rgba(19, 122, 63, 0.1);
+  color: var(--success);
+}
+
+/* Блок validator-card__result invalid використовується для помилкового результату перевірки. */
+.validator-card__result.is-invalid {
+  border-color: rgba(185, 54, 54, 0.28);
+  background: rgba(185, 54, 54, 0.1);
+  color: var(--danger);
+}
+
+/* Блок snippets-section використовується для секції з прикладами методів уроку. */
+.snippets-section {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Блок snippets-grid використовується для сітки динамічних карток з JavaScript. */
+.snippets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Блок snippet-card використовується для однієї динамічної картки методу. */
+.snippet-card {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--surface-blue);
+}
+
+/* Блок snippet-card__title використовується для назви методу регулярних виразів. */
+.snippet-card__title {
+  margin: 0;
+  color: var(--accent-blue);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+/* Блок snippet-card__pattern використовується для показу шаблону регулярного виразу. */
+.snippet-card__pattern {
+  overflow-wrap: anywhere;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+/* Блок snippet-card__result використовується для результату виконання прикладу. */
+.snippet-card__result {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* Блок examples-grid використовується для двох карток із таблицями прикладів. */
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Блок example-card використовується для окремої картки з таблицею результатів. */
+.example-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* Блок example-card__title використовується для заголовка картки з прикладами. */
+.example-card__title {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+/* Блок table-wrapper використовується для адаптивного скролу широкої таблиці. */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Блок results-table використовується для таблиці прикладів виконання функції. */
+.results-table {
+  width: 100%;
+  min-width: 430px;
+  border-collapse: collapse;
+  background: #fbfcfd;
+}
+
+/* Блок results-table__head використовується для верхньої частини таблиці. */
+.results-table__head {
+  background: var(--surface-warm);
+}
+
+/* Блок results-table__row використовується для одного рядка таблиці. */
+.results-table__row {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Блок results-table__header використовується для заголовків колонок таблиці. */
+.results-table__header {
+  padding: 12px;
+  color: var(--accent-warm);
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Блок results-table__body використовується для рядків із прикладами з JavaScript. */
+.results-table__body {
+  color: var(--text);
+}
+
+/* Блок results-table__cell використовується для однієї комірки результатів. */
+.results-table__cell {
+  padding: 11px 12px;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+/* Блок regex-notes використовується для секції зі шпаргалкою синтаксису. */
+.regex-notes {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface-blue), var(--surface-warm));
+}
+
+/* Блок regex-notes__list використовується для списку ключових правил регулярних виразів. */
+.regex-notes__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Блок regex-notes__item використовується для одного правила в списку. */
+.regex-notes__item {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Блок footer використовується для нижньої частини сторінки та кнопки повернення. */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Блок footer__text використовується для короткого фінального повідомлення. */
+.footer__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Блок footer__button використовується для кнопки-посилання на головний індекс. */
+.footer__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  background: var(--accent-warm);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок footer__button hover використовується для стану наведення та фокусу кнопки. */
+.footer__button:hover,
+.footer__button:focus-visible {
+  background: #a84920;
+  transform: translateY(-1px);
+}
+
+/* Блок media max-width 920px використовується для адаптації сторінки на планшетах. */
+@media (max-width: 920px) {
+  /* Блок hero у media використовується для переходу hero в одну колонку. */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Блок validators-grid у media використовується для однієї колонки форм. */
+  .validators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Блок snippets-grid у media використовується для компактнішої сітки прикладів. */
+  .snippets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Блок examples-grid у media використовується для однієї колонки таблиць. */
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Блок media max-width 640px використовується для адаптації сторінки на телефонах. */
+@media (max-width: 640px) {
+  /* Блок page-shell у media використовується для зменшення бокових відступів на телефонах. */
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding: 18px 0 30px;
+  }
+
+  /* Блок hero у media використовується для компактнішого вступного блоку. */
+  .hero {
+    padding: 20px;
+  }
+
+  /* Блок hero__title у media використовується для мобільного розміру головного заголовка. */
+  .hero__title {
+    font-size: 31px;
+  }
+
+  /* Блок hero__text у media використовується для зручнішого читання вступу на телефонах. */
+  .hero__text {
+    font-size: 16px;
+  }
+
+  /* Блок hero__visual у media використовується для меншої висоти візуального прикладу. */
+  .hero__visual {
+    min-height: 190px;
+  }
+
+  /* Блок hero__regex у media використовується для компактнішого regex-коду на телефоні. */
+  .hero__regex {
+    font-size: 16px;
+  }
+
+  /* Блок lesson-summary у media використовується для меншого внутрішнього відступу. */
+  .lesson-summary,
+  .validators-section,
+  .snippets-section,
+  .example-card,
+  .regex-notes {
+    padding: 20px;
+  }
+
+  /* Блок regex-notes__list у media використовується для однієї колонки правил. */
+  .regex-notes__list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Блок footer у media використовується для вертикального розміщення тексту та кнопки. */
+  .footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  /* Блок footer__button у media використовується для повної ширини кнопки на телефоні. */
+  .footer__button {
+    width: 100%;
+  }
+}

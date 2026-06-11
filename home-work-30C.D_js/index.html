@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї HTML-сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, опису сторінки та підключення файлів. -->
+<!-- Тег head використовується для метаданих, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для правильного масштабу сторінки на телефонах і планшетах. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки у браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №30: регулярні вирази, перевірка email та URL, методи test, match і replace."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 30 | Regular Expressions</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Тег script використовується для підключення JavaScript-файлу з шаблонною логікою завдання. -->
+  <script type="module" src="main%20(6)/main.js"></script>
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки домашнього завдання. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Блок hero__content використовується для текстового вступу до роботи. -->
+      <div class="hero__content">
+        <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+        <span class="hero__eyebrow">Home Work 30</span>
+        <!-- Тег h1 використовується для головного заголовка сторінки. -->
+        <h1 class="hero__title">Регулярні вирази: перевірка email та URL</h1>
+        <!-- Тег p використовується для текстового абзацу з поясненням. -->
+        <p class="hero__text">
+          У цій роботі реалізовано дві функції з шаблонного файлу:
+          <span class="inline-code">isValidEmail</span> та
+          <span class="inline-code">isValidUrl</span>. Вони використовують
+          регулярні вирази, початок і кінець рядка, групи символів та метод
+          <span class="inline-code">test()</span>.
+        </p>
+        <!-- Блок hero__tags використовується для коротких міток з темами уроку. -->
+        <div class="hero__tags" aria-label="Теми уроку">
+          <span class="hero__tag">RegExp</span>
+          <span class="hero__tag">test()</span>
+          <span class="hero__tag">match()</span>
+          <span class="hero__tag">replace()</span>
+          <span class="hero__tag">jQuery</span>
+        </div>
+      </div>
+
+      <!-- Блок hero__visual використовується як візуальний приклад регулярного виразу. -->
+      <!-- Тег figure використовується для самостійного візуального фрагмента з підписом. -->
+      <figure class="hero__visual">
+        <!-- Тег figcaption використовується для короткого підпису до візуального прикладу. -->
+        <figcaption class="hero__caption">Email pattern</figcaption>
+        <!-- Тег code використовується для фрагмента програмного коду. -->
+        <code class="hero__regex">/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i</code>
+      </figure>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту сторінки. -->
+    <!-- Тег main використовується для головної частини документа. -->
+    <main class="content">
+      <!-- Блок lesson-summary використовується для стислого підсумку матеріалу заняття. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-summary">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="section-title">Що взято з уроку</h2>
+        <p class="lesson-summary__text">
+          На занятті розглядали регулярні вирази як інструмент пошуку, заміни
+          та валідації рядків. У роботі застосовано модифікатори
+          <span class="inline-code">g</span> і <span class="inline-code">i</span>,
+          оператори повторення, групи символів, початок
+          <span class="inline-code">^</span> і кінець <span class="inline-code">$</span>
+          рядка, а також методи <span class="inline-code">replace()</span>,
+          <span class="inline-code">match()</span> та <span class="inline-code">test()</span>.
+        </p>
+      </section>
+
+      <!-- Блок validators-section використовується для інтерактивної перевірки email та URL. -->
+      <section class="validators-section" aria-labelledby="validators-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Validation</span>
+          <h2 class="section-title" id="validators-title">Інтерактивна перевірка</h2>
+        </div>
+
+        <!-- Блок validators-grid використовується для двох форм перевірки. -->
+        <div class="validators-grid">
+          <!-- Тег article використовується для окремої змістовної картки з формою. -->
+          <article class="validator-card">
+            <!-- Тег h3 використовується для заголовка картки третього рівня. -->
+            <h3 class="validator-card__title">isValidEmail(email)</h3>
+            <p class="validator-card__text">
+              Перевіряє адресу через шаблон із символом
+              <span class="inline-code">@</span>, доменом і доменною зоною.
+            </p>
+            <!-- Тег form використовується для групування поля введення та кнопки перевірки. -->
+            <form class="validator-card__form" data-email-form>
+              <!-- Тег label використовується для підпису поля введення. -->
+              <label class="validator-card__label" for="email-input">Email</label>
+              <!-- Тег input використовується для введення користувацького значення. -->
+              <input
+                class="validator-card__input"
+                id="email-input"
+                name="email"
+                type="text"
+                value="example@example.com"
+                autocomplete="email"
+              >
+              <!-- Тег button використовується для запуску перевірки форми. -->
+              <button class="validator-card__button" type="submit">Перевірити</button>
+              <!-- Тег output використовується для показу результату перевірки. -->
+              <output class="validator-card__result" aria-live="polite">Очікую введення email.</output>
+            </form>
+          </article>
+
+          <article class="validator-card">
+            <h3 class="validator-card__title">isValidUrl(url)</h3>
+            <p class="validator-card__text">
+              Перевіряє URL з протоколом
+              <span class="inline-code">http://</span> або
+              <span class="inline-code">https://</span>, доменом і шляхом.
+            </p>
+            <form class="validator-card__form" data-url-form>
+              <label class="validator-card__label" for="url-input">URL</label>
+              <input
+                class="validator-card__input"
+                id="url-input"
+                name="url"
+                type="text"
+                value="https://www.example.com"
+                autocomplete="url"
+              >
+              <button class="validator-card__button" type="submit">Перевірити</button>
+              <output class="validator-card__result" aria-live="polite">Очікую введення URL.</output>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <!-- Блок snippets-section використовується для демонстрації методів з уроку через JavaScript. -->
+      <section class="snippets-section" aria-labelledby="snippets-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Lesson methods</span>
+          <h2 class="section-title" id="snippets-title">Методи з регулярними виразами</h2>
+        </div>
+        <!-- Блок snippets-grid використовується для карток, які динамічно створює JavaScript. -->
+        <div class="snippets-grid" data-lesson-snippets></div>
+      </section>
+
+      <!-- Блок examples-grid використовується для таблиць із тестовими значеннями функцій. -->
+      <section class="examples-grid" aria-label="Приклади перевірки функцій">
+        <article class="example-card">
+          <div class="section-heading">
+            <span class="section-heading__label">Function 01</span>
+            <h3 class="example-card__title">Email приклади</h3>
+          </div>
+          <!-- Блок table-wrapper використовується для горизонтального скролу таблиці на малих екранах. -->
+          <div class="table-wrapper">
+            <!-- Тег table використовується для табличного показу вхідних значень і результатів. -->
+            <table class="results-table">
+              <!-- Тег thead використовується для групування заголовків колонок таблиці. -->
+              <thead class="results-table__head">
+                <!-- Тег tr використовується для одного рядка таблиці. -->
+                <tr class="results-table__row">
+                  <!-- Тег th використовується для комірок-заголовків у таблиці. -->
+                  <th class="results-table__header" scope="col">Вхід</th>
+                  <th class="results-table__header" scope="col">Очікується</th>
+                  <th class="results-table__header" scope="col">Результат</th>
+                </tr>
+              </thead>
+              <!-- Тег tbody використовується для основних рядків таблиці з даними. -->
+              <tbody class="results-table__body" data-email-results></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="example-card">
+          <div class="section-heading">
+            <span class="section-heading__label">Function 02</span>
+            <h3 class="example-card__title">URL приклади</h3>
+          </div>
+          <div class="table-wrapper">
+            <table class="results-table">
+              <thead class="results-table__head">
+                <tr class="results-table__row">
+                  <th class="results-table__header" scope="col">Вхід</th>
+                  <th class="results-table__header" scope="col">Очікується</th>
+                  <th class="results-table__header" scope="col">Результат</th>
+                </tr>
+              </thead>
+              <tbody class="results-table__body" data-url-results></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <!-- Блок regex-notes використовується для короткої шпаргалки з синтаксису регулярних виразів. -->
+      <section class="regex-notes" aria-labelledby="regex-notes-title">
+        <div class="section-heading">
+          <span class="section-heading__label">RegExp syntax</span>
+          <h2 class="section-title" id="regex-notes-title">Ключові частини шаблону</h2>
+        </div>
+        <!-- Тег ul використовується для ненумерованого списку коротких правил. -->
+        <ul class="regex-notes__list">
+          <!-- Тег li використовується для одного пункту списку. -->
+          <li class="regex-notes__item">
+            <span class="inline-code">^</span> і <span class="inline-code">$</span>
+            фіксують початок та кінець рядка.
+          </li>
+          <li class="regex-notes__item">
+            <span class="inline-code">+</span>, <span class="inline-code">?</span> і
+            <span class="inline-code">{2,}</span> керують кількістю символів.
+          </li>
+          <li class="regex-notes__item">
+            <span class="inline-code">(?:...)</span> групує частину шаблону без
+            зайвого захоплення результату.
+          </li>
+          <li class="regex-notes__item">
+            <span class="inline-code">i</span> дозволяє перевіряти літери без
+            залежності від регістру.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої навігації назад до головного індексу. -->
+    <!-- Тег footer використовується для завершальної частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №30 демонструє валідацію рядків через регулярні вирази.
+      </p>
+      <!-- Тег a використовується для переходу на іншу HTML-сторінку. -->
+      <a class="footer__button" href="../index.html">На головний індекс</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -35,6 +35,7 @@
 - `home-work-27C.D_js`
 - `home-work-28C.D_js`
 - `home-work-29C.D_js`
+- `home-work-30C.D_js`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -314,6 +315,24 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-29C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-29C.D_js
+
+## Домашнє завдання №30 (Regular Expressions and jQuery)
+
+Тема роботи: **Регулярні вирази, методи рядків, jQuery та валідація введення**.
+
+Що реалізовано:
+
+- створено окрему сторінку `home-work-30C.D_js/index.html` для презентації виконаного домашнього завдання;
+- стилі винесено в `home-work-30C.D_js/styles.css`, а логіку розміщено в шаблонному файлі `home-work-30C.D_js/main (6)/main.js`;
+- на основі шаблону реалізовано функції `isValidEmail` та `isValidUrl` з перевіркою через регулярні вирази і метод `test()`;
+- додано інтерактивні форми для ручної перевірки email та URL у браузері;
+- на сторінці показано приклади з методами `replace()`, `match()` і `test()`, а також стислий підсумок уроку про регулярні вирази та jQuery;
+- у HTML і CSS додано українські коментарі над блоками та пояснення для нових тегів.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-30C.D_js/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-30C.D_js
 
 ## Фінальний проєкт HTML та CSS
 
