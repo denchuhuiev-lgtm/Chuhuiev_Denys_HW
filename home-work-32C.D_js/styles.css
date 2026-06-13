@@ -13,6 +13,8 @@
   --accent-blue: #2f5f98;
   --accent-warm: #bd5b2b;
   --danger: #b93636;
+  --success: #137a3f;
+  --warning: #a45c00;
   --line: rgba(23, 33, 43, 0.14);
   --line-light: rgba(255, 255, 255, 0.24);
   --shadow: 0 18px 44px rgba(23, 33, 43, 0.13);
@@ -261,6 +263,51 @@
   outline: 3px solid rgba(15, 118, 110, 0.16);
 }
 
+/* Блок search-form__hint використовується для короткої підказки про запуск live search. */
+.search-form__hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Блок search-form__suggestions використовується для швидких прикладів пошукових запитів. */
+.search-form__suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Блок search-form__suggestions-label використовується для текстового підпису перед прикладами. */
+.search-form__suggestions-label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Блок search-form__suggestion використовується для кнопки з прикладом пошукового запиту. */
+.search-form__suggestion {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent-dark);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+/* Блок search-form__suggestion hover використовується для стану наведення на приклад пошуку. */
+.search-form__suggestion:hover,
+.search-form__suggestion:focus-visible {
+  border-color: rgba(15, 118, 110, 0.38);
+  background: rgba(15, 118, 110, 0.1);
+  transform: translateY(-1px);
+}
+
 /* Блок search-panel__meta використовується для статусу та лічильника результатів. */
 .search-panel__meta {
   display: flex;
@@ -278,8 +325,28 @@
   line-height: 1.55;
 }
 
-/* Блок search-panel__status error використовується для помилкового стану пошуку. */
-.search-panel__status.is-error {
+/* Блок search-panel__status--info використовується для інформаційного стану пошуку. */
+.search-panel__status--info {
+  color: var(--muted);
+}
+
+/* Блок search-panel__status--loading використовується для стану завантаження пошуку. */
+.search-panel__status--loading {
+  color: var(--accent-blue);
+}
+
+/* Блок search-panel__status--success використовується для успішного стану пошуку. */
+.search-panel__status--success {
+  color: var(--success);
+}
+
+/* Блок search-panel__status--warning використовується для попередження в пошуку. */
+.search-panel__status--warning {
+  color: var(--warning);
+}
+
+/* Блок search-panel__status--error використовується для помилкового стану пошуку. */
+.search-panel__status--error {
   color: var(--danger);
 }
 
@@ -292,6 +359,47 @@
   color: var(--accent-dark);
   font-size: 14px;
   font-weight: 700;
+}
+
+/* Блок search-loader використовується для видимого прогресу під час завантаження даних. */
+.search-loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(47, 95, 152, 0.22);
+  border-radius: var(--radius);
+  background: rgba(47, 95, 152, 0.08);
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+/* Блок search-loader hidden використовується для повного приховування loader. */
+.search-loader[hidden] {
+  display: none;
+}
+
+/* Блок search-loader__spinner використовується для кругової анімації завантаження. */
+.search-loader__spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(47, 95, 152, 0.2);
+  border-top-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: loader-spin 760ms linear infinite;
+}
+
+/* Блок search-loader__text використовується для тексту поруч із крутилкою. */
+.search-loader__text {
+  line-height: 1.45;
+}
+
+/* Блок keyframes loader-spin використовується для обертання крутилки завантаження. */
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Блок results-section використовується для секції результатів пошуку. */
@@ -388,6 +496,22 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface-warm);
+}
+
+/* Блок empty-state--info використовується для нейтрального інформаційного повідомлення. */
+.empty-state--info {
+  background: var(--surface-blue);
+}
+
+/* Блок empty-state--warning використовується для попередження без критичної помилки. */
+.empty-state--warning {
+  background: var(--surface-warm);
+}
+
+/* Блок empty-state--error використовується для API або мережевої помилки. */
+.empty-state--error {
+  border-color: rgba(185, 54, 54, 0.24);
+  background: rgba(185, 54, 54, 0.09);
 }
 
 /* Блок empty-state hidden використовується для повного приховування порожнього стану. */

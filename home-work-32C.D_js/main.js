@@ -2,8 +2,7 @@
 
 const API_URL = 'https://www.omdbapi.com/';
 const API_KEY = 'thewdb';
-const DEFAULT_QUERY = 'matrix';
-const MIN_QUERY_LENGTH = 2;
+const MIN_QUERY_LENGTH = 3;
 const SEARCH_DELAY = 450;
 const PLACEHOLDER_POSTER = 'https://placehold.co/420x630/111b22/f8fbfb?text=No+Poster';
 
@@ -12,12 +11,17 @@ const statusElement = document.querySelector('[data-search-status]');
 const countElement = document.querySelector('[data-result-count]');
 const resultsGrid = document.querySelector('[data-results-grid]');
 const emptyState = document.querySelector('[data-empty-state]');
+const emptyTitle = document.querySelector('[data-empty-title]');
+const emptyText = document.querySelector('[data-empty-text]');
+const loader = document.querySelector('[data-search-loader]');
+const movieTemplate = document.querySelector('[data-movie-template]');
+const suggestionButtons = document.querySelectorAll('[data-suggestion]');
 
 let debounceTimerId = 0;
 let activeController = null;
 
 function setStatus(type, message, ...details) {
-  statusElement.classList.toggle('is-error', type === 'error');
+  statusElement.className = `search-panel__status search-panel__status--${type}`;
   statusElement.textContent = [message, ...details].filter(Boolean).join(' ');
 }
 
@@ -25,13 +29,24 @@ function setResultCount(count) {
   countElement.textContent = `${count} ${count === 1 ? 'результат' : 'результатів'}`;
 }
 
+function setLoading(isLoading) {
+  loader.hidden = !isLoading;
+}
+
 function clearResults() {
   resultsGrid.replaceChildren();
   setResultCount(0);
 }
 
-function toggleEmptyState(isVisible) {
-  emptyState.hidden = !isVisible;
+function showEmptyState(type, title, text) {
+  emptyState.className = `empty-state empty-state--${type}`;
+  emptyTitle.textContent = title;
+  emptyText.textContent = text;
+  emptyState.hidden = false;
+}
+
+function hideEmptyState() {
+  emptyState.hidden = true;
 }
 
 function normalizePoster(poster) {
@@ -44,7 +59,7 @@ function normalizeMovie(movie) {
     Year: year = 'Невідомий рік',
     Type: type = 'movie',
     Poster: poster,
-    imdbID,
+    imdbID = '',
   } = movie;
 
   return {
@@ -52,96 +67,45 @@ function normalizeMovie(movie) {
     year,
     type,
     poster: normalizePoster(poster),
-    imdbID,
+    imdbUrl: imdbID ? `https://www.imdb.com/title/${imdbID}/` : '',
   };
 }
 
-function createMovieCollection(movies) {
-  return {
-    items: [...movies],
-    get size() {
-      return this.items.length;
-    },
-    *[Symbol.iterator]() {
-      yield* this.items;
-    },
-  };
-}
+function fillMovieTemplate(movie) {
+  const { title, year, type, poster, imdbUrl } = normalizeMovie(movie);
+  const movieCard = movieTemplate.content.cloneNode(true);
 
-function* movieCardGenerator(movieCollection) {
-  for (const movie of movieCollection) {
-    yield createMovieCard(movie);
+  movieCard.querySelector('[data-movie-poster]').src = poster;
+  movieCard.querySelector('[data-movie-poster]').alt = `Постер фільму ${title}`;
+  movieCard.querySelector('[data-movie-title]').textContent = title;
+  movieCard.querySelector('[data-movie-year]').textContent = year;
+  movieCard.querySelector('[data-movie-type]').textContent = type;
+
+  const movieLink = movieCard.querySelector('[data-movie-link]');
+
+  if (imdbUrl) {
+    movieLink.href = imdbUrl;
+  } else {
+    movieLink.remove();
   }
-}
 
-function createMovieCard(movie) {
-  const { title, year, type, poster, imdbID } = normalizeMovie(movie);
-
-  const card = document.createElement('article');
-  card.className = 'movie-card';
-
-  const posterWrap = document.createElement('div');
-  posterWrap.className = 'movie-card__poster-wrap';
-
-  const posterImage = document.createElement('img');
-  posterImage.className = 'movie-card__poster';
-  posterImage.src = poster;
-  posterImage.alt = `Постер фільму ${title}`;
-  posterImage.loading = 'lazy';
-
-  const content = document.createElement('div');
-  content.className = 'movie-card__content';
-
-  const titleElement = document.createElement('h3');
-  titleElement.className = 'movie-card__title';
-  titleElement.textContent = title;
-
-  const meta = document.createElement('p');
-  meta.className = 'movie-card__meta';
-
-  const yearBadge = document.createElement('span');
-  yearBadge.className = 'movie-card__badge';
-  yearBadge.textContent = year;
-
-  const typeBadge = document.createElement('span');
-  typeBadge.className = 'movie-card__badge';
-  typeBadge.textContent = type;
-
-  const link = document.createElement('a');
-  link.className = 'movie-card__link';
-  link.href = `https://www.imdb.com/title/${imdbID}/`;
-  link.target = '_blank';
-  link.rel = 'noreferrer';
-  link.textContent = 'Відкрити IMDb';
-
-  posterWrap.append(posterImage);
-  meta.append(yearBadge, typeBadge);
-  content.append(titleElement, meta, link);
-  card.append(posterWrap, content);
-
-  return card;
+  return movieCard;
 }
 
 function renderMovies(movies) {
-  const movieCollection = createMovieCollection(movies);
+  const moviesToRender = [...movies];
   const fragment = document.createDocumentFragment();
 
-  for (const card of movieCardGenerator(movieCollection)) {
-    fragment.append(card);
-  }
+  moviesToRender.forEach((movie) => {
+    fragment.append(fillMovieTemplate(movie));
+  });
 
   resultsGrid.replaceChildren(fragment);
-  setResultCount(movieCollection.size);
-  toggleEmptyState(movieCollection.size === 0);
+  setResultCount(moviesToRender.length);
+  hideEmptyState();
 }
 
-async function fetchMovies(query) {
-  if (activeController) {
-    activeController.abort();
-  }
-
-  activeController = new AbortController();
-
+async function fetchMovies(query, controller) {
   const url = new URL(API_URL);
   url.search = new URLSearchParams({
     apikey: API_KEY,
@@ -150,7 +114,7 @@ async function fetchMovies(query) {
   }).toString();
 
   const response = await fetch(url, {
-    signal: activeController.signal,
+    signal: controller.signal,
   });
 
   if (!response.ok) {
@@ -160,40 +124,100 @@ async function fetchMovies(query) {
   return response.json();
 }
 
+function abortActiveRequest() {
+  if (activeController) {
+    activeController.abort();
+    activeController = null;
+  }
+}
+
+function renderTooShortState(query) {
+  const charactersLeft = MIN_QUERY_LENGTH - query.length;
+
+  abortActiveRequest();
+  setLoading(false);
+  clearResults();
+  setStatus(
+    'warning',
+    `Пошук ще не запущено: введіть мінімум ${MIN_QUERY_LENGTH} символи.`,
+    `Залишилось додати: ${charactersLeft}.`
+  );
+  showEmptyState(
+    'info',
+    'Замало символів для пошуку',
+    'LiveSearch стартує автоматично, коли в полі буде щонайменше 3 символи.'
+  );
+}
+
+function renderApiError(errorMessage) {
+  clearResults();
+  setStatus('error', 'OMDb API повернув помилку:', errorMessage);
+
+  if (errorMessage === 'Too many results.') {
+    showEmptyState(
+      'error',
+      'Помилка API: Too many results.',
+      'Запит занадто широкий. Уточніть назву фільму, наприклад: matrix, batman begins або avatar.'
+    );
+    return;
+  }
+
+  showEmptyState(
+    'warning',
+    'Фільм не знайдено',
+    errorMessage || 'Спробуйте інший запит або перевірте написання назви.'
+  );
+}
+
 async function searchMovies(query) {
   const normalizedQuery = query.trim();
 
   if (normalizedQuery.length < MIN_QUERY_LENGTH) {
-    clearResults();
-    toggleEmptyState(false);
-    setStatus('neutral', `Введіть щонайменше ${MIN_QUERY_LENGTH} символи.`);
+    renderTooShortState(normalizedQuery);
     return;
   }
 
-  try {
-    setStatus('neutral', 'Шукаємо фільми для запиту:', `"${normalizedQuery}"`);
-    toggleEmptyState(false);
+  abortActiveRequest();
+  activeController = new AbortController();
+  const currentController = activeController;
 
-    const data = await fetchMovies(normalizedQuery);
+  try {
+    setLoading(true);
+    hideEmptyState();
+    clearResults();
+    setStatus('loading', 'Шукаємо фільми для запиту:', `"${normalizedQuery}"`);
+
+    const data = await fetchMovies(normalizedQuery, currentController);
     const movies = data?.Search ?? [];
 
     if (data?.Response === 'False') {
-      clearResults();
-      toggleEmptyState(true);
-      setStatus('error', data?.Error ?? 'Фільми не знайдено.');
+      renderApiError(data?.Error);
       return;
     }
 
     renderMovies(movies);
-    setStatus('neutral', 'Результати оновлено без натискання кнопки.');
+    setStatus(
+      'success',
+      `Знайдено ${movies.length} результатів на сторінці.`,
+      data?.totalResults ? `Усього в API: ${data.totalResults}.` : ''
+    );
   } catch (error) {
     if (error.name === 'AbortError') {
       return;
     }
 
     clearResults();
-    toggleEmptyState(true);
     setStatus('error', 'Не вдалося отримати дані з API.', error.message);
+    showEmptyState(
+      'error',
+      'Помилка завантаження',
+      'Перевірте інтернет або спробуйте повторити пошук трохи пізніше.'
+    );
+  } finally {
+    if (activeController === currentController) {
+      activeController = null;
+      setLoading(false);
+    }
   }
 }
 
@@ -205,14 +229,35 @@ function handleLiveSearch() {
   }, SEARCH_DELAY);
 }
 
+function handleSuggestionClick(event) {
+  window.clearTimeout(debounceTimerId);
+
+  const query = event.currentTarget.dataset.suggestion;
+  searchInput.value = query;
+  searchInput.focus();
+  searchMovies(query);
+}
+
+function renderInitialState() {
+  clearResults();
+  setStatus('info', `Введіть щонайменше ${MIN_QUERY_LENGTH} символи, і пошук почнеться автоматично.`);
+  showEmptyState(
+    'info',
+    'Очікую пошуковий запит',
+    'Почніть вводити назву фільму або натисніть один із прикладів над результатами.'
+  );
+}
+
 function initializeSearch() {
-  if (!searchInput || !statusElement || !countElement || !resultsGrid || !emptyState) {
+  if (!searchInput || !statusElement || !countElement || !resultsGrid || !emptyState || !movieTemplate || !loader) {
     return;
   }
 
   searchInput.addEventListener('input', handleLiveSearch);
-  searchInput.value = searchInput.value || DEFAULT_QUERY;
-  searchMovies(searchInput.value);
+  suggestionButtons.forEach((button) => {
+    button.addEventListener('click', handleSuggestionClick);
+  });
+  renderInitialState();
 }
 
 document.addEventListener('DOMContentLoaded', initializeSearch);

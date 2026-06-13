@@ -74,8 +74,8 @@
           У live search використано <span class="inline-code">destructuring</span>
           для даних фільмів, <span class="inline-code">spread</span> для створення
           нового масиву результатів, <span class="inline-code">rest</span> для
-          службових повідомлень, <span class="inline-code">function*</span> для
-          генератора карток і <span class="inline-code">?.</span> для безпечного
+          службових повідомлень, <span class="inline-code">template</span> для
+          HTML-шаблону картки і <span class="inline-code">?.</span> для безпечного
           доступу до властивостей API-відповіді.
         </p>
       </section>
@@ -98,18 +98,40 @@
             id="movie-search"
             name="movie-search"
             type="search"
-            value="matrix"
             placeholder="Наприклад: matrix, batman, avatar"
             autocomplete="off"
             data-search-input
           >
+          <!-- Тег p використовується для підказки про мінімальну довжину live search запиту. -->
+          <p class="search-form__hint" data-search-hint>
+            Пошук запускається автоматично після введення щонайменше 3 символів.
+          </p>
+          <!-- Блок search-form__suggestions використовується для швидкого вибору прикладів пошуку. -->
+          <div class="search-form__suggestions" aria-label="Приклади пошукових запитів">
+            <!-- Тег span використовується для короткого текстового підпису перед прикладами. -->
+            <span class="search-form__suggestions-label">Спробуйте:</span>
+            <!-- Тег button використовується для швидкого підставлення прикладу в поле пошуку. -->
+            <button class="search-form__suggestion" type="button" data-suggestion="matrix">matrix</button>
+            <button class="search-form__suggestion" type="button" data-suggestion="batman">batman</button>
+            <button class="search-form__suggestion" type="button" data-suggestion="avatar">avatar</button>
+            <button class="search-form__suggestion" type="button" data-suggestion="the">the</button>
+          </div>
         </form>
 
         <!-- Блок search-panel__meta використовується для статусу та лічильника результатів. -->
         <div class="search-panel__meta">
           <!-- Тег p використовується для повідомлення про стан пошуку. -->
-          <p class="search-panel__status" data-search-status>Готуємо пошук...</p>
+          <p class="search-panel__status search-panel__status--info" data-search-status>
+            Пошук ще не запущено.
+          </p>
           <p class="search-panel__count" data-result-count>0 результатів</p>
+        </div>
+
+        <!-- Блок search-loader використовується для візуального прогресу під час завантаження API-даних. -->
+        <div class="search-loader" data-search-loader hidden>
+          <!-- Тег span використовується для декоративної крутилки завантаження. -->
+          <span class="search-loader__spinner" aria-hidden="true"></span>
+          <span class="search-loader__text">Підвантажуємо дані з OMDb...</span>
         </div>
       </section>
 
@@ -126,11 +148,37 @@
       <!-- Блок empty-state використовується для повідомлення, коли результатів немає або сталася помилка. -->
       <section class="empty-state" data-empty-state hidden>
         <!-- Тег h2 використовується для заголовка повідомлення про порожній стан. -->
-        <h2 class="empty-state__title">Немає результатів</h2>
+        <h2 class="empty-state__title" data-empty-title>Немає результатів</h2>
         <p class="empty-state__text">
-          Спробуйте ввести іншу назву фільму або перевірте підключення до інтернету.
+          <span data-empty-text>Спробуйте ввести іншу назву фільму або перевірте підключення до інтернету.</span>
         </p>
       </section>
+
+      <!-- Блок movie-template використовується як HTML-шаблон картки, який JavaScript наповнює даними API. -->
+      <!-- Тег template використовується для прихованої розмітки, яку можна клонувати через JavaScript. -->
+      <template data-movie-template>
+        <!-- Тег article використовується для окремої картки фільму в результатах пошуку. -->
+        <article class="movie-card">
+          <!-- Блок movie-card__poster-wrap використовується для стабільної області постера. -->
+          <div class="movie-card__poster-wrap">
+            <!-- Тег img використовується для постера фільму з API. -->
+            <img class="movie-card__poster" src="" alt="" loading="lazy" data-movie-poster>
+          </div>
+          <!-- Блок movie-card__content використовується для текстових даних фільму. -->
+          <div class="movie-card__content">
+            <!-- Тег h3 використовується для назви фільму в картці. -->
+            <h3 class="movie-card__title" data-movie-title></h3>
+            <!-- Тег p використовується для групи коротких метаданих фільму. -->
+            <p class="movie-card__meta">
+              <!-- Тег span використовується для короткої мітки року випуску. -->
+              <span class="movie-card__badge" data-movie-year></span>
+              <span class="movie-card__badge" data-movie-type></span>
+            </p>
+            <!-- Тег a використовується для переходу на сторінку фільму в IMDb. -->
+            <a class="movie-card__link" href="#" target="_blank" rel="noreferrer" data-movie-link>Відкрити IMDb</a>
+          </div>
+        </article>
+      </template>
     </main>
 
     <!-- Блок footer використовується для нижньої навігації назад до головного індексу. -->
