@@ -38,6 +38,7 @@
 - `home-work-30C.D_js`
 - `home-work-31C.D_js`
 - `home-work-32C.D_js`
+- `home-work-33C.D`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -376,6 +377,25 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-32C.D_js/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-32C.D_js
+
+## Домашнє завдання №33 (Gulp Automation)
+
+Тема роботи: **Автоматизація веб-розробки з Gulp, Node.js, npm, SCSS, BrowserSync, Autoprefixer та мінімізацією CSS**.
+
+Що реалізовано:
+
+- створено окремий Gulp-проєкт у папці `home-work-33C.D` з власним `index.html`;
+- HTML, SCSS, зібраний CSS, JavaScript, Gulp-конфігурацію та npm-інструкції розділено по окремих файлах;
+- SCSS-структуру винесено в `assets/scss` і розділено на змінні, базові стилі, layout, компоненти та адаптив;
+- `gulpfile.js` підтримує компіляцію SCSS у CSS, BrowserSync live reload, Autoprefixer, CSSComb, групування media queries і створення `style.min.css`;
+- додано `package.json` зі скриптами `npm run build`, `npm run dev`, `npm run scss`, `npm run min` і `npm run comb`;
+- на сторінці показано pipeline Gulp-задач, структуру проєкту та інтерактивні пояснення npm-команд;
+- у HTML, SCSS, CSS, JavaScript, JSON і Gulp-файлі додано українські коментарі або пояснювальні поля до блоків коду.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-33C.D/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-33C.D
 
 ## Фінальний проєкт HTML та CSS
 

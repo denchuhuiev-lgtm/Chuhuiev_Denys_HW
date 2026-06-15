@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+/* Блок глобального box-sizing використовується для передбачуваних розмірів елементів. */
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового вигляду всієї сторінки через клас. */
+.page-body
+{
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-width: 320px;
+    margin: 0;
+
+    color: $color-ink;
+    background: linear-gradient(135deg, rgba(28, 107, 104, .12), transparent 34%),
+    linear-gradient(225deg, rgba(216, 105, 61, .14), transparent 30%),
+    $color-surface-soft;
+}
+
+/* Блок inline-code використовується для коротких технічних слів усередині тексту. */
+.inline-code
+{
+    font-family: Consolas, 'Courier New', monospace;
+
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    color: $color-code;
+    border-radius: 7px;
+    background: rgba($color-warning, .18);
+}

@@ -1,0 +1,602 @@
+@charset 'UTF-8';
+/* Блок імпорту використовується для підключення всіх SCSS-частин у правильному порядку. */
+/* Блок змінних використовується для єдиного керування кольорами, тінями та розмірами. */
+/* Блок імпорту використовується для підключення всіх SCSS-частин у правильному порядку. */
+/* Блок глобального box-sizing використовується для передбачуваних розмірів елементів. */
+*,
+*::before,
+*::after
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Блок page-body використовується для базового вигляду всієї сторінки через клас. */
+.page-body
+{
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-width: 320px;
+    margin: 0;
+
+    color: #18202f;
+    background: linear-gradient(135deg, rgba(28, 107, 104, .12), transparent 34%), linear-gradient(225deg, rgba(216, 105, 61, .14), transparent 30%), #f6f8fb;
+}
+
+/* Блок inline-code використовується для коротких технічних слів усередині тексту. */
+.inline-code
+{
+    font-family: Consolas, 'Courier New', monospace;
+
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    color: #101828;
+    border-radius: 7px;
+    background: rgba(243, 178, 60, .18);
+}
+
+/* Блок імпорту використовується для підключення всіх SCSS-частин у правильному порядку. */
+/* Блок page-shell використовується для обмеження ширини та центрального розміщення сторінки. */
+.page-shell
+{
+    width: min(1120px, 100% - 32px);
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+/* Блок hero використовується для головного вступного екрану домашнього завдання. */
+.hero
+{
+    display: grid;
+
+    padding: 32px;
+
+    border: 1px solid rgba(24, 32, 47, .14);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .9);
+    -webkit-box-shadow: 0 20px 55px rgba(24, 32, 47, .12);
+            box-shadow: 0 20px 55px rgba(24, 32, 47, .12);
+
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+    gap: 28px;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+/* Блок hero__content використовується для текстової частини першого екрану. */
+.hero__content
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки перед головним заголовком. */
+.hero__eyebrow
+{
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 14px;
+    padding: 8px 12px;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: #124b49;
+    border-radius: 999px;
+    background: rgba(28, 107, 104, .12);
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title
+{
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.02;
+
+    max-width: 760px;
+    margin: 0;
+}
+
+/* Блок hero__text використовується для вступного опису під головним заголовком. */
+.hero__text
+{
+    font-size: 18px;
+    line-height: 1.7;
+
+    max-width: 720px;
+    margin: 18px 0 0;
+
+    color: #5e6a7d;
+}
+
+/* Блок hero__actions використовується для кнопок швидкої навігації. */
+.hero__actions
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin-top: 26px;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Блок hero__panel використовується для додаткової картки з технологіями уроку. */
+.hero__panel
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    min-height: 100%;
+    padding: 24px;
+
+    border: 1px solid rgba(28, 107, 104, .18);
+    border-radius: 14px;
+    background: linear-gradient(160deg, rgba(28, 107, 104, .12), rgba(216, 105, 61, .1));
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    gap: 16px;
+}
+
+/* Блок hero__panel-label використовується для підпису над списком технологій. */
+.hero__panel-label
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: #124b49;
+}
+
+/* Блок hero__list використовується для списку технологій уроку. */
+.hero__list
+{
+    display: grid;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 10px;
+}
+
+/* Блок hero__item використовується для одного пункту списку технологій. */
+.hero__item
+{
+    font-weight: 700;
+
+    padding: 11px 12px;
+
+    border: 1px solid rgba(24, 32, 47, .14);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .72);
+}
+
+/* Блок content використовується для вертикального розміщення основних секцій. */
+.content
+{
+    display: grid;
+
+    margin-top: 28px;
+
+    gap: 28px;
+}
+
+/* Блок секцій використовується для єдиного вигляду основних частин сторінки. */
+.lesson-summary,
+.pipeline,
+.structure,
+.commands,
+.footer
+{
+    padding: 28px;
+
+    border: 1px solid rgba(24, 32, 47, .14);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .9);
+    -webkit-box-shadow: 0 20px 55px rgba(24, 32, 47, .12);
+            box-shadow: 0 20px 55px rgba(24, 32, 47, .12);
+}
+
+/* Блок section-heading використовується для заголовків секцій з коротким описом. */
+.section-heading
+{
+    max-width: 780px;
+    margin-bottom: 20px;
+}
+
+/* Блок section-heading__label використовується для коротких надписів над заголовками секцій. */
+.section-heading__label
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: #d8693d;
+}
+
+/* Блок section-title використовується для заголовків другого рівня на сторінці. */
+.section-title
+{
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.12;
+
+    margin: 0;
+}
+
+/* Блок текстів секцій використовується для читабельного опису матеріалу. */
+.lesson-summary__text,
+.section-heading__text,
+.footer__text
+{
+    font-size: 17px;
+    line-height: 1.75;
+
+    max-width: 820px;
+    margin: 14px 0 0;
+
+    color: #5e6a7d;
+}
+
+/* Блок pipeline__grid використовується для адаптивної сітки карток pipeline. */
+.pipeline__grid
+{
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* Блок імпорту використовується для підключення всіх SCSS-частин у правильному порядку. */
+/* Блок button використовується для посилань і дій, які виглядають як кнопки. */
+.button
+{
+    font-weight: 800;
+
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+
+    min-height: 44px;
+    padding: 12px 18px;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, -webkit-transform 180ms ease;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, -webkit-transform 180ms ease;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, -webkit-transform 180ms ease;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Блок button--primary використовується для головної кнопки сторінки. */
+.button--primary
+{
+    color: #fff;
+    background: #1c6b68;
+}
+.button--primary:hover,
+.button--primary:focus-visible
+{
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+
+    background: #124b49;
+}
+
+/* Блок button--ghost використовується для другорядної кнопки з прозорим фоном. */
+.button--ghost
+{
+    color: #124b49;
+    border-color: rgba(28, 107, 104, .28);
+    background: rgba(255, 255, 255, .72);
+}
+.button--ghost:hover,
+.button--ghost:focus-visible
+{
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+
+    border-color: rgba(28, 107, 104, .48);
+    background: rgba(28, 107, 104, .1);
+}
+
+/* Блок task-card використовується для одного етапу Gulp pipeline. */
+.task-card
+{
+    display: grid;
+
+    min-height: 250px;
+    padding: 18px;
+
+    border: 1px solid rgba(24, 32, 47, .14);
+    border-radius: 14px;
+    background: #fff;
+    -webkit-box-shadow: 0 12px 28px rgba(24, 32, 47, .08);
+            box-shadow: 0 12px 28px rgba(24, 32, 47, .08);
+
+    gap: 12px;
+}
+
+/* Блок task-card__number використовується для номера етапу pipeline. */
+.task-card__number
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    width: -webkit-max-content;
+    width:    -moz-max-content;
+    width:         max-content;
+    padding: 7px 10px;
+
+    color: #124b49;
+    border-radius: 999px;
+    background: rgba(28, 107, 104, .12);
+}
+
+/* Блок task-card__title використовується для назви етапу pipeline. */
+.task-card__title
+{
+    font-size: 20px;
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+/* Блок task-card__text використовується для пояснення етапу pipeline. */
+.task-card__text
+{
+    line-height: 1.6;
+
+    margin: 0;
+
+    color: #5e6a7d;
+}
+
+/* Блок task-card__code використовується для назви Gulp-задачі або плагіна. */
+.task-card__code
+{
+    font-family: Consolas, 'Courier New', monospace;
+
+    padding: 10px;
+
+    color: #101828;
+    border-radius: 10px;
+    background: #f6f8fb;
+
+    -ms-flex-item-align: end;
+    align-self: end;
+    overflow-wrap: anywhere;
+}
+
+/* Блок file-tree використовується для показу структури файлів у вигляді коду. */
+.file-tree
+{
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+
+    overflow-x: auto;
+
+    margin: 20px 0 0;
+    padding: 20px;
+
+    color: #fff;
+    border: 1px solid rgba(28, 107, 104, .16);
+    border-radius: 14px;
+    background: #101828;
+}
+
+/* Блок commands__grid використовується для сітки кнопок з npm-командами. */
+.commands__grid
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Блок command-button використовується для вибору npm-команди на сторінці. */
+.command-button
+{
+    font-family: Consolas, 'Courier New', monospace;
+    font-weight: 800;
+
+    min-height: 44px;
+    padding: 11px 14px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, -webkit-transform 180ms ease;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, -webkit-transform 180ms ease;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, -webkit-transform 180ms ease;
+
+    color: #101828;
+    border: 1px solid rgba(24, 32, 47, .14);
+    border-radius: 999px;
+    background: #fff;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.command-button:hover,
+.command-button:focus-visible,
+.command-button.is-active
+{
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+
+    color: #fff;
+    border-color: #1c6b68;
+    background: #1c6b68;
+}
+
+/* Блок command-output використовується для пояснення активної npm-команди. */
+.command-output
+{
+    margin-top: 16px;
+    padding: 18px;
+
+    border-left: 5px solid #d8693d;
+    border-radius: 14px;
+    background: rgba(216, 105, 61, .1);
+}
+
+/* Блок command-output__label використовується як мітка над поясненням команди. */
+.command-output__label
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    display: inline-block;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: #d8693d;
+}
+
+/* Блок command-output__text використовується для текстового пояснення команди. */
+.command-output__text
+{
+    line-height: 1.7;
+
+    margin: 8px 0 0;
+
+    color: #18202f;
+}
+
+/* Блок footer використовується для вирівнювання тексту та кнопки повернення. */
+.footer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin-top: 28px;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+/* Блок footer__text використовується для короткого підсумку в нижній частині сторінки. */
+.footer__text
+{
+    margin: 0;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 320px;
+        flex: 1 1 320px;
+}
+
+/* Блок імпорту використовується для підключення всіх SCSS-частин у правильному порядку. */
+/* Блок адаптації до планшетів використовується для зміни сіток на середніх екранах. */
+/* Блок адаптації до мобільних екранів використовується для зменшення відступів і одноколонкової сітки. */
+@media (max-width: 980px)
+{
+    .hero
+    {
+        grid-template-columns: 1fr;
+    }
+    .pipeline__grid
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 640px)
+{
+    .page-shell
+    {
+        width: min(100% - 20px, 1120px);
+        padding-top: 20px;
+    }
+    .hero,
+    .lesson-summary,
+    .pipeline,
+    .structure,
+    .commands,
+    .footer
+    {
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+    .hero__actions,
+    .commands__grid
+    {
+            flex-direction: column;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .button,
+    .command-button
+    {
+        width: 100%;
+    }
+    .pipeline__grid
+    {
+        grid-template-columns: 1fr;
+    }
+}

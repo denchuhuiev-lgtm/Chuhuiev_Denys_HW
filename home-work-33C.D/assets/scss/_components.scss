@@ -1,0 +1,239 @@
+@use 'variables' as *;
+
+/* Блок button використовується для посилань і дій, які виглядають як кнопки. */
+.button
+{
+    font-weight: 800;
+
+    display: inline-flex;
+
+    min-height: 44px;
+    padding: 12px 18px;
+
+    user-select: none;
+    transition: background-color $transition-fast,
+    border-color $transition-fast,
+    color $transition-fast,
+    transform $transition-fast;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* Блок button--primary використовується для головної кнопки сторінки. */
+.button--primary
+{
+    color: $color-surface;
+    background: $color-primary;
+
+    &:hover,
+    &:focus-visible
+    {
+        transform: translateY(-2px);
+
+        background: $color-primary-dark;
+    }
+}
+
+/* Блок button--ghost використовується для другорядної кнопки з прозорим фоном. */
+.button--ghost
+{
+    color: $color-primary-dark;
+    border-color: rgba($color-primary, .28);
+    background: rgba($color-surface, .72);
+
+    &:hover,
+    &:focus-visible
+    {
+        transform: translateY(-2px);
+
+        border-color: rgba($color-primary, .48);
+        background: rgba($color-primary, .1);
+    }
+}
+
+/* Блок task-card використовується для одного етапу Gulp pipeline. */
+.task-card
+{
+    display: grid;
+
+    min-height: 250px;
+    padding: 18px;
+
+    border: 1px solid $color-line;
+    border-radius: $radius-medium;
+    background: $color-surface;
+    box-shadow: 0 12px 28px rgba(24, 32, 47, .08);
+
+    gap: 12px;
+}
+
+/* Блок task-card__number використовується для номера етапу pipeline. */
+.task-card__number
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    width: max-content;
+    padding: 7px 10px;
+
+    color: $color-primary-dark;
+    border-radius: 999px;
+    background: rgba($color-primary, .12);
+}
+
+/* Блок task-card__title використовується для назви етапу pipeline. */
+.task-card__title
+{
+    font-size: 20px;
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+/* Блок task-card__text використовується для пояснення етапу pipeline. */
+.task-card__text
+{
+    line-height: 1.6;
+
+    margin: 0;
+
+    color: $color-muted;
+}
+
+/* Блок task-card__code використовується для назви Gulp-задачі або плагіна. */
+.task-card__code
+{
+    font-family: Consolas, 'Courier New', monospace;
+
+    padding: 10px;
+
+    color: $color-code;
+    border-radius: $radius-small;
+    background: $color-surface-soft;
+
+    align-self: end;
+    overflow-wrap: anywhere;
+}
+
+/* Блок file-tree використовується для показу структури файлів у вигляді коду. */
+.file-tree
+{
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+
+    overflow-x: auto;
+
+    margin: 20px 0 0;
+    padding: 20px;
+
+    color: $color-surface;
+    border: 1px solid rgba($color-primary, .16);
+    border-radius: $radius-medium;
+    background: $color-code;
+}
+
+/* Блок commands__grid використовується для сітки кнопок з npm-командами. */
+.commands__grid
+{
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Блок command-button використовується для вибору npm-команди на сторінці. */
+.command-button
+{
+    font-family: Consolas, 'Courier New', monospace;
+    font-weight: 800;
+
+    min-height: 44px;
+    padding: 11px 14px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: background-color $transition-fast,
+    border-color $transition-fast,
+    color $transition-fast,
+    transform $transition-fast;
+
+    color: $color-code;
+    border: 1px solid $color-line;
+    border-radius: 999px;
+    background: $color-surface;
+
+    appearance: none;
+
+    &:hover,
+    &:focus-visible,
+    &.is-active
+    {
+        transform: translateY(-1px);
+
+        color: $color-surface;
+        border-color: $color-primary;
+        background: $color-primary;
+    }
+}
+
+/* Блок command-output використовується для пояснення активної npm-команди. */
+.command-output
+{
+    margin-top: 16px;
+    padding: 18px;
+
+    border-left: 5px solid $color-accent;
+    border-radius: $radius-medium;
+    background: rgba($color-accent, .1);
+}
+
+/* Блок command-output__label використовується як мітка над поясненням команди. */
+.command-output__label
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    display: inline-block;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: $color-accent;
+}
+
+/* Блок command-output__text використовується для текстового пояснення команди. */
+.command-output__text
+{
+    line-height: 1.7;
+
+    margin: 8px 0 0;
+
+    color: $color-ink;
+}
+
+/* Блок footer використовується для вирівнювання тексту та кнопки повернення. */
+.footer
+{
+    display: flex;
+
+    margin-top: 28px;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+/* Блок footer__text використовується для короткого підсумку в нижній частині сторінки. */
+.footer__text
+{
+    margin: 0;
+
+    flex: 1 1 320px;
+}

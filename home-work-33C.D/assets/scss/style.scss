@@ -1,0 +1,6 @@
+/* Блок імпорту використовується для підключення всіх SCSS-частин у правильному порядку. */
+@use 'variables' as *;
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'responsive';

@@ -1,0 +1,17 @@
+/* Блок змінних використовується для єдиного керування кольорами, тінями та розмірами. */
+$color-ink: #18202f;
+$color-muted: #5e6a7d;
+$color-surface: #fff;
+$color-surface-soft: #f6f8fb;
+$color-line: rgba(24, 32, 47, .14);
+$color-primary: #1c6b68;
+$color-primary-dark: #124b49;
+$color-accent: #d8693d;
+$color-warning: #f3b23c;
+$color-code: #101828;
+$shadow-soft: 0 20px 55px rgba(24, 32, 47, .12);
+$radius-large: 20px;
+$radius-medium: 14px;
+$radius-small: 10px;
+$container-width: 1120px;
+$transition-fast: 180ms ease;

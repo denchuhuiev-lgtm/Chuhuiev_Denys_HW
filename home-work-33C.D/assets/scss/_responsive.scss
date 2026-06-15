@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+/* Блок адаптації до планшетів використовується для зміни сіток на середніх екранах. */
+@media (max-width: 980px)
+{
+    .hero
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .pipeline__grid
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Блок адаптації до мобільних екранів використовується для зменшення відступів і одноколонкової сітки. */
+@media (max-width: 640px)
+{
+    .page-shell
+    {
+        width: min(100% - 20px, $container-width);
+        padding-top: 20px;
+    }
+
+    .hero,
+    .lesson-summary,
+    .pipeline,
+    .structure,
+    .commands,
+    .footer
+    {
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    .hero__actions,
+    .commands__grid
+    {
+        flex-direction: column;
+    }
+
+    .button,
+    .command-button
+    {
+        width: 100%;
+    }
+
+    .pipeline__grid
+    {
+        grid-template-columns: 1fr;
+    }
+}

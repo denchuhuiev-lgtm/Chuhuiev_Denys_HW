@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Тег html використовується як кореневий контейнер усієї сторінки. -->
+<html lang="uk">
+<!-- Блок head використовується для службової інформації, метаданих та підключення файлів. -->
+<!-- Тег head використовується для налаштувань документа, які браузер читає перед показом сторінки. -->
+<head>
+  <!-- Тег meta використовується для встановлення кодування символів сторінки. -->
+  <meta charset="UTF-8">
+  <!-- Тег meta використовується для коректного масштабу сторінки на мобільних пристроях. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег meta використовується для короткого опису сторінки у браузері та пошукових системах. -->
+  <meta
+    name="description"
+    content="Домашнє завдання №33: автоматизація веб-розробки з Gulp, SCSS, BrowserSync, autoprefixer та мінімізацією CSS."
+  >
+  <!-- Тег title використовується для назви вкладки браузера. -->
+  <title>Home Work 33 | Gulp Automation</title>
+  <!-- Тег link використовується для підключення окремого CSS-файлу. -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Тег script використовується для підключення окремого JavaScript-файлу. -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+<!-- Блок body використовується для всього видимого контенту сторінки. -->
+<!-- Тег body використовується як контейнер елементів, які бачить користувач. -->
+<body class="page-body">
+  <!-- Блок page-shell використовується як центральна оболонка сторінки домашнього завдання. -->
+  <!-- Тег div використовується для групування елементів у спільний контейнер. -->
+  <div class="page-shell">
+    <!-- Блок hero використовується для вступу та головної теми домашнього завдання. -->
+    <!-- Тег header використовується для верхньої вступної частини сторінки. -->
+    <header class="hero">
+      <!-- Блок hero__content використовується для текстового опису роботи. -->
+      <div class="hero__content">
+        <!-- Тег span використовується для короткої текстової мітки без окремого абзацу. -->
+        <span class="hero__eyebrow">Home Work 33</span>
+        <!-- Тег h1 використовується для головного заголовка сторінки. -->
+        <h1 class="hero__title">Автоматизація веб-розробки з Gulp</h1>
+        <!-- Тег p використовується для текстового абзацу з поясненням. -->
+        <p class="hero__text">
+          Проєкт показує, як Gulp бере на себе рутинні задачі:
+          компіляцію SCSS, оновлення браузера, додавання vendor prefixes,
+          форматування та мінімізацію CSS.
+        </p>
+        <!-- Блок hero__actions використовується для швидких переходів до ключових частин сторінки. -->
+        <div class="hero__actions" aria-label="Швидкі переходи">
+          <!-- Тег a використовується для переходу до секції зі схемою збірки. -->
+          <a class="button button--primary" href="#pipeline">Pipeline</a>
+          <!-- Тег a використовується для переходу до секції з командами запуску. -->
+          <a class="button button--ghost" href="#commands">Команди</a>
+        </div>
+      </div>
+
+      <!-- Блок hero__panel використовується для короткої картки з темами уроку. -->
+      <!-- Тег aside використовується для додаткової інформації поруч з головним вступом. -->
+      <aside class="hero__panel" aria-label="Теми уроку">
+        <!-- Тег span використовується для короткого підпису над списком тем. -->
+        <span class="hero__panel-label">Lesson stack</span>
+        <!-- Тег ul використовується для списку технологій уроку. -->
+        <ul class="hero__list">
+          <!-- Тег li використовується для одного пункту списку технологій. -->
+          <li class="hero__item">Node.js та npm</li>
+          <li class="hero__item">Gulp tasks</li>
+          <li class="hero__item">SCSS to CSS</li>
+          <li class="hero__item">BrowserSync</li>
+          <li class="hero__item">Autoprefixer + cssnano</li>
+        </ul>
+      </aside>
+    </header>
+
+    <!-- Блок main використовується для основного унікального контенту сторінки. -->
+    <!-- Тег main використовується для головної частини документа. -->
+    <main class="content">
+      <!-- Блок lesson-summary використовується для стислого підсумку пройденого уроку. -->
+      <!-- Тег section використовується для смислового групування пов'язаного контенту. -->
+      <section class="lesson-summary" aria-labelledby="summary-title">
+        <!-- Тег h2 використовується для заголовка секції другого рівня. -->
+        <h2 class="section-title" id="summary-title">Що взято з уроку</h2>
+        <p class="lesson-summary__text">
+          У роботі використано підхід з прикладу вчителя: окремий
+          <span class="inline-code">gulpfile.js</span>, папки
+          <span class="inline-code">assets/scss</span>,
+          <span class="inline-code">assets/css</span> і
+          <span class="inline-code">assets/js</span>, а також npm scripts для запуску збірки.
+        </p>
+      </section>
+
+      <!-- Блок pipeline використовується для демонстрації етапів автоматизованої збірки. -->
+      <section class="pipeline" id="pipeline" aria-labelledby="pipeline-title">
+        <!-- Блок section-heading використовується для заголовка та пояснення секції. -->
+        <div class="section-heading">
+          <span class="section-heading__label">Build process</span>
+          <h2 class="section-title" id="pipeline-title">Що автоматизує Gulp</h2>
+          <p class="section-heading__text">
+            Картки нижче створюються JavaScript-ом із HTML-шаблону, а дані описують реальні задачі з
+            <span class="inline-code">gulpfile.js</span>.
+          </p>
+        </div>
+
+        <!-- Блок pipeline__grid використовується як контейнер для карток, які рендерить JavaScript. -->
+        <div class="pipeline__grid" data-task-list aria-live="polite"></div>
+      </section>
+
+      <!-- Блок structure використовується для показу файлової організації проєкту. -->
+      <section class="structure" aria-labelledby="structure-title">
+        <div class="section-heading">
+          <span class="section-heading__label">Project structure</span>
+          <h2 class="section-title" id="structure-title">Код розділений по відповідальності</h2>
+        </div>
+        <!-- Тег pre використовується для збереження форматування дерева файлів. -->
+        <pre class="file-tree"><!-- Тег code використовується для фрагмента технічного тексту або коду. --><code>home-work-33C.D/
+├── assets/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── style.min.css
+│   ├── js/
+│   │   └── main.js
+│   └── scss/
+│       ├── _base.scss
+│       ├── _components.scss
+│       ├── _layout.scss
+│       ├── _responsive.scss
+│       ├── _variables.scss
+│       └── style.scss
+├── gulpfile.js
+├── index.html
+├── package.json
+└── README.md</code></pre>
+      </section>
+
+      <!-- Блок commands використовується для демонстрації npm-команд проєкту. -->
+      <section class="commands" id="commands" aria-labelledby="commands-title">
+        <div class="section-heading">
+          <span class="section-heading__label">npm scripts</span>
+          <h2 class="section-title" id="commands-title">Команди запуску</h2>
+          <p class="section-heading__text">
+            Натисни на команду, щоб побачити коротке пояснення її призначення.
+          </p>
+        </div>
+
+        <!-- Блок commands__grid використовується для кнопок з npm-командами. -->
+        <div class="commands__grid" data-command-list>
+          <!-- Тег button використовується для вибору команди без переходу на іншу сторінку. -->
+          <button class="command-button is-active" type="button" data-command="build">npm run build</button>
+          <button class="command-button" type="button" data-command="dev">npm run dev</button>
+          <button class="command-button" type="button" data-command="scss">npm run scss</button>
+          <button class="command-button" type="button" data-command="min">npm run min</button>
+        </div>
+
+        <!-- Блок command-output використовується для пояснення вибраної команди. -->
+        <div class="command-output" data-command-output>
+          <span class="command-output__label">Обрана команда</span>
+          <p class="command-output__text">npm run build запускає повну збірку: форматування SCSS, CSS і minified CSS.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Блок footer використовується для нижньої частини сторінки та навігації назад. -->
+    <!-- Тег footer використовується для завершальної частини сторінки. -->
+    <footer class="footer">
+      <p class="footer__text">
+        Домашнє завдання №33 оформлене як окремий Gulp-проєкт з розділенням HTML, SCSS, CSS і JS.
+      </p>
+      <a class="button button--primary" href="../index.html">На головний індекс</a>
+    </footer>
+  </div>
+
+  <!-- Блок task-template використовується як HTML-шаблон картки задачі Gulp. -->
+  <!-- Тег template використовується для розмітки, яку JavaScript клонує та наповнює даними. -->
+  <template data-task-template>
+    <!-- Тег article використовується для самостійної картки одного етапу збірки. -->
+    <article class="task-card">
+      <span class="task-card__number" data-task-number></span>
+      <h3 class="task-card__title" data-task-title></h3>
+      <p class="task-card__text" data-task-text></p>
+      <code class="task-card__code" data-task-command></code>
+    </article>
+  </template>
+</body>
+</html>

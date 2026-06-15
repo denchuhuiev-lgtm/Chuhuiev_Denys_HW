@@ -1,0 +1,219 @@
+@use 'variables' as *;
+
+/* Блок page-shell використовується для обмеження ширини та центрального розміщення сторінки. */
+.page-shell
+{
+    width: min($container-width, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+/* Блок hero використовується для головного вступного екрану домашнього завдання. */
+.hero
+{
+    display: grid;
+
+    padding: 32px;
+
+    border: 1px solid $color-line;
+    border-radius: $radius-large;
+    background: rgba($color-surface, .9);
+    box-shadow: $shadow-soft;
+
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* Блок hero__content використовується для текстової частини першого екрану. */
+.hero__content
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Блок hero__eyebrow використовується для короткої мітки перед головним заголовком. */
+.hero__eyebrow
+{
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 14px;
+    padding: 8px 12px;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: $color-primary-dark;
+    border-radius: 999px;
+    background: rgba($color-primary, .12);
+}
+
+/* Блок hero__title використовується для головного заголовка сторінки. */
+.hero__title
+{
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.02;
+
+    max-width: 760px;
+    margin: 0;
+}
+
+/* Блок hero__text використовується для вступного опису під головним заголовком. */
+.hero__text
+{
+    font-size: 18px;
+    line-height: 1.7;
+
+    max-width: 720px;
+    margin: 18px 0 0;
+
+    color: $color-muted;
+}
+
+/* Блок hero__actions використовується для кнопок швидкої навігації. */
+.hero__actions
+{
+    display: flex;
+
+    margin-top: 26px;
+
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Блок hero__panel використовується для додаткової картки з технологіями уроку. */
+.hero__panel
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+    padding: 24px;
+
+    border: 1px solid rgba($color-primary, .18);
+    border-radius: $radius-medium;
+    background: linear-gradient(160deg, rgba($color-primary, .12), rgba($color-accent, .1));
+
+    gap: 16px;
+}
+
+/* Блок hero__panel-label використовується для підпису над списком технологій. */
+.hero__panel-label
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: $color-primary-dark;
+}
+
+/* Блок hero__list використовується для списку технологій уроку. */
+.hero__list
+{
+    display: grid;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 10px;
+}
+
+/* Блок hero__item використовується для одного пункту списку технологій. */
+.hero__item
+{
+    font-weight: 700;
+
+    padding: 11px 12px;
+
+    border: 1px solid $color-line;
+    border-radius: $radius-small;
+    background: rgba($color-surface, .72);
+}
+
+/* Блок content використовується для вертикального розміщення основних секцій. */
+.content
+{
+    display: grid;
+
+    margin-top: 28px;
+
+    gap: 28px;
+}
+
+/* Блок секцій використовується для єдиного вигляду основних частин сторінки. */
+.lesson-summary,
+.pipeline,
+.structure,
+.commands,
+.footer
+{
+    padding: 28px;
+
+    border: 1px solid $color-line;
+    border-radius: $radius-large;
+    background: rgba($color-surface, .9);
+    box-shadow: $shadow-soft;
+}
+
+/* Блок section-heading використовується для заголовків секцій з коротким описом. */
+.section-heading
+{
+    max-width: 780px;
+    margin-bottom: 20px;
+}
+
+/* Блок section-heading__label використовується для коротких надписів над заголовками секцій. */
+.section-heading__label
+{
+    font-size: 13px;
+    font-weight: 800;
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: $color-accent;
+}
+
+/* Блок section-title використовується для заголовків другого рівня на сторінці. */
+.section-title
+{
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.12;
+
+    margin: 0;
+}
+
+/* Блок текстів секцій використовується для читабельного опису матеріалу. */
+.lesson-summary__text,
+.section-heading__text,
+.footer__text
+{
+    font-size: 17px;
+    line-height: 1.75;
+
+    max-width: 820px;
+    margin: 14px 0 0;
+
+    color: $color-muted;
+}
+
+/* Блок pipeline__grid використовується для адаптивної сітки карток pipeline. */
+.pipeline__grid
+{
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
