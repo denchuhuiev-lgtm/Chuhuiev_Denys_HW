@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Webpack module mark</title>
+  <desc id="desc">Abstract hexagon mark for a webpack homework page.</desc>
+  <rect width="240" height="240" rx="32" fill="#eef6f1"/>
+  <path fill="#1f8a70" d="M120 24 203 72v96l-83 48-83-48V72l83-48Z"/>
+  <path fill="#ffffff" d="m120 51 59 34v70l-59 34-59-34V85l59-34Zm0 20-41 24v50l41 24 41-24V95l-41-24Z"/>
+  <path fill="#d8efe8" d="m120 96 24 14v28l-24 14-24-14v-28l24-14Z"/>
+</svg>

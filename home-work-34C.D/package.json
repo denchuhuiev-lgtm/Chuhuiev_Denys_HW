@@ -1,0 +1,31 @@
+{
+  "name": "chuhuiev-denys-home-work-34-webpack",
+  "version": "1.0.0",
+  "description": "Homework 34. Webpack asset management, hashing, local fonts, images, CSS and optimized vendor chunks.",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "keywords": [
+    "webpack",
+    "homework",
+    "assets"
+  ],
+  "author": "Denys Chuhuiev",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

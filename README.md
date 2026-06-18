@@ -39,6 +39,7 @@
 - `home-work-31C.D_js`
 - `home-work-32C.D_js`
 - `home-work-33C.D`
+- `home-work-34C.D`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -396,6 +397,25 @@
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-33C.D/
 - Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-33C.D
+
+## Домашнє завдання №34 (Webpack в дії)
+
+Тема роботи: **Webpack в дії: Конфігурація та управління активами**.
+
+Що реалізовано:
+
+- створено окремий Webpack-проєкт у папці `home-work-34C.D` з власним `webpack.config.js`;
+- налаштовано хешування імен файлів через `[contenthash]` для JavaScript, зображень і шрифтів;
+- додано локальний шрифт `Roboto Mono`, який підключається через `@font-face` у CSS;
+- зображення імпортується в JavaScript і збирається через Webpack asset modules;
+- CSS винесено в окремі файли `src/styles/fonts.css` і `src/styles/main.css`;
+- зовнішні бібліотеки `normalize.css` і `lodash-es` оптимізуються через `splitChunks` в окремий vendor chunk;
+- у футері сторінки додано кнопку повернення на головний індекс усіх домашніх завдань.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-34C.D/
+- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-34C.D
 
 ## Фінальний проєкт HTML та CSS
 
