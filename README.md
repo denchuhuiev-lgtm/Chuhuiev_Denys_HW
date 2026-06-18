@@ -415,7 +415,8 @@
 Посилання:
 
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-34C.D/
-- Код у репозиторії: https://github.com/denchuhuiev-lgtm/Chuhuiev_Denys_HW/tree/main/home-work-34C.D
+- Окремий репозиторій з кодом ДЗ №34: https://github.com/denchuhuiev-lgtm/home-work-34-webpack
+- GitHub Pages окремого репозиторію: https://denchuhuiev-lgtm.github.io/home-work-34-webpack/
 
 ## Фінальний проєкт HTML та CSS
 
