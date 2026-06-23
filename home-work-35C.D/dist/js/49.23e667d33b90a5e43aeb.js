@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[49],{49(e,t,a){a.d(t,{renderLazyStats:()=>n});const n=()=>{const e=document.querySelector(".build-panel"),t=document.createElement("p");t.className="build-panel__lazy-note",t.textContent="Dynamic import loaded: lazyStats.js",e.append(t)}}}]);

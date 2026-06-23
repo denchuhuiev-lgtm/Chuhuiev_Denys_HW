@@ -1,0 +1,78 @@
+$radius: 8px;
+$gap: 18px;
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $gap;
+  margin: 24px 0;
+}
+
+.tool-card,
+.build-panel {
+  border: 1px solid var(--line);
+  border-radius: $radius;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.tool-card {
+  min-height: 230px;
+  padding: 22px;
+
+  &__label {
+    display: inline-flex;
+    margin-bottom: 28px;
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0 0 12px;
+    font-size: 22px;
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+}
+
+.build-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 24px;
+  align-items: start;
+  padding: 26px;
+  background: var(--surface-alt);
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: $radius;
+    background: var(--surface);
+    color: var(--muted);
+  }
+
+  &__lazy-note {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 14px;
+  }
+}

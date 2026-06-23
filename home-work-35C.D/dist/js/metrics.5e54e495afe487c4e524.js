@@ -1,0 +1,1 @@
+(()=>{"use strict";window.webpackHomeworkMetrics=[{name:"devServer",value:"port 3500"},{name:"typescript",value:"babel preset"},{name:"bundleAnalyzer",value:"static report"}].reduce((e,a)=>(e[a.name]=a.value,e),{})})();

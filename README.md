@@ -40,6 +40,7 @@
 - `home-work-32C.D_js`
 - `home-work-33C.D`
 - `home-work-34C.D`
+- `home-work-35C.D`
 - `Web_Site_Bonus`
 - `Final_HTML_CSS`
 
@@ -417,6 +418,32 @@
 - GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-34C.D/
 - Окремий репозиторій з кодом ДЗ №34: https://github.com/denchuhuiev-lgtm/home-work-34-webpack
 - GitHub Pages окремого репозиторію: https://denchuhuiev-lgtm.github.io/home-work-34-webpack/
+
+
+
+## Домашнє завдання №35 (Webpack mastery)
+
+Тема роботи: **Webpack mastery: Від препроцесорів до аналізатора**.
+
+Що реалізовано за матеріалами уроку №35:
+
+- створено окремий Webpack-проєкт у папці `home-work-35C.D` з власним `webpack.config.js`;
+- налаштовано `webpack-dev-server` для локальної розробки та автоматичного оновлення сторінки;
+- додано `CopyWebpackPlugin` для копіювання статичного зображення в `dist`;
+- зовнішній CSS збирається через `css-loader`, `style-loader` у dev та `MiniCssExtractPlugin` у production;
+- підключено препроцесори `Less`, `Sass` і `SCSS`;
+- JavaScript транспілюється через Babel і `.browserslistrc`;
+- TypeScript-файл компілюється через `@babel/preset-typescript` як окремий entry;
+- production-збірка використовує `CssMinimizerPlugin`, `TerserPlugin`, `splitChunks` і хешовані назви файлів;
+- ESLint підключено через `eslint-webpack-plugin` та команду `npm run lint`;
+- додано dynamic import/lazy loading для окремого chunk;
+- `Webpack Bundle Analyzer` створює `dist/report.html` через команду `npm run analyze`.
+
+Посилання:
+
+- GitHub Pages: https://denchuhuiev-lgtm.github.io/Chuhuiev_Denys_HW/home-work-35C.D/
+- Окремий репозиторій з кодом ДЗ №35: https://github.com/denchuhuiev-lgtm/home-work-35-webpack-mastery
+- GitHub Pages окремого репозиторію: https://denchuhuiev-lgtm.github.io/home-work-35-webpack-mastery/
 
 ## Фінальний проєкт HTML та CSS
 

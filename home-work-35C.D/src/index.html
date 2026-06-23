@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ДЗ 35.1: Webpack mastery з DevServer, CSS, SCSS, Sass, Less, TypeScript, Babel, ESLint та Bundle Analyzer.">
+    <title>ДЗ 35.1 | Webpack mastery</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow">ДЗ 35.1</p>
+          <h1 class="hero__title">Webpack mastery</h1>
+          <p class="hero__text">
+            Розширена конфігурація Webpack: DevServer, зовнішні CSS-файли,
+            препроцесори, TypeScript, Babel, ESLint і Bundle Analyzer.
+          </p>
+        </div>
+        <img class="hero__image" id="heroImage" alt="Webpack cube preview">
+      </header>
+
+      <main>
+        <section class="tool-grid" aria-label="Можливості Webpack-конфігурації">
+          <article class="tool-card tool-card--scss">
+            <span class="tool-card__label">Styles</span>
+            <h2 class="tool-card__title">CSS + SCSS + Sass + Less</h2>
+            <p class="tool-card__text">
+              Сторінка імпортує звичайний CSS і три препроцесори, а production
+              збірка виносить стилі в окремий файл.
+            </p>
+          </article>
+
+          <article class="tool-card tool-card--ts">
+            <span class="tool-card__label">Code</span>
+            <h2 class="tool-card__title">TypeScript + Babel</h2>
+            <p class="tool-card__text">
+              JavaScript транспілюється через Babel, а TypeScript проходить через
+              @babel/preset-typescript і потрапляє в окремий entry chunk.
+            </p>
+          </article>
+
+          <article class="tool-card tool-card--audit">
+            <span class="tool-card__label">Quality</span>
+            <h2 class="tool-card__title">ESLint + Analyzer</h2>
+            <p class="tool-card__text">
+              ESLint підключений до Webpack, а Bundle Analyzer створює статичний
+              report.html для аналізу розміру пакетів.
+            </p>
+          </article>
+        </section>
+
+        <section class="build-panel">
+          <div>
+            <p class="build-panel__label">Runtime summary</p>
+            <h2 class="build-panel__title" id="buildTitle">Webpack pipeline</h2>
+          </div>
+          <ul class="build-panel__list" id="buildList"></ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">Denys Chuhuiev | FullStack iTHillel</p>
+        <a class="footer__button" href="../index.html">На головний індекс</a>
+      </footer>
+    </div>
+  </body>
+</html>
